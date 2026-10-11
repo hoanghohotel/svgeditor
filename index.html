@@ -25,9 +25,11 @@
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <script>
       (() => {
-        const saved = localStorage.getItem('vh_theme');
+        const saved = localStorage.getItem('vh_theme_mode') || localStorage.getItem('vh_theme');
         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const isDark = saved ? saved === 'dark' : prefersDark;
+        let isDark = prefersDark;
+        if (saved === 'dark') isDark = true;
+        else if (saved === 'light') isDark = false;
         document.documentElement.classList.toggle('dark', isDark);
         document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
         document.documentElement.style.colorScheme = isDark ? 'dark' : 'light';

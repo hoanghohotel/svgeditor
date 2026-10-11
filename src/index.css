@@ -23,6 +23,13 @@
     font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    color: #0f172a;
+    background-color: #f8fafc;
+  }
+
+  .dark body {
+    color: #f8fafc;
+    background-color: #090d16;
   }
 
   code, pre, .font-mono {

@@ -25,6 +25,8 @@ import {
   Image as ImageIcon,
   CheckCircle2,
   RefreshCw,
+  ChevronDown,
+  FileCode,
 } from 'lucide-react';
 import { SvgIcon, OptimizerOptions } from '../types/icon';
 import { iconDataset, getIconById } from '../data/iconDataset';
@@ -127,6 +129,7 @@ export const EditorPage: React.FC<EditorPageProps> = ({ initialIconId }) => {
   const [rasterQuality, setRasterQuality] = useState<number>(0.92);
   const [transparentBg, setTransparentBg] = useState<boolean>(true);
   const [isExporting, setIsExporting] = useState<boolean>(false);
+  const [topExportMenuOpen, setTopExportMenuOpen] = useState<boolean>(false);
 
   // Optimizer Options
   const [optimizerOptions, setOptimizerOptions] = useState<OptimizerOptions>(defaultOptimizerOptions);
@@ -418,13 +421,139 @@ export const EditorPage: React.FC<EditorPageProps> = ({ initialIconId }) => {
             ))}
           </select>
 
-          <button
-            onClick={() => downloadSvgFile(customizedSvg, 'vectorhub-icon.svg')}
-            className="flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold glass-btn-primary rounded-xl cursor-pointer shadow-md"
-          >
-            <Download className="w-3.5 h-3.5 text-emerald-400 dark:text-emerald-500" />
-            <span>{t.downloadCustomized}</span>
-          </button>
+          {/* Multi-Format Export Dropdown (SVG, PNG, WebP, JPEG, React, Vue, Svelte, Base64) */}
+          <div className="relative">
+            <div className="flex items-center rounded-xl overflow-hidden shadow-md">
+              <button
+                onClick={() => downloadSvgFile(customizedSvg, `vectorhub-${selectedIconId}.svg`)}
+                className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold glass-btn-primary cursor-pointer border-r border-white/20"
+                title="Download SVG directly"
+              >
+                <Download className="w-3.5 h-3.5 text-emerald-400 dark:text-emerald-500" />
+                <span>Download SVG</span>
+              </button>
+              <button
+                onClick={() => setTopExportMenuOpen(!topExportMenuOpen)}
+                className="px-2 py-1.5 text-xs font-semibold glass-btn-primary cursor-pointer hover:bg-white/20"
+                title="Choose more formats (PNG, WebP, JPEG, React, Vue, Data URI...)"
+              >
+                <ChevronDown className={`w-3.5 h-3.5 transition-transform ${topExportMenuOpen ? 'rotate-180' : ''}`} />
+              </button>
+            </div>
+
+            {topExportMenuOpen && (
+              <div className="absolute right-0 mt-2 w-64 glass-panel rounded-2xl p-2 shadow-2xl border border-slate-200/90 dark:border-white/10 z-50 space-y-1.5">
+                <div className="px-2 py-1 text-[10px] font-semibold uppercase tracking-wider text-neutral-400 border-b border-white/10">
+                  Quick Export Formats
+                </div>
+
+                <div className="grid grid-cols-2 gap-1">
+                  <button
+                    onClick={() => {
+                      downloadSvgFile(customizedSvg, `vectorhub-${selectedIconId}.svg`);
+                      setTopExportMenuOpen(false);
+                    }}
+                    className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl text-xs font-medium text-left hover:bg-black/5 dark:hover:bg-white/5 text-neutral-800 dark:text-neutral-200 cursor-pointer"
+                  >
+                    <Download className="w-3 h-3 text-emerald-500" />
+                    <span>SVG (.svg)</span>
+                  </button>
+
+                  <button
+                    onClick={async () => {
+                      setTopExportMenuOpen(false);
+                      await downloadRasterFile(customizedSvg, `vectorhub-${selectedIconId}`, 'png', rasterSize, 1.0, transparentBg ? 'transparent' : '#ffffff');
+                    }}
+                    className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl text-xs font-medium text-left hover:bg-black/5 dark:hover:bg-white/5 text-neutral-800 dark:text-neutral-200 cursor-pointer"
+                  >
+                    <ImageIcon className="w-3 h-3 text-sky-500" />
+                    <span>PNG ({rasterSize}px)</span>
+                  </button>
+
+                  <button
+                    onClick={async () => {
+                      setTopExportMenuOpen(false);
+                      await downloadRasterFile(customizedSvg, `vectorhub-${selectedIconId}`, 'webp', rasterSize, rasterQuality, transparentBg ? 'transparent' : '#ffffff');
+                    }}
+                    className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl text-xs font-medium text-left hover:bg-black/5 dark:hover:bg-white/5 text-neutral-800 dark:text-neutral-200 cursor-pointer"
+                  >
+                    <ImageIcon className="w-3 h-3 text-indigo-500" />
+                    <span>WebP Image</span>
+                  </button>
+
+                  <button
+                    onClick={async () => {
+                      setTopExportMenuOpen(false);
+                      await downloadRasterFile(customizedSvg, `vectorhub-${selectedIconId}`, 'jpeg', rasterSize, rasterQuality, '#ffffff');
+                    }}
+                    className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl text-xs font-medium text-left hover:bg-black/5 dark:hover:bg-white/5 text-neutral-800 dark:text-neutral-200 cursor-pointer"
+                  >
+                    <ImageIcon className="w-3 h-3 text-amber-500" />
+                    <span>JPEG Image</span>
+                  </button>
+                </div>
+
+                <div className="pt-1 border-t border-white/10 space-y-0.5">
+                  <div className="px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-neutral-400">
+                    Copy Code Snippets
+                  </div>
+                  <button
+                    onClick={() => {
+                      handleCopyText(customizedSvg, 'quick-svg-code');
+                      setTopExportMenuOpen(false);
+                    }}
+                    className="w-full flex items-center justify-between px-2.5 py-1 rounded-xl text-xs hover:bg-black/5 dark:hover:bg-white/5 text-neutral-700 dark:text-neutral-300 cursor-pointer"
+                  >
+                    <span className="flex items-center gap-1.5">
+                      <Code2 className="w-3 h-3 text-neutral-400" />
+                      <span>Raw SVG Code</span>
+                    </span>
+                    <Copy className="w-3 h-3 opacity-60" />
+                  </button>
+
+                  <button
+                    onClick={() => {
+                      handleCopyText(generateReactComponent(customizedSvg, 'CustomVectorIcon'), 'quick-react-code');
+                      setTopExportMenuOpen(false);
+                    }}
+                    className="w-full flex items-center justify-between px-2.5 py-1 rounded-xl text-xs hover:bg-black/5 dark:hover:bg-white/5 text-neutral-700 dark:text-neutral-300 cursor-pointer"
+                  >
+                    <span className="flex items-center gap-1.5">
+                      <FileCode className="w-3 h-3 text-sky-400" />
+                      <span>React JSX Component</span>
+                    </span>
+                    <Copy className="w-3 h-3 opacity-60" />
+                  </button>
+
+                  <button
+                    onClick={() => {
+                      handleCopyText(getSvgDataUri(customizedSvg, 'base64'), 'quick-base64');
+                      setTopExportMenuOpen(false);
+                    }}
+                    className="w-full flex items-center justify-between px-2.5 py-1 rounded-xl text-xs hover:bg-black/5 dark:hover:bg-white/5 text-neutral-700 dark:text-neutral-300 cursor-pointer"
+                  >
+                    <span className="flex items-center gap-1.5">
+                      <Zap className="w-3 h-3 text-amber-400" />
+                      <span>Data URI Base64</span>
+                    </span>
+                    <Copy className="w-3 h-3 opacity-60" />
+                  </button>
+                </div>
+
+                <div className="pt-1 border-t border-white/10">
+                  <button
+                    onClick={() => {
+                      setActiveTab('export');
+                      setTopExportMenuOpen(false);
+                    }}
+                    className="w-full py-1.5 px-2 text-center text-xs font-semibold text-emerald-600 dark:text-emerald-400 hover:underline cursor-pointer"
+                  >
+                    Open Full Converter Studio →
+                  </button>
+                </div>
+              </div>
+            )}
+          </div>
         </div>
       </div>
 

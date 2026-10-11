@@ -42,17 +42,24 @@ async function startServer() {
       appType: 'custom',
     });
 
-    // Vite can inject its client module in middleware mode even when HMR is
-    // disabled. The preview proxy cannot provide a WebSocket endpoint, so serve
-    // the entry HTML without that client and keep Vite for module requests.
+    // Serve index.html for all client-side navigation routes (SPA fallback).
+    // Vite middleware only handles module imports and static assets; client routes
+    // like /editor, /portfolio, /s/:id, /directory/:category need index.html fallback
+    // so refreshing (F5) never yields a 404 error.
     app.use(async (req, res, next) => {
-      if (req.headers.accept?.includes('text/html')) {
+      // Exclude API, health, and Vite internal asset/source requests
+      if (req.path.startsWith('/api') || req.path === '/health' || req.path.startsWith('/@') || req.path.startsWith('/src')) {
+        return next();
+      }
+
+      // Check if this is an HTML document navigation request or a clean URL without file extension
+      const acceptsHtml = req.headers.accept?.includes('text/html');
+      const hasNoExtension = !path.extname(req.path);
+
+      if (acceptsHtml || hasNoExtension) {
         try {
           const indexPath = path.resolve(__dirname, 'index.html');
           const source = await readFile(indexPath, 'utf8');
-          // Serve the source document directly in preview. Vite's HTML transform
-          // injects /@vite/client even with HMR disabled, and the preview proxy
-          // cannot establish that WebSocket connection.
           res.type('html').send(source);
           return;
         } catch (error) {

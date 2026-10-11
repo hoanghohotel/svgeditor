@@ -10,7 +10,7 @@ import { IconDetailPage } from './components/IconDetailPage';
 import { EditorPage } from './components/EditorPage';
 import { PortfolioPage } from './components/PortfolioPage';
 import { AdminDashboard } from './components/AdminDashboard';
-import { useAppRouter, navigateTo } from './utils/router';
+import { useAppRouter, navigateTo, formatRouteUrl } from './utils/router';
 import { getIconById } from './data/iconDataset';
 import { IconCategory } from './types/icon';
 import { useI18n } from './i18n';
@@ -62,6 +62,17 @@ export default function App() {
         document.title = `${catName} (${t.page} ${currentRoute.page}) — VectorHub`;
         break;
       }
+    }
+
+    // Sync canonical link and Open Graph URL with clean path
+    const cleanUrl = `${window.location.origin}${formatRouteUrl(currentRoute)}`;
+    const canonicalLink = document.querySelector('link[rel="canonical"]');
+    if (canonicalLink) {
+      canonicalLink.setAttribute('href', cleanUrl);
+    }
+    const ogUrlMeta = document.querySelector('meta[property="og:url"]');
+    if (ogUrlMeta) {
+      ogUrlMeta.setAttribute('content', cleanUrl);
     }
   }, [currentRoute, language, t]);
 

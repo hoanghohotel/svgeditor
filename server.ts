@@ -60,7 +60,8 @@ async function startServer() {
         try {
           const indexPath = path.resolve(__dirname, 'index.html');
           const source = await readFile(indexPath, 'utf8');
-          res.type('html').send(source);
+          const html = await vite.transformIndexHtml(req.originalUrl || req.url, source);
+          res.type('html').send(html);
           return;
         } catch (error) {
           next(error);

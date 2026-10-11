@@ -13,6 +13,7 @@ import {
   Image as ImageIcon,
   ShieldAlert,
   Crown,
+  Share2,
 } from 'lucide-react';
 import { SvgIcon } from '../types/icon';
 import { getIconById, getRelatedIcons } from '../data/iconDataset';
@@ -46,11 +47,12 @@ const COLOR_PRESETS = [
   { name: 'Violet', value: '#8b5cf6', bgClass: 'bg-violet-500' },
 ];
 
-export const IconDetailPage: React.FC<IconDetailPageProps> = ({ iconId }) => {
+export const IconDetailPage: React.FC<IconDetailPageProps> = ({ iconId, iconSlug }) => {
   const { t } = useI18n();
   const [icon, setIcon] = useState<SvgIcon | null>(() => getIconById(iconId) || null);
   const [loading, setLoading] = useState<boolean>(!icon);
   const [copiedType, setCopiedType] = useState<string | null>(null);
+  const [copiedLink, setCopiedLink] = useState<boolean>(false);
   const [pngSize, setPngSize] = useState<number>(512);
   const [pngTransparent, setPngTransparent] = useState<boolean>(true);
   const [isExportingPng, setIsExportingPng] = useState<boolean>(false);
@@ -201,6 +203,24 @@ export const ${reactComponentName}: React.FC<React.SVGProps<SVGSVGElement>> = (p
     }
   };
 
+  // Normalize URL to canonical clean path /s/:id/:slug
+  useEffect(() => {
+    if (icon && icon.slug) {
+      const canonicalPath = `/s/${encodeURIComponent(icon.id)}/${encodeURIComponent(icon.slug)}`;
+      if (window.location.pathname !== canonicalPath && !window.location.hash) {
+        window.history.replaceState({ route: { type: 'detail', id: icon.id, slug: icon.slug } }, '', canonicalPath);
+      }
+    }
+  }, [icon, iconSlug]);
+
+  const handleCopyLink = async () => {
+    if (!icon) return;
+    const shareUrl = `${window.location.origin}/s/${encodeURIComponent(icon.id)}/${encodeURIComponent(icon.slug)}`;
+    await copyToClipboard(shareUrl);
+    setCopiedLink(true);
+    setTimeout(() => setCopiedLink(false), 2200);
+  };
+
   const handleOpenEditor = () => {
     navigateTo({ type: 'editor', iconId: icon.id });
   };
@@ -248,6 +268,25 @@ export const ${reactComponentName}: React.FC<React.SVGProps<SVGSVGElement>> = (p
         </div>
 
         <div className="flex items-center gap-2">
+          {/* Share / Copy Clean URL button */}
+          <button
+            onClick={handleCopyLink}
+            title="Copy clean shareable link to this vector"
+            className="glass-btn px-3 py-1 rounded-xl text-neutral-700 dark:text-neutral-200 hover:text-neutral-900 dark:hover:text-white transition-all flex items-center gap-1.5 cursor-pointer text-xs font-medium"
+          >
+            {copiedLink ? (
+              <>
+                <Check className="w-3.5 h-3.5 text-emerald-500" />
+                <span className="text-emerald-600 dark:text-emerald-400 font-semibold">Link Copied!</span>
+              </>
+            ) : (
+              <>
+                <Share2 className="w-3.5 h-3.5" />
+                <span>Share Link</span>
+              </>
+            )}
+          </button>
+
           {icon.is_pro && (
             <span className="flex items-center gap-1 px-3 py-1 text-xs font-semibold bg-amber-500/20 text-amber-700 dark:text-amber-300 border border-amber-500/30 rounded-xl backdrop-blur-md shadow-xs">
               <Crown className="w-3.5 h-3.5" />
@@ -416,7 +455,7 @@ export const ${reactComponentName}: React.FC<React.SVGProps<SVGSVGElement>> = (p
               </div>
 
               {/* Viewport Dimensions Badge (Apple Glass Pill) */}
-              <div className="absolute bottom-3 right-3 font-mono text-[10px] tabular-nums px-2.5 py-1 rounded-xl glass-panel text-white shadow-xs">
+              <div className="absolute bottom-3 right-3 font-mono text-[10px] tabular-nums px-2.5 py-1 rounded-xl glass-panel text-neutral-800 dark:text-white shadow-xs">
                 {icon.viewBox}
               </div>
             </div>

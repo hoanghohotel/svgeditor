@@ -27,6 +27,7 @@ import {
   RefreshCw,
   ChevronDown,
   FileCode,
+  Share2,
 } from 'lucide-react';
 import { SvgIcon, OptimizerOptions } from '../types/icon';
 import { iconDataset, getIconById } from '../data/iconDataset';
@@ -311,12 +312,28 @@ export const EditorPage: React.FC<EditorPageProps> = ({ initialIconId }) => {
     e.target.value = '';
   };
 
+  const [copiedShareLink, setCopiedShareLink] = useState<boolean>(false);
+
+  const handleShareLink = async () => {
+    const url = selectedIconId
+      ? `${window.location.origin}/editor?id=${encodeURIComponent(selectedIconId)}`
+      : `${window.location.origin}/editor`;
+    await copyToClipboard(url);
+    setCopiedShareLink(true);
+    setTimeout(() => setCopiedShareLink(false), 2200);
+  };
+
   const handleSelectIcon = (iconId: string) => {
     setSelectedIconId(iconId);
     const found = iconDataset.find((i) => i.id === iconId);
     if (found) {
       updateCodeWithHistory(found.svgContent);
       resetDesignControls();
+      // Keep URL clean: /editor?id=:iconId
+      const targetUrl = `/editor?id=${encodeURIComponent(iconId)}`;
+      if (window.location.pathname + window.location.search !== targetUrl && !window.location.hash) {
+        window.history.replaceState({ route: { type: 'editor', iconId } }, '', targetUrl);
+      }
     }
   };
 
@@ -454,6 +471,25 @@ export const EditorPage: React.FC<EditorPageProps> = ({ initialIconId }) => {
               </option>
             ))}
           </select>
+
+          {/* Share clean link */}
+          <button
+            onClick={handleShareLink}
+            title="Copy clean shareable link to this editor document"
+            className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium glass-btn rounded-xl transition-all cursor-pointer"
+          >
+            {copiedShareLink ? (
+              <>
+                <Check className="w-3.5 h-3.5 text-emerald-500" />
+                <span className="text-emerald-600 dark:text-emerald-400 font-semibold">Link Copied!</span>
+              </>
+            ) : (
+              <>
+                <Share2 className="w-3.5 h-3.5 text-neutral-500" />
+                <span>Share Link</span>
+              </>
+            )}
+          </button>
 
           {/* Multi-Format Export Dropdown (SVG, PNG, WebP, JPEG, React, Vue, Svelte, Base64) */}
           <div className="relative">

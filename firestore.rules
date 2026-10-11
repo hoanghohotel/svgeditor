@@ -1,0 +1,101 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Global default-deny safety net
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Helper functions
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function existing() {
+      return resource.data;
+    }
+
+    function isBootstrappedAdmin() {
+      return isSignedIn() && (
+        request.auth.token.email == 'trustwallet.vn@gmail.com' ||
+        request.auth.token.email == 'admin@vectorhub.dev'
+      );
+    }
+
+    function isAdmin() {
+      return isBootstrappedAdmin() || (
+        isSignedIn() &&
+        exists(/databases/$(database)/documents/profiles/$(request.auth.uid)) &&
+        get(/databases/$(database)/documents/profiles/$(request.auth.uid)).data.role == 'admin'
+      );
+    }
+
+    function isValidSvgAsset(data) {
+      return data.keys().hasAll(['id', 'name', 'slug', 'svg_content', 'status', 'created_at']) &&
+        data.id is string && isValidId(data.id) &&
+        data.name is string && data.name.size() > 0 && data.name.size() <= 128 &&
+        data.slug is string && data.slug.size() > 0 && data.slug.size() <= 128 &&
+        data.svg_content is string && data.svg_content.size() > 10 && data.svg_content.size() <= 500000 &&
+        data.status in ['published', 'draft', 'archived'] &&
+        data.created_at is string;
+    }
+
+    // SVG Assets: Public can read published items; Admins can read all and manage
+    match /svg_assets/{assetId} {
+      allow read: if isValidId(assetId) && (
+        resource == null || resource.data.status == 'published' || isAdmin()
+      );
+      allow create: if isValidId(assetId) && isAdmin() && isValidSvgAsset(incoming());
+      allow update: if isValidId(assetId) && isAdmin() && isValidSvgAsset(incoming());
+      allow delete: if isValidId(assetId) && isAdmin();
+    }
+
+    // Categories: Public read, Admin write
+    match /categories/{categoryId} {
+      allow read: if isValidId(categoryId);
+      allow write: if isValidId(categoryId) && isAdmin();
+    }
+
+    // Collections: Public read, Admin write
+    match /collections/{collectionId} {
+      allow read: if isValidId(collectionId);
+      allow write: if isValidId(collectionId) && isAdmin();
+    }
+
+    // Licenses: Public read, Admin write
+    match /licenses/{licenseId} {
+      allow read: if isValidId(licenseId);
+      allow write: if isValidId(licenseId) && isAdmin();
+    }
+
+    // Tags: Public read, Admin write
+    match /tags/{tagId} {
+      allow read: if isValidId(tagId);
+      allow write: if isValidId(tagId) && isAdmin();
+    }
+
+    // User profiles: Users can read their own profile, Admins can read/write all
+    match /profiles/{userId} {
+      allow read: if isValidId(userId) && (
+        (isSignedIn() && request.auth.uid == userId) || isAdmin()
+      );
+      allow create: if isValidId(userId) && isSignedIn() && (
+        request.auth.uid == userId || isAdmin()
+      );
+      allow update: if isValidId(userId) && isSignedIn() && (
+        (request.auth.uid == userId && incoming().diff(existing()).affectedKeys().hasOnly(['display_name'])) ||
+        isAdmin()
+      );
+      allow delete: if isValidId(userId) && isAdmin();
+    }
+  }
+}

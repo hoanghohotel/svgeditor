@@ -1,0 +1,6 @@
+{
+  "name": "VectorHub",
+  "description": "High-performance SVG icon directory, inspector, and real-time SVG optimizer studio.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

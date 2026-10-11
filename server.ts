@@ -1,0 +1,56 @@
+import 'dotenv/config';
+import express from 'express';
+import cookieParser from 'cookie-parser';
+import { apiRouter } from './src/server/api.ts';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+async function startServer() {
+  const app = express();
+  const PORT = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
+  const isProd = process.env.NODE_ENV === 'production';
+
+  // Body parsing and cookies
+  app.use(express.json({ limit: '5mb' }));
+  app.use(express.urlencoded({ extended: true, limit: '5mb' }));
+  app.use(cookieParser());
+
+  // Mount Backend REST API
+  app.use('/api', apiRouter);
+
+  // Health check
+  app.get('/health', (_req, res) => {
+    res.json({ status: 'healthy', timestamp: new Date().toISOString() });
+  });
+
+  if (!isProd) {
+    // Mount Vite dev server in middleware mode
+    const { createServer: createViteServer } = await import('vite');
+    const vite = await createViteServer({
+      server: { middlewareMode: true },
+      appType: 'spa',
+    });
+
+    app.use(vite.middlewares);
+  } else {
+    // Production static serving
+    const distPath = path.resolve(__dirname, 'dist');
+    app.use(express.static(distPath));
+
+    app.get('*', (_req, res) => {
+      res.sendFile(path.join(distPath, 'index.html'));
+    });
+  }
+
+  app.listen(PORT, '0.0.0.0', () => {
+    console.log(`VectorHub Full-Stack Server listening on http://0.0.0.0:${PORT}`);
+  });
+}
+
+startServer().catch((err) => {
+  console.error('Failed to start server:', err);
+  process.exit(1);
+});

@@ -1,0 +1,118 @@
+{
+  "entities": {
+    "SvgAsset": {
+      "title": "SvgAsset",
+      "description": "An SVG vector asset in the library",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string", "maxLength": 128 },
+        "slug": { "type": "string", "maxLength": 128 },
+        "description": { "type": "string", "maxLength": 1000 },
+        "svg_content": { "type": "string", "maxLength": 500000 },
+        "thumbnail_path": { "type": "string", "maxLength": 256 },
+        "collection_id": { "type": "string", "maxLength": 64 },
+        "category_id": { "type": "string", "maxLength": 64 },
+        "license_id": { "type": "string", "maxLength": 64 },
+        "width": { "type": "number" },
+        "height": { "type": "number" },
+        "view_box": { "type": "string", "maxLength": 64 },
+        "file_size": { "type": "number" },
+        "status": { "type": "string", "enum": ["published", "draft", "archived"] },
+        "created_at": { "type": "string" },
+        "updated_at": { "type": "string" },
+        "published_at": { "type": "string" }
+      },
+      "required": ["id", "name", "slug", "svg_content", "status", "created_at"]
+    },
+    "Category": {
+      "title": "Category",
+      "description": "Category for organizing SVG icons",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string", "maxLength": 64 },
+        "slug": { "type": "string", "maxLength": 64 },
+        "description": { "type": "string", "maxLength": 500 }
+      },
+      "required": ["id", "name", "slug"]
+    },
+    "Collection": {
+      "title": "Collection",
+      "description": "Curated collection of SVG icons",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string", "maxLength": 128 },
+        "slug": { "type": "string", "maxLength": 128 },
+        "description": { "type": "string", "maxLength": 500 },
+        "source_url": { "type": "string", "maxLength": 256 },
+        "author": { "type": "string", "maxLength": 128 }
+      },
+      "required": ["id", "name", "slug"]
+    },
+    "License": {
+      "title": "License",
+      "description": "License terms for vector assets",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string", "maxLength": 64 },
+        "license_url": { "type": "string", "maxLength": 256 },
+        "attribution_required": { "type": "boolean" },
+        "commercial_use_allowed": { "type": "boolean" }
+      },
+      "required": ["id", "name", "license_url"]
+    },
+    "Tag": {
+      "title": "Tag",
+      "description": "Searchable tag descriptor",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string", "maxLength": 64 },
+        "slug": { "type": "string", "maxLength": 64 }
+      },
+      "required": ["id", "name", "slug"]
+    },
+    "Profile": {
+      "title": "Profile",
+      "description": "User profile and role permissions",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "email": { "type": "string", "maxLength": 128 },
+        "display_name": { "type": "string", "maxLength": 128 },
+        "role": { "type": "string", "enum": ["admin", "editor", "viewer"] },
+        "created_at": { "type": "string" }
+      },
+      "required": ["id", "email", "role"]
+    }
+  },
+  "firestore": {
+    "/svg_assets/{assetId}": {
+      "schema": { "$ref": "#/entities/SvgAsset" },
+      "description": "Public and managed vector assets"
+    },
+    "/categories/{categoryId}": {
+      "schema": { "$ref": "#/entities/Category" },
+      "description": "Icon taxonomies"
+    },
+    "/collections/{collectionId}": {
+      "schema": { "$ref": "#/entities/Collection" },
+      "description": "Curated icon libraries"
+    },
+    "/licenses/{licenseId}": {
+      "schema": { "$ref": "#/entities/License" },
+      "description": "Open-source and commercial licenses"
+    },
+    "/tags/{tagId}": {
+      "schema": { "$ref": "#/entities/Tag" },
+      "description": "Search keyword tags"
+    },
+    "/profiles/{userId}": {
+      "schema": { "$ref": "#/entities/Profile" },
+      "description": "User account profiles"
+    }
+  }
+}

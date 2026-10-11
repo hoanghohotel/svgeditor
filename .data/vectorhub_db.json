@@ -1,0 +1,3992 @@
+{
+  "categories": [
+    {
+      "id": "cat-1",
+      "name": "UI Actions",
+      "slug": "ui-actions",
+      "description": "Core user interface interactive glyphs and action icons"
+    },
+    {
+      "id": "cat-2",
+      "name": "Tech Logos",
+      "slug": "tech-logos",
+      "description": "Programming languages, frameworks, and cloud developer emblems"
+    },
+    {
+      "id": "cat-3",
+      "name": "System & Devices",
+      "slug": "system-devices",
+      "description": "Hardware devices, terminal consoles, and server equipment"
+    },
+    {
+      "id": "cat-4",
+      "name": "Media & Controls",
+      "slug": "media-controls",
+      "description": "Audio, video, broadcast transmitters, and streaming controls"
+    },
+    {
+      "id": "cat-5",
+      "name": "Science & Molecules",
+      "slug": "science-molecules",
+      "description": "Chemical compounds, biomolecules, and scientific laboratory graphics"
+    }
+  ],
+  "collections": [
+    {
+      "id": "col-1",
+      "name": "VectorHub Core",
+      "slug": "vectorhub-core",
+      "description": "Primary curated developer icon set",
+      "source_url": "https://vectorhub.dev",
+      "author": "VectorHub Open Source"
+    },
+    {
+      "id": "col-2",
+      "name": "Dev & Cloud Badges",
+      "slug": "dev-cloud",
+      "description": "Open-source technology emblems",
+      "source_url": "https://github.com",
+      "author": "Community Standards"
+    },
+    {
+      "id": "col-3",
+      "name": "Hardware & IoT",
+      "slug": "hardware-iot",
+      "description": "Electronics and devices schematics",
+      "source_url": "https://vectorhub.dev",
+      "author": "VectorHub Lab"
+    },
+    {
+      "id": "col-4",
+      "name": "PubChem Science Vectors",
+      "slug": "pubchem-science",
+      "description": "Scientific molecular formulas and chemical graphs",
+      "source_url": "https://pubchem.ncbi.nlm.nih.gov",
+      "author": "Google DeepMind Science / PubChem"
+    }
+  ],
+  "licenses": [
+    {
+      "id": "lic-1",
+      "name": "MIT License",
+      "license_url": "https://opensource.org/licenses/MIT",
+      "attribution_required": false,
+      "commercial_use_allowed": true
+    },
+    {
+      "id": "lic-2",
+      "name": "Apache 2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "attribution_required": true,
+      "commercial_use_allowed": true
+    },
+    {
+      "id": "lic-3",
+      "name": "CC0 Public Domain",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attribution_required": false,
+      "commercial_use_allowed": true
+    }
+  ],
+  "profiles": [
+    {
+      "id": "usr-admin-1",
+      "email": "admin@vectorhub.dev",
+      "display_name": "Lead Architect",
+      "role": "admin",
+      "created_at": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "usr-editor-1",
+      "email": "editor@vectorhub.dev",
+      "display_name": "Curator",
+      "role": "editor",
+      "created_at": "2026-01-02T00:00:00.000Z"
+    }
+  ],
+  "tags": [
+    {
+      "id": "tag-9bbee837",
+      "name": "award",
+      "slug": "award"
+    },
+    {
+      "id": "tag-cbbb5981",
+      "name": "cup",
+      "slug": "cup"
+    },
+    {
+      "id": "tag-e0b4c708",
+      "name": "winner",
+      "slug": "winner"
+    },
+    {
+      "id": "tag-80a43f60",
+      "name": "achievement",
+      "slug": "achievement"
+    },
+    {
+      "id": "tag-f5b55284",
+      "name": "prize",
+      "slug": "prize"
+    },
+    {
+      "id": "tag-f4d5d01f",
+      "name": "security",
+      "slug": "security"
+    },
+    {
+      "id": "tag-f7ebb6db",
+      "name": "verified",
+      "slug": "verified"
+    },
+    {
+      "id": "tag-b95f0031",
+      "name": "safe",
+      "slug": "safe"
+    },
+    {
+      "id": "tag-32632164",
+      "name": "protection",
+      "slug": "protection"
+    },
+    {
+      "id": "tag-ed44fd8a",
+      "name": "guard",
+      "slug": "guard"
+    },
+    {
+      "id": "tag-52b15636",
+      "name": "magic",
+      "slug": "magic"
+    },
+    {
+      "id": "tag-a63b1201",
+      "name": "star",
+      "slug": "star"
+    },
+    {
+      "id": "tag-59802f71",
+      "name": "ai",
+      "slug": "ai"
+    },
+    {
+      "id": "tag-d27db020",
+      "name": "quality",
+      "slug": "quality"
+    },
+    {
+      "id": "tag-81451207",
+      "name": "glow",
+      "slug": "glow"
+    },
+    {
+      "id": "tag-e4c4b958",
+      "name": "direction",
+      "slug": "direction"
+    },
+    {
+      "id": "tag-2b42c3ce",
+      "name": "explore",
+      "slug": "explore"
+    },
+    {
+      "id": "tag-a750018e",
+      "name": "map",
+      "slug": "map"
+    },
+    {
+      "id": "tag-623a2942",
+      "name": "travel",
+      "slug": "travel"
+    },
+    {
+      "id": "tag-1156f0e7",
+      "name": "guide",
+      "slug": "guide"
+    },
+    {
+      "id": "tag-02a3c674",
+      "name": "deploy",
+      "slug": "deploy"
+    },
+    {
+      "id": "tag-cfef25db",
+      "name": "startup",
+      "slug": "startup"
+    },
+    {
+      "id": "tag-1c74dedb",
+      "name": "speed",
+      "slug": "speed"
+    },
+    {
+      "id": "tag-a51ec70c",
+      "name": "fast",
+      "slug": "fast"
+    },
+    {
+      "id": "tag-64080dc4",
+      "name": "blastoff",
+      "slug": "blastoff"
+    },
+    {
+      "id": "tag-9f5b451d",
+      "name": "fire",
+      "slug": "fire"
+    },
+    {
+      "id": "tag-896a9db4",
+      "name": "hot",
+      "slug": "hot"
+    },
+    {
+      "id": "tag-841fe0e8",
+      "name": "trending",
+      "slug": "trending"
+    },
+    {
+      "id": "tag-5dca59d4",
+      "name": "popular",
+      "slug": "popular"
+    },
+    {
+      "id": "tag-aa3a435b",
+      "name": "burn",
+      "slug": "burn"
+    },
+    {
+      "id": "tag-857cab04",
+      "name": "favorite",
+      "slug": "favorite"
+    },
+    {
+      "id": "tag-bd6d4fbb",
+      "name": "like",
+      "slug": "like"
+    },
+    {
+      "id": "tag-87b4d0d4",
+      "name": "health",
+      "slug": "health"
+    },
+    {
+      "id": "tag-6c32296c",
+      "name": "vital",
+      "slug": "vital"
+    },
+    {
+      "id": "tag-abcf20be",
+      "name": "ecg",
+      "slug": "ecg"
+    },
+    {
+      "id": "tag-2442ecae",
+      "name": "save",
+      "slug": "save"
+    },
+    {
+      "id": "tag-6aed2391",
+      "name": "mark",
+      "slug": "mark"
+    },
+    {
+      "id": "tag-4a580367",
+      "name": "archive",
+      "slug": "archive"
+    },
+    {
+      "id": "tag-123813a1",
+      "name": "read-later",
+      "slug": "read-later"
+    },
+    {
+      "id": "tag-3dbc19e6",
+      "name": "alert",
+      "slug": "alert"
+    },
+    {
+      "id": "tag-6ec3f9a2",
+      "name": "alarm",
+      "slug": "alarm"
+    },
+    {
+      "id": "tag-988085e2",
+      "name": "ring",
+      "slug": "ring"
+    },
+    {
+      "id": "tag-984c6dc3",
+      "name": "subscribe",
+      "slug": "subscribe"
+    },
+    {
+      "id": "tag-d2172e3c",
+      "name": "ping",
+      "slug": "ping"
+    },
+    {
+      "id": "tag-848b0e35",
+      "name": "nodes",
+      "slug": "nodes"
+    },
+    {
+      "id": "tag-1f4330d7",
+      "name": "social",
+      "slug": "social"
+    },
+    {
+      "id": "tag-4505754b",
+      "name": "export",
+      "slug": "export"
+    },
+    {
+      "id": "tag-b00c10b0",
+      "name": "broadcast",
+      "slug": "broadcast"
+    },
+    {
+      "id": "tag-aae689b2",
+      "name": "distribute",
+      "slug": "distribute"
+    },
+    {
+      "id": "tag-9c41b651",
+      "name": "controls",
+      "slug": "controls"
+    },
+    {
+      "id": "tag-a7d4f719",
+      "name": "tune",
+      "slug": "tune"
+    },
+    {
+      "id": "tag-e1b44ac3",
+      "name": "adjust",
+      "slug": "adjust"
+    },
+    {
+      "id": "tag-24298855",
+      "name": "settings",
+      "slug": "settings"
+    },
+    {
+      "id": "tag-b9c75ea8",
+      "name": "eq",
+      "slug": "eq"
+    },
+    {
+      "id": "tag-0ecd9757",
+      "name": "protect",
+      "slug": "protect"
+    },
+    {
+      "id": "tag-4f9a6bcd",
+      "name": "private",
+      "slug": "private"
+    },
+    {
+      "id": "tag-caed7bad",
+      "name": "auth",
+      "slug": "auth"
+    },
+    {
+      "id": "tag-468397d7",
+      "name": "secret",
+      "slug": "secret"
+    },
+    {
+      "id": "tag-c274f30e",
+      "name": "fetch",
+      "slug": "fetch"
+    },
+    {
+      "id": "tag-6f143458",
+      "name": "storage",
+      "slug": "storage"
+    },
+    {
+      "id": "tag-b7d87bc1",
+      "name": "data",
+      "slug": "data"
+    },
+    {
+      "id": "tag-5e5a777c",
+      "name": "backup",
+      "slug": "backup"
+    },
+    {
+      "id": "tag-1b87a406",
+      "name": "sync",
+      "slug": "sync"
+    },
+    {
+      "id": "tag-49e1d060",
+      "name": "reload",
+      "slug": "reload"
+    },
+    {
+      "id": "tag-d817b307",
+      "name": "repeat",
+      "slug": "repeat"
+    },
+    {
+      "id": "tag-fcc3ac57",
+      "name": "update",
+      "slug": "update"
+    },
+    {
+      "id": "tag-ff25e6d1",
+      "name": "recalculate",
+      "slug": "recalculate"
+    },
+    {
+      "id": "tag-4a018cc8",
+      "name": "success",
+      "slug": "success"
+    },
+    {
+      "id": "tag-f10f5229",
+      "name": "done",
+      "slug": "done"
+    },
+    {
+      "id": "tag-21624977",
+      "name": "approved",
+      "slug": "approved"
+    },
+    {
+      "id": "tag-c2e0d126",
+      "name": "pass",
+      "slug": "pass"
+    },
+    {
+      "id": "tag-c8557c50",
+      "name": "valid",
+      "slug": "valid"
+    },
+    {
+      "id": "tag-01d30ca2",
+      "name": "question",
+      "slug": "question"
+    },
+    {
+      "id": "tag-6f554864",
+      "name": "faq",
+      "slug": "faq"
+    },
+    {
+      "id": "tag-245fff15",
+      "name": "info",
+      "slug": "info"
+    },
+    {
+      "id": "tag-73f6bd5e",
+      "name": "support",
+      "slug": "support"
+    },
+    {
+      "id": "tag-d85c8c11",
+      "name": "hint",
+      "slug": "hint"
+    },
+    {
+      "id": "tag-364ffb48",
+      "name": "react",
+      "slug": "react"
+    },
+    {
+      "id": "tag-46c5c661",
+      "name": "meta",
+      "slug": "meta"
+    },
+    {
+      "id": "tag-aa5bbb49",
+      "name": "frontend",
+      "slug": "frontend"
+    },
+    {
+      "id": "tag-21adbb09",
+      "name": "components",
+      "slug": "components"
+    },
+    {
+      "id": "tag-62c0cdc2",
+      "name": "jsx",
+      "slug": "jsx"
+    },
+    {
+      "id": "tag-560c885a",
+      "name": "typescript",
+      "slug": "typescript"
+    },
+    {
+      "id": "tag-fff070ec",
+      "name": "ts",
+      "slug": "ts"
+    },
+    {
+      "id": "tag-8598c2f5",
+      "name": "microsoft",
+      "slug": "microsoft"
+    },
+    {
+      "id": "tag-393301fa",
+      "name": "typed",
+      "slug": "typed"
+    },
+    {
+      "id": "tag-769b49b6",
+      "name": "javascript",
+      "slug": "javascript"
+    },
+    {
+      "id": "tag-da4f1de9",
+      "name": "python",
+      "slug": "python"
+    },
+    {
+      "id": "tag-86683db3",
+      "name": "django",
+      "slug": "django"
+    },
+    {
+      "id": "tag-4ef0b021",
+      "name": "data-science",
+      "slug": "data-science"
+    },
+    {
+      "id": "tag-f7b2adf5",
+      "name": "backend",
+      "slug": "backend"
+    },
+    {
+      "id": "tag-f322b37a",
+      "name": "rust",
+      "slug": "rust"
+    },
+    {
+      "id": "tag-39eb7b66",
+      "name": "cargo",
+      "slug": "cargo"
+    },
+    {
+      "id": "tag-1c229419",
+      "name": "wasm",
+      "slug": "wasm"
+    },
+    {
+      "id": "tag-a5d4aec0",
+      "name": "systems",
+      "slug": "systems"
+    },
+    {
+      "id": "tag-8f1f5a72",
+      "name": "safe-memory",
+      "slug": "safe-memory"
+    },
+    {
+      "id": "tag-0791c423",
+      "name": "docker",
+      "slug": "docker"
+    },
+    {
+      "id": "tag-325f7aca",
+      "name": "container",
+      "slug": "container"
+    },
+    {
+      "id": "tag-eb6e4780",
+      "name": "whale",
+      "slug": "whale"
+    },
+    {
+      "id": "tag-83140393",
+      "name": "devops",
+      "slug": "devops"
+    },
+    {
+      "id": "tag-3e7a92a8",
+      "name": "kubernetes",
+      "slug": "kubernetes"
+    },
+    {
+      "id": "tag-ac2879ee",
+      "name": "k8s",
+      "slug": "k8s"
+    },
+    {
+      "id": "tag-96059363",
+      "name": "cloud",
+      "slug": "cloud"
+    },
+    {
+      "id": "tag-c5416d65",
+      "name": "cluster",
+      "slug": "cluster"
+    },
+    {
+      "id": "tag-37b1228e",
+      "name": "orchestration",
+      "slug": "orchestration"
+    },
+    {
+      "id": "tag-749bf1d5",
+      "name": "git",
+      "slug": "git"
+    },
+    {
+      "id": "tag-1283e1f7",
+      "name": "github",
+      "slug": "github"
+    },
+    {
+      "id": "tag-1a2d843a",
+      "name": "commit",
+      "slug": "commit"
+    },
+    {
+      "id": "tag-4925c870",
+      "name": "merge",
+      "slug": "merge"
+    },
+    {
+      "id": "tag-8a9e4b83",
+      "name": "vcs",
+      "slug": "vcs"
+    },
+    {
+      "id": "tag-64c679ec",
+      "name": "node",
+      "slug": "node"
+    },
+    {
+      "id": "tag-a1c684cc",
+      "name": "v8",
+      "slug": "v8"
+    },
+    {
+      "id": "tag-a58e4c18",
+      "name": "express",
+      "slug": "express"
+    },
+    {
+      "id": "tag-ff3bcc2f",
+      "name": "graphql",
+      "slug": "graphql"
+    },
+    {
+      "id": "tag-b077e816",
+      "name": "api",
+      "slug": "api"
+    },
+    {
+      "id": "tag-4bb543db",
+      "name": "query",
+      "slug": "query"
+    },
+    {
+      "id": "tag-900a575b",
+      "name": "apollo",
+      "slug": "apollo"
+    },
+    {
+      "id": "tag-4a6dc35e",
+      "name": "schema",
+      "slug": "schema"
+    },
+    {
+      "id": "tag-57a8a3f2",
+      "name": "postgres",
+      "slug": "postgres"
+    },
+    {
+      "id": "tag-afc7f41b",
+      "name": "sql",
+      "slug": "sql"
+    },
+    {
+      "id": "tag-990f89f7",
+      "name": "database",
+      "slug": "database"
+    },
+    {
+      "id": "tag-0bc66711",
+      "name": "rdbms",
+      "slug": "rdbms"
+    },
+    {
+      "id": "tag-38e23cd1",
+      "name": "acid",
+      "slug": "acid"
+    },
+    {
+      "id": "tag-b0d21b87",
+      "name": "vite",
+      "slug": "vite"
+    },
+    {
+      "id": "tag-0fbf1e58",
+      "name": "bundler",
+      "slug": "bundler"
+    },
+    {
+      "id": "tag-4b386568",
+      "name": "esm",
+      "slug": "esm"
+    },
+    {
+      "id": "tag-f0a55671",
+      "name": "html",
+      "slug": "html"
+    },
+    {
+      "id": "tag-8cf5ca0a",
+      "name": "markup",
+      "slug": "markup"
+    },
+    {
+      "id": "tag-f5150e11",
+      "name": "w3c",
+      "slug": "w3c"
+    },
+    {
+      "id": "tag-4d264e95",
+      "name": "semantics",
+      "slug": "semantics"
+    },
+    {
+      "id": "tag-f46ad22a",
+      "name": "web",
+      "slug": "web"
+    },
+    {
+      "id": "tag-54b5de6d",
+      "name": "css",
+      "slug": "css"
+    },
+    {
+      "id": "tag-1ca28311",
+      "name": "styles",
+      "slug": "styles"
+    },
+    {
+      "id": "tag-7c561b8b",
+      "name": "flexbox",
+      "slug": "flexbox"
+    },
+    {
+      "id": "tag-a9cd9c87",
+      "name": "grid",
+      "slug": "grid"
+    },
+    {
+      "id": "tag-a3420bfa",
+      "name": "tailwind",
+      "slug": "tailwind"
+    },
+    {
+      "id": "tag-631cf638",
+      "name": "utility",
+      "slug": "utility"
+    },
+    {
+      "id": "tag-f461980e",
+      "name": "classes",
+      "slug": "classes"
+    },
+    {
+      "id": "tag-e4b9bb1f",
+      "name": "framework",
+      "slug": "framework"
+    },
+    {
+      "id": "tag-35d4c867",
+      "name": "terminal",
+      "slug": "terminal"
+    },
+    {
+      "id": "tag-51a30f09",
+      "name": "bash",
+      "slug": "bash"
+    },
+    {
+      "id": "tag-f31368c5",
+      "name": "console",
+      "slug": "console"
+    },
+    {
+      "id": "tag-553ca531",
+      "name": "cli",
+      "slug": "cli"
+    },
+    {
+      "id": "tag-579bf7ed",
+      "name": "command",
+      "slug": "command"
+    },
+    {
+      "id": "tag-58767228",
+      "name": "mobile",
+      "slug": "mobile"
+    },
+    {
+      "id": "tag-9a7c4d7e",
+      "name": "phone",
+      "slug": "phone"
+    },
+    {
+      "id": "tag-a9fb377e",
+      "name": "ios",
+      "slug": "ios"
+    },
+    {
+      "id": "tag-24ee39a9",
+      "name": "android",
+      "slug": "android"
+    },
+    {
+      "id": "tag-560d4bde",
+      "name": "touch",
+      "slug": "touch"
+    },
+    {
+      "id": "tag-7cb616a4",
+      "name": "server",
+      "slug": "server"
+    },
+    {
+      "id": "tag-cdad92e6",
+      "name": "datacenter",
+      "slug": "datacenter"
+    },
+    {
+      "id": "tag-3314849d",
+      "name": "host",
+      "slug": "host"
+    },
+    {
+      "id": "tag-731990db",
+      "name": "infrastructure",
+      "slug": "infrastructure"
+    },
+    {
+      "id": "tag-bf8fdea6",
+      "name": "processor",
+      "slug": "processor"
+    },
+    {
+      "id": "tag-f97ebe8e",
+      "name": "hardware",
+      "slug": "hardware"
+    },
+    {
+      "id": "tag-5e12d142",
+      "name": "silicon",
+      "slug": "silicon"
+    },
+    {
+      "id": "tag-02e65a86",
+      "name": "core",
+      "slug": "core"
+    },
+    {
+      "id": "tag-756cee57",
+      "name": "intel",
+      "slug": "intel"
+    },
+    {
+      "id": "tag-334b20d3",
+      "name": "tables",
+      "slug": "tables"
+    },
+    {
+      "id": "tag-01b14746",
+      "name": "nosql",
+      "slug": "nosql"
+    },
+    {
+      "id": "tag-051187d6",
+      "name": "ssd",
+      "slug": "ssd"
+    },
+    {
+      "id": "tag-8ba6409c",
+      "name": "disk",
+      "slug": "disk"
+    },
+    {
+      "id": "tag-6a755ad5",
+      "name": "nvme",
+      "slug": "nvme"
+    },
+    {
+      "id": "tag-bd83e948",
+      "name": "memory",
+      "slug": "memory"
+    },
+    {
+      "id": "tag-fd64107f",
+      "name": "read-write",
+      "slug": "read-write"
+    },
+    {
+      "id": "tag-b6e01f1c",
+      "name": "wireless",
+      "slug": "wireless"
+    },
+    {
+      "id": "tag-15452fef",
+      "name": "signal",
+      "slug": "signal"
+    },
+    {
+      "id": "tag-95e794ec",
+      "name": "internet",
+      "slug": "internet"
+    },
+    {
+      "id": "tag-6e063ff1",
+      "name": "network",
+      "slug": "network"
+    },
+    {
+      "id": "tag-aa59edb3",
+      "name": "router",
+      "slug": "router"
+    },
+    {
+      "id": "tag-d032722c",
+      "name": "power",
+      "slug": "power"
+    },
+    {
+      "id": "tag-ee4c5fdb",
+      "name": "energy",
+      "slug": "energy"
+    },
+    {
+      "id": "tag-5ff1e9ca",
+      "name": "electric",
+      "slug": "electric"
+    },
+    {
+      "id": "tag-d1e9ecb8",
+      "name": "charge",
+      "slug": "charge"
+    },
+    {
+      "id": "tag-30f18d46",
+      "name": "capacity",
+      "slug": "capacity"
+    },
+    {
+      "id": "tag-93d3046b",
+      "name": "screen",
+      "slug": "screen"
+    },
+    {
+      "id": "tag-95ef0ea4",
+      "name": "desktop",
+      "slug": "desktop"
+    },
+    {
+      "id": "tag-6052dcc2",
+      "name": "tv",
+      "slug": "tv"
+    },
+    {
+      "id": "tag-4bdf0f39",
+      "name": "display",
+      "slug": "display"
+    },
+    {
+      "id": "tag-eb6c9b55",
+      "name": "panel",
+      "slug": "panel"
+    },
+    {
+      "id": "tag-7554d8f5",
+      "name": "photo",
+      "slug": "photo"
+    },
+    {
+      "id": "tag-40d3e02c",
+      "name": "optics",
+      "slug": "optics"
+    },
+    {
+      "id": "tag-78235b11",
+      "name": "aperture",
+      "slug": "aperture"
+    },
+    {
+      "id": "tag-d432e142",
+      "name": "sensor",
+      "slug": "sensor"
+    },
+    {
+      "id": "tag-f75d23ef",
+      "name": "image",
+      "slug": "image"
+    },
+    {
+      "id": "tag-b2e7eac5",
+      "name": "gaming",
+      "slug": "gaming"
+    },
+    {
+      "id": "tag-b807622f",
+      "name": "joystick",
+      "slug": "joystick"
+    },
+    {
+      "id": "tag-ea5dcb0e",
+      "name": "arcade",
+      "slug": "arcade"
+    },
+    {
+      "id": "tag-27a52c45",
+      "name": "play",
+      "slug": "play"
+    },
+    {
+      "id": "tag-10d3dca2",
+      "name": "controller",
+      "slug": "controller"
+    },
+    {
+      "id": "tag-bd0133e0",
+      "name": "robotics",
+      "slug": "robotics"
+    },
+    {
+      "id": "tag-0129e4c7",
+      "name": "flight",
+      "slug": "flight"
+    },
+    {
+      "id": "tag-5cd17c2b",
+      "name": "camera",
+      "slug": "camera"
+    },
+    {
+      "id": "tag-11fae2e0",
+      "name": "rotor",
+      "slug": "rotor"
+    },
+    {
+      "id": "tag-5e1c32c5",
+      "name": "aerial",
+      "slug": "aerial"
+    },
+    {
+      "id": "tag-bcedc86c",
+      "name": "video",
+      "slug": "video"
+    },
+    {
+      "id": "tag-72756165",
+      "name": "stream",
+      "slug": "stream"
+    },
+    {
+      "id": "tag-1917d0ed",
+      "name": "media",
+      "slug": "media"
+    },
+    {
+      "id": "tag-b144d1cc",
+      "name": "movie",
+      "slug": "movie"
+    },
+    {
+      "id": "tag-72ed8bcc",
+      "name": "audio",
+      "slug": "audio"
+    },
+    {
+      "id": "tag-e16d911c",
+      "name": "equalizer",
+      "slug": "equalizer"
+    },
+    {
+      "id": "tag-0a6296b4",
+      "name": "spectrum",
+      "slug": "spectrum"
+    },
+    {
+      "id": "tag-a4405b8e",
+      "name": "levels",
+      "slug": "levels"
+    },
+    {
+      "id": "tag-3a7c25c8",
+      "name": "sound",
+      "slug": "sound"
+    },
+    {
+      "id": "tag-3b3d49b9",
+      "name": "mic",
+      "slug": "mic"
+    },
+    {
+      "id": "tag-9b0e42aa",
+      "name": "podcast",
+      "slug": "podcast"
+    },
+    {
+      "id": "tag-f7e81ea6",
+      "name": "recording",
+      "slug": "recording"
+    },
+    {
+      "id": "tag-27004d49",
+      "name": "voice",
+      "slug": "voice"
+    },
+    {
+      "id": "tag-f18daf64",
+      "name": "music",
+      "slug": "music"
+    },
+    {
+      "id": "tag-7f2f16b2",
+      "name": "listen",
+      "slug": "listen"
+    },
+    {
+      "id": "tag-fbe50382",
+      "name": "hifi",
+      "slug": "hifi"
+    },
+    {
+      "id": "tag-10d53a97",
+      "name": "bass",
+      "slug": "bass"
+    },
+    {
+      "id": "tag-57626384",
+      "name": "loud",
+      "slug": "loud"
+    },
+    {
+      "id": "tag-822ee09e",
+      "name": "volume",
+      "slug": "volume"
+    },
+    {
+      "id": "tag-c9180066",
+      "name": "speaker",
+      "slug": "speaker"
+    },
+    {
+      "id": "tag-03a53c62",
+      "name": "radio",
+      "slug": "radio"
+    },
+    {
+      "id": "tag-f2c41e5d",
+      "name": "fm",
+      "slug": "fm"
+    },
+    {
+      "id": "tag-3df2c31b",
+      "name": "frequency",
+      "slug": "frequency"
+    },
+    {
+      "id": "tag-fdc3ff58",
+      "name": "cinema",
+      "slug": "cinema"
+    },
+    {
+      "id": "tag-dc66a9b8",
+      "name": "hollywood",
+      "slug": "hollywood"
+    },
+    {
+      "id": "tag-727e78a2",
+      "name": "roll",
+      "slug": "roll"
+    },
+    {
+      "id": "tag-4a68b4dc",
+      "name": "vinyl",
+      "slug": "vinyl"
+    },
+    {
+      "id": "tag-bc91acff",
+      "name": "retro",
+      "slug": "retro"
+    },
+    {
+      "id": "tag-2e3c92d6",
+      "name": "lp",
+      "slug": "lp"
+    },
+    {
+      "id": "tag-b449d1ff",
+      "name": "analog",
+      "slug": "analog"
+    },
+    {
+      "id": "tag-8143cde0",
+      "name": "melody",
+      "slug": "melody"
+    },
+    {
+      "id": "tag-ae92e3b4",
+      "name": "song",
+      "slug": "song"
+    },
+    {
+      "id": "tag-f9fbec30",
+      "name": "clef",
+      "slug": "clef"
+    },
+    {
+      "id": "tag-50f74370",
+      "name": "webcam",
+      "slug": "webcam"
+    },
+    {
+      "id": "tag-8c9b44d8",
+      "name": "call",
+      "slug": "call"
+    },
+    {
+      "id": "tag-632d7bdd",
+      "name": "meeting",
+      "slug": "meeting"
+    },
+    {
+      "id": "tag-52b92ce9",
+      "name": "science",
+      "slug": "science"
+    },
+    {
+      "id": "tag-420570ec",
+      "name": "pharma",
+      "slug": "pharma"
+    },
+    {
+      "id": "tag-6dd002cc",
+      "name": "compound",
+      "slug": "compound"
+    },
+    {
+      "id": "tag-745b4ff8",
+      "name": "drug",
+      "slug": "drug"
+    },
+    {
+      "id": "tag-4c0daec2",
+      "name": "analgesic",
+      "slug": "analgesic"
+    },
+    {
+      "id": "tag-43f5de37",
+      "name": "neuro",
+      "slug": "neuro"
+    },
+    {
+      "id": "tag-02a0557e",
+      "name": "caffeine",
+      "slug": "caffeine"
+    },
+    {
+      "id": "tag-8d941570",
+      "name": "stimulant",
+      "slug": "stimulant"
+    },
+    {
+      "id": "tag-5930f41c",
+      "name": "purine",
+      "slug": "purine"
+    },
+    {
+      "id": "tag-a7555ec1",
+      "name": "dna",
+      "slug": "dna"
+    },
+    {
+      "id": "tag-e8cdf254",
+      "name": "genomics",
+      "slug": "genomics"
+    },
+    {
+      "id": "tag-3a99cc1d",
+      "name": "biology",
+      "slug": "biology"
+    },
+    {
+      "id": "tag-d3c1284c",
+      "name": "helix",
+      "slug": "helix"
+    },
+    {
+      "id": "tag-1c452946",
+      "name": "nucleotide",
+      "slug": "nucleotide"
+    },
+    {
+      "id": "tag-40b82dc0",
+      "name": "brain",
+      "slug": "brain"
+    },
+    {
+      "id": "tag-907d381c",
+      "name": "dopamine",
+      "slug": "dopamine"
+    },
+    {
+      "id": "tag-4071a9ea",
+      "name": "catecholamine",
+      "slug": "catecholamine"
+    },
+    {
+      "id": "tag-5264aac7",
+      "name": "test",
+      "slug": "test"
+    },
+    {
+      "id": "tag-b0180225",
+      "name": "integration",
+      "slug": "integration"
+    },
+    {
+      "id": "tag-01f12ae4",
+      "name": "brands",
+      "slug": "brands"
+    },
+    {
+      "id": "tag-c3e95b7b",
+      "name": "font-awesome",
+      "slug": "font-awesome"
+    },
+    {
+      "id": "tag-c16aff71",
+      "name": "pro",
+      "slug": "pro"
+    },
+    {
+      "id": "tag-c822d1b5",
+      "name": "duotone",
+      "slug": "duotone"
+    },
+    {
+      "id": "tag-79db7e2e",
+      "name": "bolt",
+      "slug": "bolt"
+    },
+    {
+      "id": "tag-446939aa",
+      "name": "light",
+      "slug": "light"
+    },
+    {
+      "id": "tag-ebab23ae",
+      "name": "bell",
+      "slug": "bell"
+    },
+    {
+      "id": "tag-00159e77",
+      "name": "regular",
+      "slug": "regular"
+    },
+    {
+      "id": "tag-fd9dee20",
+      "name": "heart",
+      "slug": "heart"
+    },
+    {
+      "id": "tag-df969a38",
+      "name": "sharp-solid",
+      "slug": "sharp-solid"
+    },
+    {
+      "id": "tag-ec6d497d",
+      "name": "key",
+      "slug": "key"
+    },
+    {
+      "id": "tag-feafa0f0",
+      "name": "solid",
+      "slug": "solid"
+    },
+    {
+      "id": "tag-f5ad180f",
+      "name": "shield",
+      "slug": "shield"
+    },
+    {
+      "id": "tag-08327f18",
+      "name": "check",
+      "slug": "check"
+    },
+    {
+      "id": "tag-a2995a5b",
+      "name": "thin",
+      "slug": "thin"
+    }
+  ],
+  "svg_assets": [
+    {
+      "id": "asset-2081b1fe-1853-48e6-a22b-59f2ea0f2b2d",
+      "name": "Star",
+      "slug": "fa-thin-star",
+      "description": "Font Awesome Pro (thin) icon: Star. Locally owned and verified asset.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 576 512\" fill=\"currentColor\">\n  <!-- Font Awesome Pro Thin Star -->\n  <path d=\"M288 28.5l68.7 139.1 153.5 22.3-111.1 108.3 26.2 152.9-137.3-72.2-137.3 72.2 26.2-152.9L65.8 189.9l153.5-22.3L288 28.5zm0-28.5L200.7 176.8 6 205.1l140.7 137.1L113.5 536 288 444.2 462.5 536l-33.2-193.8L570 205.1l-194.7-28.3L288 0z\"/>\n</svg>",
+      "thumbnail_path": "/thumbnails/fa-thin-star.svg",
+      "collection_id": "col-fa-pro-1791675872406",
+      "category_id": "cat-1",
+      "license_id": "lic-1",
+      "width": 576,
+      "height": 512,
+      "view_box": "0 0 576 512",
+      "file_size": 372,
+      "status": "published",
+      "style": "thin",
+      "source": "font-awesome-pro",
+      "storage_path": "/app/applet/assets/sample-fa-pro/svgs/thin/star.svg",
+      "content_hash": "5ac2cbf84553befa061de306e57f88941e4e42d637799ca93d439c0c31b4bed7",
+      "is_pro": true,
+      "created_at": "2026-10-10T23:44:32.420Z",
+      "updated_at": "2026-10-10T23:44:32.420Z",
+      "published_at": "2026-10-10T23:44:32.420Z"
+    },
+    {
+      "id": "asset-01d15089-d7df-4b85-92cb-c5293c44d416",
+      "name": "Shield Check",
+      "slug": "fa-solid-shield-check",
+      "description": "Font Awesome Pro (solid) icon: Shield Check. Locally owned and verified asset.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 512 512\" fill=\"currentColor\">\n  <!-- Font Awesome Pro Solid Shield Check -->\n  <path d=\"M256 0c4.6 0 9.2 1 13.4 2.9L457.7 82.8c22 9.3 38.4 31 38.3 57.2c-.5 99.2-41.3 280.7-213.6 363.2c-16.7 8-36.1 8-52.8 0C57.3 420.7 16.5 239.2 16 140c-.1-26.2 16.3-47.9 38.3-57.2L242.7 2.9C246.8 1 251.4 0 256 0zm113 185c-9.4-9.4-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0l128-128c9.4-9.4 9.4-24.6 0-33.9z\"/>\n</svg>",
+      "thumbnail_path": "/thumbnails/fa-solid-shield-check.svg",
+      "collection_id": "col-fa-pro-1791675872406",
+      "category_id": "cat-1",
+      "license_id": "lic-1",
+      "width": 512,
+      "height": 512,
+      "view_box": "0 0 512 512",
+      "file_size": 513,
+      "status": "published",
+      "style": "solid",
+      "source": "font-awesome-pro",
+      "storage_path": "/app/applet/assets/sample-fa-pro/svgs/solid/shield-check.svg",
+      "content_hash": "5847e2cf9d7f46e4627d655c8d27b81f9325eb0845aa32ea2b833404c435cac1",
+      "is_pro": true,
+      "created_at": "2026-10-10T23:44:32.419Z",
+      "updated_at": "2026-10-10T23:44:32.419Z",
+      "published_at": "2026-10-10T23:44:32.419Z"
+    },
+    {
+      "id": "asset-21b8e9f7-3345-419a-b552-14b5f1e0ccc0",
+      "name": "Camera",
+      "slug": "fa-solid-camera",
+      "description": "Font Awesome Pro (solid) icon: Camera. Locally owned and verified asset.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 512 512\" fill=\"currentColor\">\n  <!-- Font Awesome Pro Solid Camera -->\n  <path d=\"M149.1 64l-31.1 48L64 112c-35.3 0-64 28.7-64 64L0 400c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-224c0-35.3-28.7-64-64-64l-54 0-31.1-48c-10.7-16.5-29.2-26.4-49.1-26.4L198.2 37.6C178.3 37.6 159.8 47.5 149.1 64zM256 192a96 96 0 1 1 0 192 96 96 0 1 1 0-192z\"/>\n</svg>",
+      "thumbnail_path": "/thumbnails/fa-solid-camera.svg",
+      "collection_id": "col-fa-pro-1791675872406",
+      "category_id": "cat-1",
+      "license_id": "lic-1",
+      "width": 512,
+      "height": 512,
+      "view_box": "0 0 512 512",
+      "file_size": 407,
+      "status": "published",
+      "style": "solid",
+      "source": "font-awesome-pro",
+      "storage_path": "/app/applet/assets/sample-fa-pro/svgs/solid/camera.svg",
+      "content_hash": "521f23872505996a1cfa4a7f0e914a15ae0aeba78a38fb395184b779c84dd214",
+      "is_pro": true,
+      "created_at": "2026-10-10T23:44:32.418Z",
+      "updated_at": "2026-10-10T23:44:32.418Z",
+      "published_at": "2026-10-10T23:44:32.418Z"
+    },
+    {
+      "id": "asset-0730a07a-99dc-43fa-aa34-1991b512fa37",
+      "name": "Key",
+      "slug": "fa-sharp-solid-key",
+      "description": "Font Awesome Pro (sharp-solid) icon: Key. Locally owned and verified asset.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 512 512\" fill=\"currentColor\">\n  <!-- Font Awesome Pro Sharp Solid Key -->\n  <path d=\"M336 0H496L512 16V128L464 176H416V224L368 272H320V320L291.6 348.4C294.5 359.8 296 371.7 296 384C296 454.7 238.7 512 168 512C97.3 512 40 454.7 40 384C40 313.3 97.3 256 168 256C176.6 256 185 256.9 193 258.5L336 115.5V0ZM168 432C194.5 432 216 410.5 216 384C216 357.5 194.5 336 168 336C141.5 336 120 357.5 120 384C120 410.5 141.5 432 168 432Z\"/>\n</svg>",
+      "thumbnail_path": "/thumbnails/fa-sharp-solid-key.svg",
+      "collection_id": "col-fa-pro-1791675872406",
+      "category_id": "cat-1",
+      "license_id": "lic-1",
+      "width": 512,
+      "height": 512,
+      "view_box": "0 0 512 512",
+      "file_size": 487,
+      "status": "published",
+      "style": "sharp-solid",
+      "source": "font-awesome-pro",
+      "storage_path": "/app/applet/assets/sample-fa-pro/svgs/sharp-solid/key.svg",
+      "content_hash": "e1b6d5ec0719df5368a6fb6059624d773207949ec9783f41a58b5be09208f5e6",
+      "is_pro": true,
+      "created_at": "2026-10-10T23:44:32.417Z",
+      "updated_at": "2026-10-10T23:44:32.417Z",
+      "published_at": "2026-10-10T23:44:32.417Z"
+    },
+    {
+      "id": "asset-2357aa86-ff8f-4a93-8164-b873ddbf4fab",
+      "name": "Heart",
+      "slug": "fa-regular-heart",
+      "description": "Font Awesome Pro (regular) icon: Heart. Locally owned and verified asset.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 512 512\" fill=\"currentColor\">\n  <!-- Font Awesome Pro Regular Heart -->\n  <path d=\"M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c8.9 6.3 17.1 13.9 25 22.4 7.9-8.5 16.1-16.1 25-22.4 32.1-22.6 72.4-31.7 111.8-24.1C462 58.7 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.8-30.2 11.8s-22-4.2-30.2-11.8zM256 127c-6.8-9.4-14.7-17.8-23.7-25.1-23.8-19.2-54.7-26.6-84.5-20.2C101.4 90.9 64 136.2 64 189.5v3.3c0 26.2 10.9 51.2 30.1 69l161.9 150.3 161.9-150.3c19.2-17.8 30.1-42.8 30.1-69v-3.3c0-53.3-37.4-98.6-83.8-107.8-29.8-6.4-60.7 1-84.5 20.2-9 7.3-16.9 15.7-23.7 25.1l-10 13.9-10-13.9z\"/>\n</svg>",
+      "thumbnail_path": "/thumbnails/fa-regular-heart.svg",
+      "collection_id": "col-fa-pro-1791675872406",
+      "category_id": "cat-1",
+      "license_id": "lic-1",
+      "width": 512,
+      "height": 512,
+      "view_box": "0 0 512 512",
+      "file_size": 757,
+      "status": "published",
+      "style": "regular",
+      "source": "font-awesome-pro",
+      "storage_path": "/app/applet/assets/sample-fa-pro/svgs/regular/heart.svg",
+      "content_hash": "b698762e3e4238dd472d51f4dc81a232f0d1a0e4a8877ef66695dd1052f523bc",
+      "is_pro": true,
+      "created_at": "2026-10-10T23:44:32.416Z",
+      "updated_at": "2026-10-10T23:44:32.416Z",
+      "published_at": "2026-10-10T23:44:32.416Z"
+    },
+    {
+      "id": "asset-2c59718d-8746-40ed-83b9-38eeca9d4ecf",
+      "name": "Bell",
+      "slug": "fa-light-bell",
+      "description": "Font Awesome Pro (light) icon: Bell. Locally owned and verified asset.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 448 512\" fill=\"currentColor\">\n  <!-- Font Awesome Pro Light Bell -->\n  <path d=\"M224 0c17.7 0 32 14.3 32 32v19.2C344.6 65 416 142.1 416 240v104.9l20.4 40.7c4.6 9.2 4.1 20.1-1.3 28.9s-14.8 14.1-25.1 14.1H38c-10.3 0-19.7-5.3-25.1-14.1s-5.9-19.7-1.3-28.9L32 344.9V240C32 142.1 103.4 65 192 51.2V32c0-17.7 14.3-32 32-32zm160 358.9V240c0-82.7-61.9-149.6-144-159.2-2.7-.3-5.3-.5-8-.5s-5.3.2-8 .5C141.9 90.4 80 157.3 80 240v118.9L64.6 396.6h318.9L384 358.9zM224 512c35.3 0 64-28.7 64-64H160c0 35.3 28.7 64 64 64z\"/>\n</svg>",
+      "thumbnail_path": "/thumbnails/fa-light-bell.svg",
+      "collection_id": "col-fa-pro-1791675872406",
+      "category_id": "cat-1",
+      "license_id": "lic-1",
+      "width": 448,
+      "height": 512,
+      "view_box": "0 0 448 512",
+      "file_size": 569,
+      "status": "published",
+      "style": "light",
+      "source": "font-awesome-pro",
+      "storage_path": "/app/applet/assets/sample-fa-pro/svgs/light/bell.svg",
+      "content_hash": "adb2f1c9c344a8b5cb2e1246851709fd62ecb0bba2396893e3c933a0875bfe56",
+      "is_pro": true,
+      "created_at": "2026-10-10T23:44:32.415Z",
+      "updated_at": "2026-10-10T23:44:32.415Z",
+      "published_at": "2026-10-10T23:44:32.415Z"
+    },
+    {
+      "id": "asset-da2e2886-de3f-4244-bea4-bdc1afaf7540",
+      "name": "Bolt",
+      "slug": "fa-duotone-bolt",
+      "description": "Font Awesome Pro (duotone) icon: Bolt. Locally owned and verified asset.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 448 512\" fill=\"currentColor\">\n  <!-- Font Awesome Pro Duotone Bolt -->\n  <defs>\n    <style>.fa-secondary{opacity:.4}</style>\n  </defs>\n  <path class=\"fa-secondary\" d=\"M349.4 44.3C361.3 54.1 364.5 71 356.9 84.6L240.4 293.7l158.4 22.6c15.2 2.2 26.3 14.8 26.6 30.1s-10.1 28.5-24.8 32.7l-320 91.4C63.8 475.3 45.4 466.8 38 450.9s.4-34.6 15.3-46.7L189.7 274.6 31.3 252c-15.2-2.2-26.3-14.8-26.6-30.1s10.1-28.5 24.8-32.7l320-91.4c16.8-4.8 34.6 3.7 42 19.6z\"/>\n  <path class=\"fa-primary\" d=\"M240.4 293.7L356.9 84.6C364.5 71 361.3 54.1 349.4 44.3c-7.4-15.9-25.2-24.4-42-19.6l-320 91.4c-14.7 4.2-24.5 17.4-24.8 32.7s11.4 27.9 26.6 30.1l158.4 22.6-136.4 129.6c-14.9 12.1-19.7 30.8-15.3 46.7s25.8 24.4 42.6 19.6l320-91.4c14.7-4.2 24.5-17.4 24.8-32.7s-11.4-27.9-26.6-30.1l-158.4-22.6z\"/>\n</svg>",
+      "thumbnail_path": "/thumbnails/fa-duotone-bolt.svg",
+      "collection_id": "col-fa-pro-1791675872406",
+      "category_id": "cat-1",
+      "license_id": "lic-1",
+      "width": 448,
+      "height": 512,
+      "view_box": "0 0 448 512",
+      "file_size": 834,
+      "status": "published",
+      "style": "duotone",
+      "source": "font-awesome-pro",
+      "storage_path": "/app/applet/assets/sample-fa-pro/svgs/duotone/bolt.svg",
+      "content_hash": "ba51a0873438849cdbee9e505580226f29826ddd51511fbc3c444964c8bd02d7",
+      "is_pro": true,
+      "created_at": "2026-10-10T23:44:32.412Z",
+      "updated_at": "2026-10-10T23:44:32.412Z",
+      "published_at": "2026-10-10T23:44:32.412Z"
+    },
+    {
+      "id": "asset-2950f7cd-67ba-41d9-8498-144832f6222d",
+      "name": "Github",
+      "slug": "fa-brands-github",
+      "description": "Font Awesome Pro (brands) icon: Github. Locally owned and verified asset.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 496 512\" fill=\"currentColor\">\n  <!-- Font Awesome Brands GitHub -->\n  <path d=\"M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM248 8C111 8 0 119 0 256c0 110 71.3 203.2 170.2 236.2 12.4 2.3 17-5.4 17-12v-45.2c-69.1 15-83.7-33.3-83.7-33.3-11.3-28.7-27.6-36.4-27.6-36.4-22.6-15.4 1.7-15.1 1.7-15.1 25 1.7 38.2 25.7 38.2 25.7 22.1 38 58 27 72.1 20.7 2.3-16 8.6-27 15.6-33.3-55.2-6.3-113.2-27.6-113.2-122.9 0-27.1 9.7-49.3 25.7-66.7-2.6-6.3-11.1-31.6 2.4-65.9 0 0 20.9-6.7 68.4 25.5 19.8-5.5 41-8.3 62.1-8.4 21.1.1 42.4 2.8 62.2 8.4 47.5-32.2 68.3-25.5 68.3-25.5 13.6 34.3 5.1 59.6 2.5 65.9 16.1 17.4 25.6 39.6 25.6 66.7 0 95.5-58.2 116.5-113.6 122.7 8.9 7.7 16.9 22.8 16.9 46v68.3c0 6.7 4.6 14.4 17.2 12C424.8 459.1 496 366 496 256 496 119 385 8 248 8z\"/>\n</svg>",
+      "thumbnail_path": "/thumbnails/fa-brands-github.svg",
+      "collection_id": "col-fa-pro-1791675872406",
+      "category_id": "cat-1",
+      "license_id": "lic-1",
+      "width": 496,
+      "height": 512,
+      "view_box": "0 0 496 512",
+      "file_size": 1048,
+      "status": "published",
+      "style": "brands",
+      "source": "font-awesome-pro",
+      "storage_path": "/app/applet/assets/sample-fa-pro/svgs/brands/github.svg",
+      "content_hash": "fe39b9cb70e955baa9e327086a43658b0292059f29dc4c3503d52acd48b7c88a",
+      "is_pro": true,
+      "created_at": "2026-10-10T23:44:32.410Z",
+      "updated_at": "2026-10-10T23:44:32.410Z",
+      "published_at": "2026-10-10T23:44:32.410Z"
+    },
+    {
+      "id": "asset-d52870e5-5ee6-46a4-9100-29c11299ec43",
+      "name": "XSS Malicious Test",
+      "slug": "xss-malicious-test",
+      "description": "",
+      "svg_content": "<svg><circle cx=\"10\" cy=\"10\" r=\"5\"/><a href=\"#\">link</a></svg>",
+      "thumbnail_path": "/thumbnails/xss-malicious-test.svg",
+      "collection_id": "col-1",
+      "category_id": "cat-1",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 62,
+      "status": "published",
+      "created_at": "2026-10-10T23:26:25.674Z",
+      "updated_at": "2026-10-10T23:26:25.674Z",
+      "published_at": "2026-10-10T23:26:25.674Z"
+    },
+    {
+      "id": "asset-74be4a1e-7096-4df0-a3a0-25ffd9ade0fa",
+      "name": "Integration Test Node",
+      "slug": "integration-test-node",
+      "description": "Test asset created via public API",
+      "svg_content": "<svg viewBox=\"0 0 24 24\" width=\"24\" height=\"24\"><circle cx=\"12\" cy=\"12\" r=\"10\" fill=\"currentColor\"/></svg>",
+      "thumbnail_path": "/thumbnails/integration-test-node.svg",
+      "collection_id": "col-1",
+      "category_id": "cat-1",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 106,
+      "status": "published",
+      "created_at": "2026-10-10T23:25:57.509Z",
+      "updated_at": "2026-10-10T23:25:57.509Z",
+      "published_at": "2026-10-10T23:25:57.509Z"
+    },
+    {
+      "id": "asset-1001",
+      "name": "Trophy Champion",
+      "slug": "trophy",
+      "description": "High-quality Trophy Champion vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <path d=\"M6 9H4.5a2.5 2.5 0 0 1 0-5H6\" />\n  <path d=\"M18 9h1.5a2.5 2.5 0 0 0 0-5H18\" />\n  <path d=\"M4 22h16\" />\n  <path d=\"M10 14.66V17c0 .55-.45 1-1 1H7v4h10v-4h-2c-.55 0-1-.45-1-1v-2.34\" />\n  <path d=\"M6 4h12v6c0 3.31-2.69 6-6 6s-6-2.69-6-6V4z\" />\n</svg>",
+      "thumbnail_path": "/thumbnails/trophy.svg",
+      "collection_id": "col-1",
+      "category_id": "cat-1",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 440,
+      "status": "published",
+      "created_at": "2026-03-01T00:00:00.000Z",
+      "updated_at": "2026-03-01T00:00:00.000Z",
+      "published_at": "2026-03-01T00:00:00.000Z"
+    },
+    {
+      "id": "asset-1002",
+      "name": "Shield Check",
+      "slug": "shield-check",
+      "description": "High-quality Shield Check vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <path d=\"M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z\" />\n  <path d=\"m9 12 2 2 4-4\" />\n</svg>",
+      "thumbnail_path": "/thumbnails/shield-check.svg",
+      "collection_id": "col-1",
+      "category_id": "cat-1",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 276,
+      "status": "published",
+      "created_at": "2026-03-02T00:00:00.000Z",
+      "updated_at": "2026-03-02T00:00:00.000Z",
+      "published_at": "2026-03-02T00:00:00.000Z"
+    },
+    {
+      "id": "asset-1003",
+      "name": "Sparkles Dynamic",
+      "slug": "sparkles",
+      "description": "High-quality Sparkles Dynamic vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <path d=\"m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3L12 3z\" />\n  <path d=\"M5 3v4\" />\n  <path d=\"M19 17v4\" />\n  <path d=\"M3 5h4\" />\n  <path d=\"M17 19h4\" />\n</svg>",
+      "thumbnail_path": "/thumbnails/sparkles.svg",
+      "collection_id": "col-1",
+      "category_id": "cat-1",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 429,
+      "status": "published",
+      "created_at": "2026-03-03T00:00:00.000Z",
+      "updated_at": "2026-03-03T00:00:00.000Z",
+      "published_at": "2026-03-03T00:00:00.000Z"
+    },
+    {
+      "id": "asset-1004",
+      "name": "Compass Navigation",
+      "slug": "compass",
+      "description": "High-quality Compass Navigation vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <circle cx=\"12\" cy=\"12\" r=\"10\" />\n  <polygon points=\"16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76\" />\n</svg>",
+      "thumbnail_path": "/thumbnails/compass.svg",
+      "collection_id": "col-1",
+      "category_id": "cat-1",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 302,
+      "status": "published",
+      "created_at": "2026-03-04T00:00:00.000Z",
+      "updated_at": "2026-03-04T00:00:00.000Z",
+      "published_at": "2026-03-04T00:00:00.000Z"
+    },
+    {
+      "id": "asset-1005",
+      "name": "Rocket Launch",
+      "slug": "rocket-launch",
+      "description": "High-quality Rocket Launch vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <path d=\"M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z\" />\n  <path d=\"m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-4.05 11a22.4 22.4 0 0 1-3.95 2z\" />\n  <path d=\"m9 12-4.5 4.5\" />\n  <path d=\"m15 6 3 3\" />\n</svg>",
+      "thumbnail_path": "/thumbnails/rocket-launch.svg",
+      "collection_id": "col-1",
+      "category_id": "cat-1",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 462,
+      "status": "published",
+      "created_at": "2026-03-05T00:00:00.000Z",
+      "updated_at": "2026-03-05T00:00:00.000Z",
+      "published_at": "2026-03-05T00:00:00.000Z"
+    },
+    {
+      "id": "asset-1006",
+      "name": "Flame Trending",
+      "slug": "flame",
+      "description": "High-quality Flame Trending vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <path d=\"M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z\" />\n</svg>",
+      "thumbnail_path": "/thumbnails/flame.svg",
+      "collection_id": "col-1",
+      "category_id": "cat-1",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 373,
+      "status": "published",
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "published_at": "2026-03-06T00:00:00.000Z"
+    },
+    {
+      "id": "asset-1007",
+      "name": "Heart Pulse",
+      "slug": "heart-pulse",
+      "description": "High-quality Heart Pulse vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <path d=\"M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z\" />\n  <path d=\"M3.22 12H9.5l1.5-3 2 6 1.5-3h6.28\" />\n</svg>",
+      "thumbnail_path": "/thumbnails/heart-pulse.svg",
+      "collection_id": "col-1",
+      "category_id": "cat-1",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 389,
+      "status": "published",
+      "created_at": "2026-03-07T00:00:00.000Z",
+      "updated_at": "2026-03-07T00:00:00.000Z",
+      "published_at": "2026-03-07T00:00:00.000Z"
+    },
+    {
+      "id": "asset-1008",
+      "name": "Bookmark Star",
+      "slug": "bookmark-star",
+      "description": "High-quality Bookmark Star vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <path d=\"m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z\" />\n  <polygon points=\"12 7 13.09 9.26 15.5 9.58 13.72 11.23 14.18 13.62 12 12.38 9.82 13.62 10.28 11.23 8.5 9.58 10.91 9.26 12 7\" fill=\"currentColor\" fill-opacity=\"0.2\" />\n</svg>",
+      "thumbnail_path": "/thumbnails/bookmark-star.svg",
+      "collection_id": "col-1",
+      "category_id": "cat-1",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 424,
+      "status": "published",
+      "created_at": "2026-03-08T00:00:00.000Z",
+      "updated_at": "2026-03-08T00:00:00.000Z",
+      "published_at": "2026-03-08T00:00:00.000Z"
+    },
+    {
+      "id": "asset-1009",
+      "name": "Bell Notification",
+      "slug": "bell-ring",
+      "description": "High-quality Bell Notification vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <path d=\"M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9\" />\n  <path d=\"M10.3 21a1.94 1.94 0 0 0 3.4 0\" />\n  <path d=\"M4 2C2.8 3.7 2 5.7 2 8\" />\n  <path d=\"M22 8c0-2.3-.8-4.3-2-6\" />\n</svg>",
+      "thumbnail_path": "/thumbnails/bell-ring.svg",
+      "collection_id": "col-1",
+      "category_id": "cat-1",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 367,
+      "status": "published",
+      "created_at": "2026-03-09T00:00:00.000Z",
+      "updated_at": "2026-03-09T00:00:00.000Z",
+      "published_at": "2026-03-09T00:00:00.000Z"
+    },
+    {
+      "id": "asset-1010",
+      "name": "Share Network",
+      "slug": "share-network",
+      "description": "High-quality Share Network vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <circle cx=\"18\" cy=\"5\" r=\"3\" />\n  <circle cx=\"6\" cy=\"12\" r=\"3\" />\n  <circle cx=\"18\" cy=\"19\" r=\"3\" />\n  <line x1=\"8.59\" y1=\"13.51\" x2=\"15.42\" y2=\"17.49\" />\n  <line x1=\"15.41\" y1=\"6.51\" x2=\"8.59\" y2=\"10.49\" />\n</svg>",
+      "thumbnail_path": "/thumbnails/share-network.svg",
+      "collection_id": "col-1",
+      "category_id": "cat-1",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 398,
+      "status": "published",
+      "created_at": "2026-03-10T00:00:00.000Z",
+      "updated_at": "2026-03-10T00:00:00.000Z",
+      "published_at": "2026-03-10T00:00:00.000Z"
+    },
+    {
+      "id": "asset-1011",
+      "name": "Filter Sliders",
+      "slug": "sliders-filter",
+      "description": "High-quality Filter Sliders vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"4\" y1=\"21\" x2=\"4\" y2=\"14\" />\n  <line x1=\"4\" y1=\"10\" x2=\"4\" y2=\"3\" />\n  <line x1=\"12\" y1=\"21\" x2=\"12\" y2=\"12\" />\n  <line x1=\"12\" y1=\"8\" x2=\"12\" y2=\"3\" />\n  <line x1=\"20\" y1=\"21\" x2=\"20\" y2=\"16\" />\n  <line x1=\"20\" y1=\"12\" x2=\"20\" y2=\"3\" />\n  <line x1=\"1\" y1=\"14\" x2=\"7\" y2=\"14\" />\n  <line x1=\"9\" y1=\"8\" x2=\"15\" y2=\"8\" />\n  <line x1=\"17\" y1=\"16\" x2=\"23\" y2=\"16\" />\n</svg>",
+      "thumbnail_path": "/thumbnails/sliders-filter.svg",
+      "collection_id": "col-1",
+      "category_id": "cat-1",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 562,
+      "status": "published",
+      "created_at": "2026-03-11T00:00:00.000Z",
+      "updated_at": "2026-03-11T00:00:00.000Z",
+      "published_at": "2026-03-11T00:00:00.000Z"
+    },
+    {
+      "id": "asset-1012",
+      "name": "Lock Keyhole",
+      "slug": "lock-keyhole",
+      "description": "High-quality Lock Keyhole vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <circle cx=\"12\" cy=\"16\" r=\"1\" />\n  <rect x=\"3\" y=\"11\" width=\"18\" height=\"11\" rx=\"2\" ry=\"2\" />\n  <path d=\"M7 11V7a5 5 0 0 1 10 0v4\" />\n</svg>",
+      "thumbnail_path": "/thumbnails/lock-keyhole.svg",
+      "collection_id": "col-1",
+      "category_id": "cat-1",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 324,
+      "status": "published",
+      "created_at": "2026-03-12T00:00:00.000Z",
+      "updated_at": "2026-03-12T00:00:00.000Z",
+      "published_at": "2026-03-12T00:00:00.000Z"
+    },
+    {
+      "id": "asset-1013",
+      "name": "Cloud Download",
+      "slug": "cloud-download",
+      "description": "High-quality Cloud Download vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <path d=\"M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242\" />\n  <path d=\"M12 12v9\" />\n  <path d=\"m8 17 4 4 4-4\" />\n</svg>",
+      "thumbnail_path": "/thumbnails/cloud-download.svg",
+      "collection_id": "col-1",
+      "category_id": "cat-1",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 313,
+      "status": "published",
+      "created_at": "2026-03-13T00:00:00.000Z",
+      "updated_at": "2026-03-13T00:00:00.000Z",
+      "published_at": "2026-03-13T00:00:00.000Z"
+    },
+    {
+      "id": "asset-1014",
+      "name": "Refresh Loop",
+      "slug": "refresh-loop",
+      "description": "High-quality Refresh Loop vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <path d=\"M3 12a9 9 0 0 1 15-6.7L21 8\" />\n  <path d=\"M21 3v5h-5\" />\n  <path d=\"M21 12a9 9 0 0 1-15 6.7L3 16\" />\n  <path d=\"M3 21v-5h5\" />\n</svg>",
+      "thumbnail_path": "/thumbnails/refresh-loop.svg",
+      "collection_id": "col-1",
+      "category_id": "cat-1",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 327,
+      "status": "published",
+      "created_at": "2026-03-14T00:00:00.000Z",
+      "updated_at": "2026-03-14T00:00:00.000Z",
+      "published_at": "2026-03-14T00:00:00.000Z"
+    },
+    {
+      "id": "asset-1015",
+      "name": "Check Circle",
+      "slug": "check-circle",
+      "description": "High-quality Check Circle vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <path d=\"M22 11.08V12a10 10 0 1 1-5.93-9.14\" />\n  <polyline points=\"22 4 12 14.01 9 11.01\" />\n</svg>",
+      "thumbnail_path": "/thumbnails/check-circle.svg",
+      "collection_id": "col-1",
+      "category_id": "cat-1",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 284,
+      "status": "published",
+      "created_at": "2026-03-15T00:00:00.000Z",
+      "updated_at": "2026-03-15T00:00:00.000Z",
+      "published_at": "2026-03-15T00:00:00.000Z"
+    },
+    {
+      "id": "asset-1016",
+      "name": "Help Circle",
+      "slug": "help-circle",
+      "description": "High-quality Help Circle vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <circle cx=\"12\" cy=\"12\" r=\"10\" />\n  <path d=\"M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3\" />\n  <line x1=\"12\" y1=\"17\" x2=\"12.01\" y2=\"17\" />\n</svg>",
+      "thumbnail_path": "/thumbnails/help-circle.svg",
+      "collection_id": "col-1",
+      "category_id": "cat-1",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 322,
+      "status": "published",
+      "created_at": "2026-03-16T00:00:00.000Z",
+      "updated_at": "2026-03-16T00:00:00.000Z",
+      "published_at": "2026-03-16T00:00:00.000Z"
+    },
+    {
+      "id": "asset-2001",
+      "name": "React Ecosystem",
+      "slug": "react-logo",
+      "description": "High-quality React Ecosystem vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <ellipse cx=\"12\" cy=\"12\" rx=\"10\" ry=\"4\" transform=\"rotate(0 12 12)\" />\n  <ellipse cx=\"12\" cy=\"12\" rx=\"10\" ry=\"4\" transform=\"rotate(60 12 12)\" />\n  <ellipse cx=\"12\" cy=\"12\" rx=\"10\" ry=\"4\" transform=\"rotate(120 12 12)\" />\n  <circle cx=\"12\" cy=\"12\" r=\"2\" fill=\"currentColor\" />\n</svg>",
+      "thumbnail_path": "/thumbnails/react-logo.svg",
+      "collection_id": "col-2",
+      "category_id": "cat-2",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 467,
+      "status": "published",
+      "created_at": "2026-02-10T00:00:00.000Z",
+      "updated_at": "2026-02-10T00:00:00.000Z",
+      "published_at": "2026-02-10T00:00:00.000Z"
+    },
+    {
+      "id": "asset-2002",
+      "name": "TypeScript Emblem",
+      "slug": "typescript-logo",
+      "description": "High-quality TypeScript Emblem vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <rect x=\"2\" y=\"2\" width=\"20\" height=\"20\" rx=\"3\" />\n  <path d=\"M5 8h6\" />\n  <path d=\"M8 8v9\" />\n  <path d=\"M19 10c-.5-.7-1.3-1-2.2-1-1.5 0-2.3.9-2.3 2 0 2.2 4.5 1.5 4.5 4.2 0 1.2-.9 2.2-2.5 2.2-1.3 0-2.2-.6-2.7-1.4\" />\n</svg>",
+      "thumbnail_path": "/thumbnails/typescript-logo.svg",
+      "collection_id": "col-2",
+      "category_id": "cat-2",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 408,
+      "status": "published",
+      "created_at": "2026-02-11T00:00:00.000Z",
+      "updated_at": "2026-02-11T00:00:00.000Z",
+      "published_at": "2026-02-11T00:00:00.000Z"
+    },
+    {
+      "id": "asset-2003",
+      "name": "Python Runtime",
+      "slug": "python-logo",
+      "description": "High-quality Python Runtime vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <path d=\"M11.5 2h-1c-2.5 0-4.5 2-4.5 4.5V9h6V7.5A1.5 1.5 0 0 1 13.5 6H17V4.5C17 3.1 15.9 2 14.5 2h-3z\" />\n  <circle cx=\"8.5\" cy=\"5.5\" r=\"0.75\" fill=\"currentColor\" />\n  <path d=\"M12.5 22h1c2.5 0 4.5-2 4.5-4.5V15h-6v1.5a1.5 1.5 0 0 1-1.5 1.5H7v1.5C7 20.9 8.1 22 9.5 22h3z\" />\n  <circle cx=\"15.5\" cy=\"18.5\" r=\"0.75\" fill=\"currentColor\" />\n</svg>",
+      "thumbnail_path": "/thumbnails/python-logo.svg",
+      "collection_id": "col-2",
+      "category_id": "cat-2",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 528,
+      "status": "published",
+      "created_at": "2026-02-12T00:00:00.000Z",
+      "updated_at": "2026-02-12T00:00:00.000Z",
+      "published_at": "2026-02-12T00:00:00.000Z"
+    },
+    {
+      "id": "asset-2004",
+      "name": "Rust Gear",
+      "slug": "rust-logo",
+      "description": "High-quality Rust Gear vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <circle cx=\"12\" cy=\"12\" r=\"7\" />\n  <path d=\"M12 2v3\" />\n  <path d=\"M12 19v3\" />\n  <path d=\"M2 12h3\" />\n  <path d=\"M19 12h3\" />\n  <path d=\"m4.93 4.93 2.12 2.12\" />\n  <path d=\"m16.95 16.95 2.12 2.12\" />\n  <path d=\"m4.93 19.07 2.12-2.12\" />\n  <path d=\"m16.95 7.05 2.12-2.12\" />\n  <path d=\"M10 10v4l2.5-2z\" fill=\"currentColor\" />\n</svg>",
+      "thumbnail_path": "/thumbnails/rust-logo.svg",
+      "collection_id": "col-2",
+      "category_id": "cat-2",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 518,
+      "status": "published",
+      "created_at": "2026-02-13T00:00:00.000Z",
+      "updated_at": "2026-02-13T00:00:00.000Z",
+      "published_at": "2026-02-13T00:00:00.000Z"
+    },
+    {
+      "id": "asset-2005",
+      "name": "Docker Container",
+      "slug": "docker-whale",
+      "description": "High-quality Docker Container vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <path d=\"M2 14c1.5 2 4.5 4 10 4 6.5 0 9.5-2.5 10-6.5-1.5 0-3-.5-4-2 0 1.5-2 2-3 2H2z\" />\n  <rect x=\"5\" y=\"10\" width=\"2.5\" height=\"2.5\" rx=\"0.5\" />\n  <rect x=\"8.5\" y=\"10\" width=\"2.5\" height=\"2.5\" rx=\"0.5\" />\n  <rect x=\"12\" y=\"10\" width=\"2.5\" height=\"2.5\" rx=\"0.5\" />\n  <rect x=\"8.5\" y=\"6.5\" width=\"2.5\" height=\"2.5\" rx=\"0.5\" />\n  <rect x=\"12\" y=\"6.5\" width=\"2.5\" height=\"2.5\" rx=\"0.5\" />\n</svg>",
+      "thumbnail_path": "/thumbnails/docker-whale.svg",
+      "collection_id": "col-2",
+      "category_id": "cat-2",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 579,
+      "status": "published",
+      "created_at": "2026-02-14T00:00:00.000Z",
+      "updated_at": "2026-02-14T00:00:00.000Z",
+      "published_at": "2026-02-14T00:00:00.000Z"
+    },
+    {
+      "id": "asset-2006",
+      "name": "Kubernetes Helm",
+      "slug": "kubernetes-helm",
+      "description": "High-quality Kubernetes Helm vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <polygon points=\"12 2 21 7 21 17 12 22 3 17 3 7 12 2\" />\n  <circle cx=\"12\" cy=\"12\" r=\"3\" />\n  <line x1=\"12\" y1=\"9\" x2=\"12\" y2=\"2\" />\n  <line x1=\"12\" y1=\"15\" x2=\"12\" y2=\"22\" />\n  <line x1=\"9.5\" y1=\"13.5\" x2=\"3\" y2=\"17\" />\n  <line x1=\"14.5\" y1=\"10.5\" x2=\"21\" y2=\"7\" />\n  <line x1=\"9.5\" y1=\"10.5\" x2=\"3\" y2=\"7\" />\n  <line x1=\"14.5\" y1=\"13.5\" x2=\"21\" y2=\"17\" />\n</svg>",
+      "thumbnail_path": "/thumbnails/kubernetes-helm.svg",
+      "collection_id": "col-2",
+      "category_id": "cat-2",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 550,
+      "status": "published",
+      "created_at": "2026-02-15T00:00:00.000Z",
+      "updated_at": "2026-02-15T00:00:00.000Z",
+      "published_at": "2026-02-15T00:00:00.000Z"
+    },
+    {
+      "id": "asset-2007",
+      "name": "Git Branch Node",
+      "slug": "git-branch",
+      "description": "High-quality Git Branch Node vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"6\" y1=\"3\" x2=\"6\" y2=\"15\" />\n  <circle cx=\"18\" cy=\"6\" r=\"3\" />\n  <circle cx=\"6\" cy=\"18\" r=\"3\" />\n  <path d=\"M18 9a9 9 0 0 1-9 9\" />\n</svg>",
+      "thumbnail_path": "/thumbnails/git-branch.svg",
+      "collection_id": "col-2",
+      "category_id": "cat-2",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 331,
+      "status": "published",
+      "created_at": "2026-02-16T00:00:00.000Z",
+      "updated_at": "2026-02-16T00:00:00.000Z",
+      "published_at": "2026-02-16T00:00:00.000Z"
+    },
+    {
+      "id": "asset-2008",
+      "name": "Node.js Hex",
+      "slug": "nodejs-hex",
+      "description": "High-quality Node.js Hex vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <path d=\"m12 2 9 5.2v10.4L12 23l-9-5.4V7.2L12 2z\" />\n  <path d=\"M8 12.5c0-2.2 1.8-4 4-4s4 1.8 4 4\" />\n  <path d=\"M12 12v6\" />\n</svg>",
+      "thumbnail_path": "/thumbnails/nodejs-hex.svg",
+      "collection_id": "col-2",
+      "category_id": "cat-2",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 318,
+      "status": "published",
+      "created_at": "2026-02-17T00:00:00.000Z",
+      "updated_at": "2026-02-17T00:00:00.000Z",
+      "published_at": "2026-02-17T00:00:00.000Z"
+    },
+    {
+      "id": "asset-2009",
+      "name": "GraphQL Schema",
+      "slug": "graphql-poly",
+      "description": "High-quality GraphQL Schema vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <circle cx=\"12\" cy=\"3\" r=\"2\" />\n  <circle cx=\"19.79\" cy=\"7.5\" r=\"2\" />\n  <circle cx=\"19.79\" cy=\"16.5\" r=\"2\" />\n  <circle cx=\"12\" cy=\"21\" r=\"2\" />\n  <circle cx=\"4.21\" cy=\"16.5\" r=\"2\" />\n  <circle cx=\"4.21\" cy=\"7.5\" r=\"2\" />\n  <polygon points=\"12 5 18.06 8.5 18.06 15.5 12 19 5.94 15.5 5.94 8.5\" />\n</svg>",
+      "thumbnail_path": "/thumbnails/graphql-poly.svg",
+      "collection_id": "col-2",
+      "category_id": "cat-2",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 489,
+      "status": "published",
+      "created_at": "2026-02-18T00:00:00.000Z",
+      "updated_at": "2026-02-18T00:00:00.000Z",
+      "published_at": "2026-02-18T00:00:00.000Z"
+    },
+    {
+      "id": "asset-2010",
+      "name": "PostgreSQL Relational",
+      "slug": "postgresql-db",
+      "description": "High-quality PostgreSQL Relational vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <path d=\"M12 2C6.5 2 2 5.5 2 9.5c0 3.2 2.8 6 7 7.1V21l4-2.5v-2c5.5-.3 9-3.2 9-7 0-4-4.5-7.5-10-7.5z\" />\n  <circle cx=\"8\" cy=\"9\" r=\"1.5\" fill=\"currentColor\" />\n  <circle cx=\"16\" cy=\"9\" r=\"1.5\" fill=\"currentColor\" />\n</svg>",
+      "thumbnail_path": "/thumbnails/postgresql-db.svg",
+      "collection_id": "col-2",
+      "category_id": "cat-2",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 407,
+      "status": "published",
+      "created_at": "2026-02-19T00:00:00.000Z",
+      "updated_at": "2026-02-19T00:00:00.000Z",
+      "published_at": "2026-02-19T00:00:00.000Z"
+    },
+    {
+      "id": "asset-2011",
+      "name": "Vite Lightning",
+      "slug": "vite-bolt",
+      "description": "High-quality Vite Lightning vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <polygon points=\"12 2 3 7 7 21 12 22 17 21 21 7 12 2\" />\n  <polygon points=\"13 4 8 13 13 13 11 20 17 11 12 11 13 4\" fill=\"currentColor\" fill-opacity=\"0.15\" />\n</svg>",
+      "thumbnail_path": "/thumbnails/vite-bolt.svg",
+      "collection_id": "col-2",
+      "category_id": "cat-2",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 351,
+      "status": "published",
+      "created_at": "2026-02-20T00:00:00.000Z",
+      "updated_at": "2026-02-20T00:00:00.000Z",
+      "published_at": "2026-02-20T00:00:00.000Z"
+    },
+    {
+      "id": "asset-2012",
+      "name": "HTML5 Modern Standard",
+      "slug": "html5-shield",
+      "description": "High-quality HTML5 Modern Standard vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <polygon points=\"4 2 20 2 18.5 19 12 22 5.5 19 4 2\" />\n  <path d=\"M8 7h8\" />\n  <path d=\"M8 11h7l-.5 4.5L12 17l-2.5-1.5\" />\n</svg>",
+      "thumbnail_path": "/thumbnails/html5-shield.svg",
+      "collection_id": "col-2",
+      "category_id": "cat-2",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 315,
+      "status": "published",
+      "created_at": "2026-02-21T00:00:00.000Z",
+      "updated_at": "2026-02-21T00:00:00.000Z",
+      "published_at": "2026-02-21T00:00:00.000Z"
+    },
+    {
+      "id": "asset-2013",
+      "name": "CSS3 Stylesheet",
+      "slug": "css3-shield",
+      "description": "High-quality CSS3 Stylesheet vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <polygon points=\"4 2 20 2 18.5 19 12 22 5.5 19 4 2\" />\n  <path d=\"M16 7H8v4h7l-.5 4.5L12 17l-2.5-1.5\" />\n</svg>",
+      "thumbnail_path": "/thumbnails/css3-shield.svg",
+      "collection_id": "col-2",
+      "category_id": "cat-2",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 297,
+      "status": "published",
+      "created_at": "2026-02-22T00:00:00.000Z",
+      "updated_at": "2026-02-22T00:00:00.000Z",
+      "published_at": "2026-02-22T00:00:00.000Z"
+    },
+    {
+      "id": "asset-2014",
+      "name": "Tailwind Waveform",
+      "slug": "tailwind-waves",
+      "description": "High-quality Tailwind Waveform vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <path d=\"M6 14c1.5-2 3.5-3 6-3s4 1 6 3\" />\n  <path d=\"M2 18c2-3 4.5-4.5 8-4.5s5.5 1.5 8 4.5\" />\n  <path d=\"M8 10c1.5-2 3-3 5-3s3.5 1 5 3\" />\n</svg>",
+      "thumbnail_path": "/thumbnails/tailwind-waves.svg",
+      "collection_id": "col-2",
+      "category_id": "cat-2",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 331,
+      "status": "published",
+      "created_at": "2026-02-23T00:00:00.000Z",
+      "updated_at": "2026-02-23T00:00:00.000Z",
+      "published_at": "2026-02-23T00:00:00.000Z"
+    },
+    {
+      "id": "asset-3001",
+      "name": "Terminal CLI Prompt",
+      "slug": "terminal-cli",
+      "description": "High-quality Terminal CLI Prompt vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <polyline points=\"4 17 10 11 4 5\" />\n  <line x1=\"12\" y1=\"19\" x2=\"20\" y2=\"19\" />\n</svg>",
+      "thumbnail_path": "/thumbnails/terminal-cli.svg",
+      "collection_id": "col-3",
+      "category_id": "cat-3",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 270,
+      "status": "published",
+      "created_at": "2026-01-10T00:00:00.000Z",
+      "updated_at": "2026-01-10T00:00:00.000Z",
+      "published_at": "2026-01-10T00:00:00.000Z"
+    },
+    {
+      "id": "asset-3002",
+      "name": "Smartphone Touch",
+      "slug": "smartphone-device",
+      "description": "High-quality Smartphone Touch vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <rect x=\"5\" y=\"2\" width=\"14\" height=\"20\" rx=\"2\" ry=\"2\" />\n  <line x1=\"12\" y1=\"18\" x2=\"12.01\" y2=\"18\" />\n</svg>",
+      "thumbnail_path": "/thumbnails/smartphone-device.svg",
+      "collection_id": "col-3",
+      "category_id": "cat-3",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 294,
+      "status": "published",
+      "created_at": "2026-01-11T00:00:00.000Z",
+      "updated_at": "2026-01-11T00:00:00.000Z",
+      "published_at": "2026-01-11T00:00:00.000Z"
+    },
+    {
+      "id": "asset-3003",
+      "name": "Server Rack Cluster",
+      "slug": "server-rack",
+      "description": "High-quality Server Rack Cluster vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <rect x=\"2\" y=\"2\" width=\"20\" height=\"8\" rx=\"2\" ry=\"2\" />\n  <rect x=\"2\" y=\"14\" width=\"20\" height=\"8\" rx=\"2\" ry=\"2\" />\n  <line x1=\"6\" y1=\"6\" x2=\"6.01\" y2=\"6\" />\n  <line x1=\"6\" y1=\"18\" x2=\"6.01\" y2=\"18\" />\n  <line x1=\"10\" y1=\"6\" x2=\"14\" y2=\"6\" />\n  <line x1=\"10\" y1=\"18\" x2=\"14\" y2=\"18\" />\n</svg>",
+      "thumbnail_path": "/thumbnails/server-rack.svg",
+      "collection_id": "col-3",
+      "category_id": "cat-3",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 477,
+      "status": "published",
+      "created_at": "2026-01-12T00:00:00.000Z",
+      "updated_at": "2026-01-12T00:00:00.000Z",
+      "published_at": "2026-01-12T00:00:00.000Z"
+    },
+    {
+      "id": "asset-3004",
+      "name": "CPU Microchip",
+      "slug": "cpu-chip",
+      "description": "High-quality CPU Microchip vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <rect x=\"4\" y=\"4\" width=\"16\" height=\"16\" rx=\"2\" />\n  <rect x=\"9\" y=\"9\" width=\"6\" height=\"6\" />\n  <line x1=\"9\" y1=\"1\" x2=\"9\" y2=\"4\" />\n  <line x1=\"15\" y1=\"1\" x2=\"15\" y2=\"4\" />\n  <line x1=\"9\" y1=\"20\" x2=\"9\" y2=\"23\" />\n  <line x1=\"15\" y1=\"20\" x2=\"15\" y2=\"23\" />\n  <line x1=\"20\" y1=\"9\" x2=\"23\" y2=\"9\" />\n  <line x1=\"20\" y1=\"15\" x2=\"23\" y2=\"15\" />\n  <line x1=\"1\" y1=\"9\" x2=\"4\" y2=\"9\" />\n  <line x1=\"1\" y1=\"15\" x2=\"4\" y2=\"15\" />\n</svg>",
+      "thumbnail_path": "/thumbnails/cpu-chip.svg",
+      "collection_id": "col-3",
+      "category_id": "cat-3",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 613,
+      "status": "published",
+      "created_at": "2026-01-13T00:00:00.000Z",
+      "updated_at": "2026-01-13T00:00:00.000Z",
+      "published_at": "2026-01-13T00:00:00.000Z"
+    },
+    {
+      "id": "asset-3005",
+      "name": "Database Storage Stack",
+      "slug": "database-stack",
+      "description": "High-quality Database Storage Stack vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <ellipse cx=\"12\" cy=\"5\" rx=\"9\" ry=\"3\" />\n  <path d=\"M21 12c0 1.66-4 3-9 3s-9-1.34-9-3\" />\n  <path d=\"M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5\" />\n</svg>",
+      "thumbnail_path": "/thumbnails/database-stack.svg",
+      "collection_id": "col-3",
+      "category_id": "cat-3",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 331,
+      "status": "published",
+      "created_at": "2026-01-14T00:00:00.000Z",
+      "updated_at": "2026-01-14T00:00:00.000Z",
+      "published_at": "2026-01-14T00:00:00.000Z"
+    },
+    {
+      "id": "asset-3006",
+      "name": "Hard Drive NVMe",
+      "slug": "hard-drive",
+      "description": "High-quality Hard Drive NVMe vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"22\" y1=\"12\" x2=\"2\" y2=\"12\" />\n  <path d=\"M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z\" />\n  <line x1=\"6\" y1=\"16\" x2=\"6.01\" y2=\"16\" />\n  <line x1=\"10\" y1=\"16\" x2=\"10.01\" y2=\"16\" />\n</svg>",
+      "thumbnail_path": "/thumbnails/hard-drive.svg",
+      "collection_id": "col-3",
+      "category_id": "cat-3",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 442,
+      "status": "published",
+      "created_at": "2026-01-15T00:00:00.000Z",
+      "updated_at": "2026-01-15T00:00:00.000Z",
+      "published_at": "2026-01-15T00:00:00.000Z"
+    },
+    {
+      "id": "asset-3007",
+      "name": "WiFi High Broadcast",
+      "slug": "wifi-signal",
+      "description": "High-quality WiFi High Broadcast vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <path d=\"M5 12.55a11 11 0 0 1 14.08 0\" />\n  <path d=\"M1.42 9a16 16 0 0 1 21.16 0\" />\n  <path d=\"M8.53 16.11a6 6 0 0 1 6.95 0\" />\n  <line x1=\"12\" y1=\"20\" x2=\"12.01\" y2=\"20\" />\n</svg>",
+      "thumbnail_path": "/thumbnails/wifi-signal.svg",
+      "collection_id": "col-3",
+      "category_id": "cat-3",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 365,
+      "status": "published",
+      "created_at": "2026-01-16T00:00:00.000Z",
+      "updated_at": "2026-01-16T00:00:00.000Z",
+      "published_at": "2026-01-16T00:00:00.000Z"
+    },
+    {
+      "id": "asset-3008",
+      "name": "Battery Fast Charging",
+      "slug": "battery-charging",
+      "description": "High-quality Battery Fast Charging vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <path d=\"M15 7h1a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-2\" />\n  <path d=\"M6 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h1\" />\n  <line x1=\"11\" y1=\"7\" x2=\"8\" y2=\"12\" />\n  <line x1=\"8\" y1=\"12\" x2=\"13\" y2=\"12\" />\n  <line x1=\"13\" y1=\"12\" x2=\"10\" y2=\"17\" />\n  <line x1=\"22\" y1=\"11\" x2=\"22\" y2=\"13\" />\n</svg>",
+      "thumbnail_path": "/thumbnails/battery-charging.svg",
+      "collection_id": "col-3",
+      "category_id": "cat-3",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 467,
+      "status": "published",
+      "created_at": "2026-01-17T00:00:00.000Z",
+      "updated_at": "2026-01-17T00:00:00.000Z",
+      "published_at": "2026-01-17T00:00:00.000Z"
+    },
+    {
+      "id": "asset-3009",
+      "name": "Monitor Display 4K",
+      "slug": "monitor-display",
+      "description": "High-quality Monitor Display 4K vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <rect x=\"2\" y=\"3\" width=\"20\" height=\"14\" rx=\"2\" />\n  <line x1=\"8\" y1=\"21\" x2=\"16\" y2=\"21\" />\n  <line x1=\"12\" y1=\"17\" x2=\"12\" y2=\"21\" />\n</svg>",
+      "thumbnail_path": "/thumbnails/monitor-display.svg",
+      "collection_id": "col-3",
+      "category_id": "cat-3",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 326,
+      "status": "published",
+      "created_at": "2026-01-18T00:00:00.000Z",
+      "updated_at": "2026-01-18T00:00:00.000Z",
+      "published_at": "2026-01-18T00:00:00.000Z"
+    },
+    {
+      "id": "asset-3010",
+      "name": "Camera Optical Lens",
+      "slug": "camera-lens",
+      "description": "High-quality Camera Optical Lens vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <path d=\"M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z\" />\n  <circle cx=\"12\" cy=\"13\" r=\"4\" />\n</svg>",
+      "thumbnail_path": "/thumbnails/camera-lens.svg",
+      "collection_id": "col-3",
+      "category_id": "cat-3",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 320,
+      "status": "published",
+      "created_at": "2026-01-19T00:00:00.000Z",
+      "updated_at": "2026-01-19T00:00:00.000Z",
+      "published_at": "2026-01-19T00:00:00.000Z"
+    },
+    {
+      "id": "asset-3011",
+      "name": "Gamepad Console",
+      "slug": "gamepad-controller",
+      "description": "High-quality Gamepad Console vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"6\" y1=\"12\" x2=\"10\" y2=\"12\" />\n  <line x1=\"8\" y1=\"10\" x2=\"8\" y2=\"14\" />\n  <line x1=\"15\" y1=\"13\" x2=\"15.01\" y2=\"13\" />\n  <line x1=\"18\" y1=\"11\" x2=\"18.01\" y2=\"11\" />\n  <rect x=\"2\" y=\"6\" width=\"20\" height=\"12\" rx=\"6\" />\n</svg>",
+      "thumbnail_path": "/thumbnails/gamepad-controller.svg",
+      "collection_id": "col-3",
+      "category_id": "cat-3",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 416,
+      "status": "published",
+      "created_at": "2026-01-20T00:00:00.000Z",
+      "updated_at": "2026-01-20T00:00:00.000Z",
+      "published_at": "2026-01-20T00:00:00.000Z"
+    },
+    {
+      "id": "asset-3012",
+      "name": "Drone Autonomous",
+      "slug": "drone-quadcopter",
+      "description": "High-quality Drone Autonomous vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <rect x=\"9\" y=\"9\" width=\"6\" height=\"6\" rx=\"1\" />\n  <line x1=\"9\" y1=\"9\" x2=\"5\" y2=\"5\" />\n  <line x1=\"15\" y1=\"9\" x2=\"19\" y2=\"5\" />\n  <line x1=\"9\" y1=\"15\" x2=\"5\" y2=\"19\" />\n  <line x1=\"15\" y1=\"15\" x2=\"19\" y2=\"19\" />\n  <circle cx=\"4\" cy=\"4\" r=\"2\" />\n  <circle cx=\"20\" cy=\"4\" r=\"2\" />\n  <circle cx=\"4\" cy=\"20\" r=\"2\" />\n  <circle cx=\"20\" cy=\"20\" r=\"2\" />\n</svg>",
+      "thumbnail_path": "/thumbnails/drone-quadcopter.svg",
+      "collection_id": "col-3",
+      "category_id": "cat-3",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 539,
+      "status": "published",
+      "created_at": "2026-01-21T00:00:00.000Z",
+      "updated_at": "2026-01-21T00:00:00.000Z",
+      "published_at": "2026-01-21T00:00:00.000Z"
+    },
+    {
+      "id": "asset-4001",
+      "name": "Play Stream Circle",
+      "slug": "play-circle",
+      "description": "High-quality Play Stream Circle vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <circle cx=\"12\" cy=\"12\" r=\"10\" />\n  <polygon points=\"10 8 16 12 10 16 10 8\" fill=\"currentColor\" fill-opacity=\"0.2\" />\n</svg>",
+      "thumbnail_path": "/thumbnails/play-circle.svg",
+      "collection_id": "col-1",
+      "category_id": "cat-4",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 308,
+      "status": "published",
+      "created_at": "2025-12-01T00:00:00.000Z",
+      "updated_at": "2025-12-01T00:00:00.000Z",
+      "published_at": "2025-12-01T00:00:00.000Z"
+    },
+    {
+      "id": "asset-4002",
+      "name": "Audio Spectrum Wave",
+      "slug": "equalizer-waves",
+      "description": "High-quality Audio Spectrum Wave vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"4\" y1=\"18\" x2=\"4\" y2=\"6\" />\n  <line x1=\"8\" y1=\"21\" x2=\"8\" y2=\"3\" />\n  <line x1=\"12\" y1=\"16\" x2=\"12\" y2=\"8\" />\n  <line x1=\"16\" y1=\"20\" x2=\"16\" y2=\"4\" />\n  <line x1=\"20\" y1=\"15\" x2=\"20\" y2=\"9\" />\n</svg>",
+      "thumbnail_path": "/thumbnails/equalizer-waves.svg",
+      "collection_id": "col-1",
+      "category_id": "cat-4",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 394,
+      "status": "published",
+      "created_at": "2025-12-02T00:00:00.000Z",
+      "updated_at": "2025-12-02T00:00:00.000Z",
+      "published_at": "2025-12-02T00:00:00.000Z"
+    },
+    {
+      "id": "asset-4003",
+      "name": "Studio Condenser Mic",
+      "slug": "studio-microphone",
+      "description": "High-quality Studio Condenser Mic vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <path d=\"M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z\" />\n  <path d=\"M19 10v2a7 7 0 0 1-14 0v-2\" />\n  <line x1=\"12\" y1=\"19\" x2=\"12\" y2=\"23\" />\n  <line x1=\"8\" y1=\"23\" x2=\"16\" y2=\"23\" />\n</svg>",
+      "thumbnail_path": "/thumbnails/studio-microphone.svg",
+      "collection_id": "col-1",
+      "category_id": "cat-4",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 383,
+      "status": "published",
+      "created_at": "2025-12-03T00:00:00.000Z",
+      "updated_at": "2025-12-03T00:00:00.000Z",
+      "published_at": "2025-12-03T00:00:00.000Z"
+    },
+    {
+      "id": "asset-4004",
+      "name": "DJ Monitor Headphones",
+      "slug": "dj-headphones",
+      "description": "High-quality DJ Monitor Headphones vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <path d=\"M3 18v-6a9 9 0 0 1 18 0v6\" />\n  <path d=\"M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z\" />\n</svg>",
+      "thumbnail_path": "/thumbnails/dj-headphones.svg",
+      "collection_id": "col-1",
+      "category_id": "cat-4",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 357,
+      "status": "published",
+      "created_at": "2025-12-04T00:00:00.000Z",
+      "updated_at": "2025-12-04T00:00:00.000Z",
+      "published_at": "2025-12-04T00:00:00.000Z"
+    },
+    {
+      "id": "asset-4005",
+      "name": "Speaker Volume High",
+      "slug": "speaker-volume",
+      "description": "High-quality Speaker Volume High vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <polygon points=\"11 5 6 9 2 9 2 15 6 15 11 19 11 5\" />\n  <path d=\"M15.54 8.46a5 5 0 0 1 0 7.07\" />\n  <path d=\"M19.07 4.93a10 10 0 0 1 0 14.14\" />\n</svg>",
+      "thumbnail_path": "/thumbnails/speaker-volume.svg",
+      "collection_id": "col-1",
+      "category_id": "cat-4",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 336,
+      "status": "published",
+      "created_at": "2025-12-05T00:00:00.000Z",
+      "updated_at": "2025-12-05T00:00:00.000Z",
+      "published_at": "2025-12-05T00:00:00.000Z"
+    },
+    {
+      "id": "asset-4006",
+      "name": "Radio Broadcast Tower",
+      "slug": "radio-antenna",
+      "description": "High-quality Radio Broadcast Tower vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <path d=\"M4.9 19.1C1 15.2 1 8.8 4.9 4.9\" />\n  <path d=\"M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.4\" />\n  <circle cx=\"12\" cy=\"12\" r=\"2\" fill=\"currentColor\" />\n  <path d=\"M16.2 7.8c2.3 2.3 2.3 6.1 0 8.4\" />\n  <path d=\"M19.1 4.9c3.9 3.9 3.9 10.3 0 14.2\" />\n</svg>",
+      "thumbnail_path": "/thumbnails/radio-antenna.svg",
+      "collection_id": "col-1",
+      "category_id": "cat-4",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 433,
+      "status": "published",
+      "created_at": "2025-12-06T00:00:00.000Z",
+      "updated_at": "2025-12-06T00:00:00.000Z",
+      "published_at": "2025-12-06T00:00:00.000Z"
+    },
+    {
+      "id": "asset-4007",
+      "name": "Film Cinema Reel",
+      "slug": "film-reel",
+      "description": "High-quality Film Cinema Reel vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <circle cx=\"12\" cy=\"12\" r=\"10\" />\n  <circle cx=\"12\" cy=\"12\" r=\"3\" />\n  <circle cx=\"7\" cy=\"12\" r=\"1.5\" />\n  <circle cx=\"17\" cy=\"12\" r=\"1.5\" />\n  <circle cx=\"12\" cy=\"7\" r=\"1.5\" />\n  <circle cx=\"12\" cy=\"17\" r=\"1.5\" />\n</svg>",
+      "thumbnail_path": "/thumbnails/film-reel.svg",
+      "collection_id": "col-1",
+      "category_id": "cat-4",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 405,
+      "status": "published",
+      "created_at": "2025-12-07T00:00:00.000Z",
+      "updated_at": "2025-12-07T00:00:00.000Z",
+      "published_at": "2025-12-07T00:00:00.000Z"
+    },
+    {
+      "id": "asset-4008",
+      "name": "Vinyl Album Record",
+      "slug": "vinyl-record",
+      "description": "High-quality Vinyl Album Record vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <circle cx=\"12\" cy=\"12\" r=\"10\" />\n  <circle cx=\"12\" cy=\"12\" r=\"6\" />\n  <circle cx=\"12\" cy=\"12\" r=\"2\" />\n</svg>",
+      "thumbnail_path": "/thumbnails/vinyl-record.svg",
+      "collection_id": "col-1",
+      "category_id": "cat-4",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 294,
+      "status": "published",
+      "created_at": "2025-12-08T00:00:00.000Z",
+      "updated_at": "2025-12-08T00:00:00.000Z",
+      "published_at": "2025-12-08T00:00:00.000Z"
+    },
+    {
+      "id": "asset-4009",
+      "name": "Dual Music Notes",
+      "slug": "music-notes",
+      "description": "High-quality Dual Music Notes vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <path d=\"M9 18V5l12-2v13\" />\n  <circle cx=\"6\" cy=\"18\" r=\"3\" />\n  <circle cx=\"18\" cy=\"16\" r=\"3\" />\n</svg>",
+      "thumbnail_path": "/thumbnails/music-notes.svg",
+      "collection_id": "col-1",
+      "category_id": "cat-4",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 288,
+      "status": "published",
+      "created_at": "2025-12-09T00:00:00.000Z",
+      "updated_at": "2025-12-09T00:00:00.000Z",
+      "published_at": "2025-12-09T00:00:00.000Z"
+    },
+    {
+      "id": "asset-4010",
+      "name": "Webcam Stream Optic",
+      "slug": "webcam-lens",
+      "description": "High-quality Webcam Stream Optic vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <circle cx=\"12\" cy=\"10\" r=\"8\" />\n  <circle cx=\"12\" cy=\"10\" r=\"3\" fill=\"currentColor\" fill-opacity=\"0.2\" />\n  <path d=\"M7 22h10\" />\n  <path d=\"M12 18v4\" />\n</svg>",
+      "thumbnail_path": "/thumbnails/webcam-lens.svg",
+      "collection_id": "col-1",
+      "category_id": "cat-4",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 24 24",
+      "file_size": 345,
+      "status": "published",
+      "created_at": "2025-12-10T00:00:00.000Z",
+      "updated_at": "2025-12-10T00:00:00.000Z",
+      "published_at": "2025-12-10T00:00:00.000Z"
+    },
+    {
+      "id": "asset-5001",
+      "name": "Aspirin (C9H8O4)",
+      "slug": "aspirin-molecule",
+      "description": "High-quality Aspirin (C9H8O4) vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" width=\"100\" height=\"100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <polygon points=\"50,20 76,35 76,65 50,80 24,65 24,35\" stroke=\"currentColor\" />\n  <circle cx=\"50\" cy=\"50\" r=\"14\" stroke=\"currentColor\" stroke-dasharray=\"2 3\" />\n  <line x1=\"76\" y1=\"35\" x2=\"92\" y2=\"25\" />\n  <line x1=\"92\" y1=\"25\" x2=\"92\" y2=\"10\" />\n  <line x1=\"24\" y1=\"65\" x2=\"10\" y2=\"75\" />\n  <text x=\"50\" y=\"53\" text-anchor=\"middle\" font-size=\"8\" font-family=\"monospace\" fill=\"currentColor\" stroke=\"none\">C9H8O4</text>\n</svg>",
+      "thumbnail_path": "/thumbnails/aspirin-molecule.svg",
+      "collection_id": "col-1",
+      "category_id": "cat-5",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 100 100",
+      "file_size": 614,
+      "status": "published",
+      "created_at": "2026-03-01T00:00:00.000Z",
+      "updated_at": "2026-03-01T00:00:00.000Z",
+      "published_at": "2026-03-01T00:00:00.000Z"
+    },
+    {
+      "id": "asset-5002",
+      "name": "Caffeine (C8H10N4O2)",
+      "slug": "caffeine-purine",
+      "description": "High-quality Caffeine (C8H10N4O2) vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" width=\"100\" height=\"100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <polygon points=\"40,25 65,25 78,48 65,70 40,70 28,48\" stroke=\"currentColor\" />\n  <polygon points=\"65,25 88,38 88,60 65,70\" stroke=\"currentColor\" />\n  <circle cx=\"30\" cy=\"48\" r=\"4\" fill=\"currentColor\" />\n  <circle cx=\"75\" cy=\"48\" r=\"4\" fill=\"currentColor\" />\n  <text x=\"53\" y=\"52\" text-anchor=\"middle\" font-size=\"7\" font-family=\"monospace\" fill=\"currentColor\" stroke=\"none\">C8H10N4O2</text>\n</svg>",
+      "thumbnail_path": "/thumbnails/caffeine-purine.svg",
+      "collection_id": "col-1",
+      "category_id": "cat-5",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 100 100",
+      "file_size": 586,
+      "status": "published",
+      "created_at": "2026-03-02T00:00:00.000Z",
+      "updated_at": "2026-03-02T00:00:00.000Z",
+      "published_at": "2026-03-02T00:00:00.000Z"
+    },
+    {
+      "id": "asset-5003",
+      "name": "DNA Double Helix",
+      "slug": "dna-double-helix",
+      "description": "High-quality DNA Double Helix vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" width=\"100\" height=\"100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <path d=\"M25,15 Q50,35 75,50 Q50,65 25,85\" stroke=\"currentColor\" />\n  <path d=\"M75,15 Q50,35 25,50 Q50,65 75,85\" stroke=\"currentColor\" />\n  <line x1=\"32\" y1=\"25\" x2=\"68\" y2=\"25\" stroke-dasharray=\"2 2\" />\n  <line x1=\"42\" y1=\"40\" x2=\"58\" y2=\"40\" />\n  <line x1=\"50\" y1=\"50\" x2=\"50\" y2=\"50\" stroke-width=\"5\" />\n  <line x1=\"42\" y1=\"60\" x2=\"58\" y2=\"60\" />\n  <line x1=\"32\" y1=\"75\" x2=\"68\" y2=\"75\" stroke-dasharray=\"2 2\" />\n</svg>",
+      "thumbnail_path": "/thumbnails/dna-double-helix.svg",
+      "collection_id": "col-1",
+      "category_id": "cat-5",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 100 100",
+      "file_size": 612,
+      "status": "published",
+      "created_at": "2026-03-03T00:00:00.000Z",
+      "updated_at": "2026-03-03T00:00:00.000Z",
+      "published_at": "2026-03-03T00:00:00.000Z"
+    },
+    {
+      "id": "asset-5004",
+      "name": "Dopamine Neurotransmitter",
+      "slug": "dopamine-neuro",
+      "description": "High-quality Dopamine Neurotransmitter vector asset for production web and application interfaces.",
+      "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" width=\"100\" height=\"100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <polygon points=\"35,30 55,30 65,48 55,65 35,65 25,48\" stroke=\"currentColor\" />\n  <line x1=\"65\" y1=\"48\" x2=\"80\" y2=\"48\" />\n  <line x1=\"80\" y1=\"48\" x2=\"90\" y2=\"35\" />\n  <text x=\"45\" y=\"51\" text-anchor=\"middle\" font-size=\"7\" font-family=\"monospace\" fill=\"currentColor\" stroke=\"none\">C8H11NO2</text>\n</svg>",
+      "thumbnail_path": "/thumbnails/dopamine-neuro.svg",
+      "collection_id": "col-1",
+      "category_id": "cat-5",
+      "license_id": "lic-1",
+      "width": 24,
+      "height": 24,
+      "view_box": "0 0 100 100",
+      "file_size": 492,
+      "status": "published",
+      "created_at": "2026-03-04T00:00:00.000Z",
+      "updated_at": "2026-03-04T00:00:00.000Z",
+      "published_at": "2026-03-04T00:00:00.000Z"
+    }
+  ],
+  "svg_asset_tags": [
+    {
+      "asset_id": "asset-1001",
+      "tag_id": "tag-9bbee837"
+    },
+    {
+      "asset_id": "asset-1001",
+      "tag_id": "tag-cbbb5981"
+    },
+    {
+      "asset_id": "asset-1001",
+      "tag_id": "tag-e0b4c708"
+    },
+    {
+      "asset_id": "asset-1001",
+      "tag_id": "tag-80a43f60"
+    },
+    {
+      "asset_id": "asset-1001",
+      "tag_id": "tag-f5b55284"
+    },
+    {
+      "asset_id": "asset-1002",
+      "tag_id": "tag-f4d5d01f"
+    },
+    {
+      "asset_id": "asset-1002",
+      "tag_id": "tag-f7ebb6db"
+    },
+    {
+      "asset_id": "asset-1002",
+      "tag_id": "tag-b95f0031"
+    },
+    {
+      "asset_id": "asset-1002",
+      "tag_id": "tag-32632164"
+    },
+    {
+      "asset_id": "asset-1002",
+      "tag_id": "tag-ed44fd8a"
+    },
+    {
+      "asset_id": "asset-1003",
+      "tag_id": "tag-52b15636"
+    },
+    {
+      "asset_id": "asset-1003",
+      "tag_id": "tag-a63b1201"
+    },
+    {
+      "asset_id": "asset-1003",
+      "tag_id": "tag-59802f71"
+    },
+    {
+      "asset_id": "asset-1003",
+      "tag_id": "tag-d27db020"
+    },
+    {
+      "asset_id": "asset-1003",
+      "tag_id": "tag-81451207"
+    },
+    {
+      "asset_id": "asset-1004",
+      "tag_id": "tag-e4c4b958"
+    },
+    {
+      "asset_id": "asset-1004",
+      "tag_id": "tag-2b42c3ce"
+    },
+    {
+      "asset_id": "asset-1004",
+      "tag_id": "tag-a750018e"
+    },
+    {
+      "asset_id": "asset-1004",
+      "tag_id": "tag-623a2942"
+    },
+    {
+      "asset_id": "asset-1004",
+      "tag_id": "tag-1156f0e7"
+    },
+    {
+      "asset_id": "asset-1005",
+      "tag_id": "tag-02a3c674"
+    },
+    {
+      "asset_id": "asset-1005",
+      "tag_id": "tag-cfef25db"
+    },
+    {
+      "asset_id": "asset-1005",
+      "tag_id": "tag-1c74dedb"
+    },
+    {
+      "asset_id": "asset-1005",
+      "tag_id": "tag-a51ec70c"
+    },
+    {
+      "asset_id": "asset-1005",
+      "tag_id": "tag-64080dc4"
+    },
+    {
+      "asset_id": "asset-1006",
+      "tag_id": "tag-9f5b451d"
+    },
+    {
+      "asset_id": "asset-1006",
+      "tag_id": "tag-896a9db4"
+    },
+    {
+      "asset_id": "asset-1006",
+      "tag_id": "tag-841fe0e8"
+    },
+    {
+      "asset_id": "asset-1006",
+      "tag_id": "tag-5dca59d4"
+    },
+    {
+      "asset_id": "asset-1006",
+      "tag_id": "tag-aa3a435b"
+    },
+    {
+      "asset_id": "asset-1007",
+      "tag_id": "tag-857cab04"
+    },
+    {
+      "asset_id": "asset-1007",
+      "tag_id": "tag-bd6d4fbb"
+    },
+    {
+      "asset_id": "asset-1007",
+      "tag_id": "tag-87b4d0d4"
+    },
+    {
+      "asset_id": "asset-1007",
+      "tag_id": "tag-6c32296c"
+    },
+    {
+      "asset_id": "asset-1007",
+      "tag_id": "tag-abcf20be"
+    },
+    {
+      "asset_id": "asset-1008",
+      "tag_id": "tag-2442ecae"
+    },
+    {
+      "asset_id": "asset-1008",
+      "tag_id": "tag-6aed2391"
+    },
+    {
+      "asset_id": "asset-1008",
+      "tag_id": "tag-857cab04"
+    },
+    {
+      "asset_id": "asset-1008",
+      "tag_id": "tag-4a580367"
+    },
+    {
+      "asset_id": "asset-1008",
+      "tag_id": "tag-123813a1"
+    },
+    {
+      "asset_id": "asset-1009",
+      "tag_id": "tag-3dbc19e6"
+    },
+    {
+      "asset_id": "asset-1009",
+      "tag_id": "tag-6ec3f9a2"
+    },
+    {
+      "asset_id": "asset-1009",
+      "tag_id": "tag-988085e2"
+    },
+    {
+      "asset_id": "asset-1009",
+      "tag_id": "tag-984c6dc3"
+    },
+    {
+      "asset_id": "asset-1009",
+      "tag_id": "tag-d2172e3c"
+    },
+    {
+      "asset_id": "asset-1010",
+      "tag_id": "tag-848b0e35"
+    },
+    {
+      "asset_id": "asset-1010",
+      "tag_id": "tag-1f4330d7"
+    },
+    {
+      "asset_id": "asset-1010",
+      "tag_id": "tag-4505754b"
+    },
+    {
+      "asset_id": "asset-1010",
+      "tag_id": "tag-b00c10b0"
+    },
+    {
+      "asset_id": "asset-1010",
+      "tag_id": "tag-aae689b2"
+    },
+    {
+      "asset_id": "asset-1011",
+      "tag_id": "tag-9c41b651"
+    },
+    {
+      "asset_id": "asset-1011",
+      "tag_id": "tag-a7d4f719"
+    },
+    {
+      "asset_id": "asset-1011",
+      "tag_id": "tag-e1b44ac3"
+    },
+    {
+      "asset_id": "asset-1011",
+      "tag_id": "tag-24298855"
+    },
+    {
+      "asset_id": "asset-1011",
+      "tag_id": "tag-b9c75ea8"
+    },
+    {
+      "asset_id": "asset-1012",
+      "tag_id": "tag-f4d5d01f"
+    },
+    {
+      "asset_id": "asset-1012",
+      "tag_id": "tag-0ecd9757"
+    },
+    {
+      "asset_id": "asset-1012",
+      "tag_id": "tag-4f9a6bcd"
+    },
+    {
+      "asset_id": "asset-1012",
+      "tag_id": "tag-caed7bad"
+    },
+    {
+      "asset_id": "asset-1012",
+      "tag_id": "tag-468397d7"
+    },
+    {
+      "asset_id": "asset-1013",
+      "tag_id": "tag-c274f30e"
+    },
+    {
+      "asset_id": "asset-1013",
+      "tag_id": "tag-2442ecae"
+    },
+    {
+      "asset_id": "asset-1013",
+      "tag_id": "tag-6f143458"
+    },
+    {
+      "asset_id": "asset-1013",
+      "tag_id": "tag-b7d87bc1"
+    },
+    {
+      "asset_id": "asset-1013",
+      "tag_id": "tag-5e5a777c"
+    },
+    {
+      "asset_id": "asset-1014",
+      "tag_id": "tag-1b87a406"
+    },
+    {
+      "asset_id": "asset-1014",
+      "tag_id": "tag-49e1d060"
+    },
+    {
+      "asset_id": "asset-1014",
+      "tag_id": "tag-d817b307"
+    },
+    {
+      "asset_id": "asset-1014",
+      "tag_id": "tag-fcc3ac57"
+    },
+    {
+      "asset_id": "asset-1014",
+      "tag_id": "tag-ff25e6d1"
+    },
+    {
+      "asset_id": "asset-1015",
+      "tag_id": "tag-4a018cc8"
+    },
+    {
+      "asset_id": "asset-1015",
+      "tag_id": "tag-f10f5229"
+    },
+    {
+      "asset_id": "asset-1015",
+      "tag_id": "tag-21624977"
+    },
+    {
+      "asset_id": "asset-1015",
+      "tag_id": "tag-c2e0d126"
+    },
+    {
+      "asset_id": "asset-1015",
+      "tag_id": "tag-c8557c50"
+    },
+    {
+      "asset_id": "asset-1016",
+      "tag_id": "tag-01d30ca2"
+    },
+    {
+      "asset_id": "asset-1016",
+      "tag_id": "tag-6f554864"
+    },
+    {
+      "asset_id": "asset-1016",
+      "tag_id": "tag-245fff15"
+    },
+    {
+      "asset_id": "asset-1016",
+      "tag_id": "tag-73f6bd5e"
+    },
+    {
+      "asset_id": "asset-1016",
+      "tag_id": "tag-d85c8c11"
+    },
+    {
+      "asset_id": "asset-2001",
+      "tag_id": "tag-364ffb48"
+    },
+    {
+      "asset_id": "asset-2001",
+      "tag_id": "tag-46c5c661"
+    },
+    {
+      "asset_id": "asset-2001",
+      "tag_id": "tag-aa5bbb49"
+    },
+    {
+      "asset_id": "asset-2001",
+      "tag_id": "tag-21adbb09"
+    },
+    {
+      "asset_id": "asset-2001",
+      "tag_id": "tag-62c0cdc2"
+    },
+    {
+      "asset_id": "asset-2002",
+      "tag_id": "tag-560c885a"
+    },
+    {
+      "asset_id": "asset-2002",
+      "tag_id": "tag-fff070ec"
+    },
+    {
+      "asset_id": "asset-2002",
+      "tag_id": "tag-8598c2f5"
+    },
+    {
+      "asset_id": "asset-2002",
+      "tag_id": "tag-393301fa"
+    },
+    {
+      "asset_id": "asset-2002",
+      "tag_id": "tag-769b49b6"
+    },
+    {
+      "asset_id": "asset-2003",
+      "tag_id": "tag-da4f1de9"
+    },
+    {
+      "asset_id": "asset-2003",
+      "tag_id": "tag-86683db3"
+    },
+    {
+      "asset_id": "asset-2003",
+      "tag_id": "tag-59802f71"
+    },
+    {
+      "asset_id": "asset-2003",
+      "tag_id": "tag-4ef0b021"
+    },
+    {
+      "asset_id": "asset-2003",
+      "tag_id": "tag-f7b2adf5"
+    },
+    {
+      "asset_id": "asset-2004",
+      "tag_id": "tag-f322b37a"
+    },
+    {
+      "asset_id": "asset-2004",
+      "tag_id": "tag-39eb7b66"
+    },
+    {
+      "asset_id": "asset-2004",
+      "tag_id": "tag-1c229419"
+    },
+    {
+      "asset_id": "asset-2004",
+      "tag_id": "tag-a5d4aec0"
+    },
+    {
+      "asset_id": "asset-2004",
+      "tag_id": "tag-8f1f5a72"
+    },
+    {
+      "asset_id": "asset-2005",
+      "tag_id": "tag-0791c423"
+    },
+    {
+      "asset_id": "asset-2005",
+      "tag_id": "tag-325f7aca"
+    },
+    {
+      "asset_id": "asset-2005",
+      "tag_id": "tag-eb6e4780"
+    },
+    {
+      "asset_id": "asset-2005",
+      "tag_id": "tag-83140393"
+    },
+    {
+      "asset_id": "asset-2005",
+      "tag_id": "tag-3e7a92a8"
+    },
+    {
+      "asset_id": "asset-2006",
+      "tag_id": "tag-ac2879ee"
+    },
+    {
+      "asset_id": "asset-2006",
+      "tag_id": "tag-3e7a92a8"
+    },
+    {
+      "asset_id": "asset-2006",
+      "tag_id": "tag-96059363"
+    },
+    {
+      "asset_id": "asset-2006",
+      "tag_id": "tag-c5416d65"
+    },
+    {
+      "asset_id": "asset-2006",
+      "tag_id": "tag-37b1228e"
+    },
+    {
+      "asset_id": "asset-2007",
+      "tag_id": "tag-749bf1d5"
+    },
+    {
+      "asset_id": "asset-2007",
+      "tag_id": "tag-1283e1f7"
+    },
+    {
+      "asset_id": "asset-2007",
+      "tag_id": "tag-1a2d843a"
+    },
+    {
+      "asset_id": "asset-2007",
+      "tag_id": "tag-4925c870"
+    },
+    {
+      "asset_id": "asset-2007",
+      "tag_id": "tag-8a9e4b83"
+    },
+    {
+      "asset_id": "asset-2008",
+      "tag_id": "tag-64c679ec"
+    },
+    {
+      "asset_id": "asset-2008",
+      "tag_id": "tag-769b49b6"
+    },
+    {
+      "asset_id": "asset-2008",
+      "tag_id": "tag-f7b2adf5"
+    },
+    {
+      "asset_id": "asset-2008",
+      "tag_id": "tag-a1c684cc"
+    },
+    {
+      "asset_id": "asset-2008",
+      "tag_id": "tag-a58e4c18"
+    },
+    {
+      "asset_id": "asset-2009",
+      "tag_id": "tag-ff3bcc2f"
+    },
+    {
+      "asset_id": "asset-2009",
+      "tag_id": "tag-b077e816"
+    },
+    {
+      "asset_id": "asset-2009",
+      "tag_id": "tag-4bb543db"
+    },
+    {
+      "asset_id": "asset-2009",
+      "tag_id": "tag-900a575b"
+    },
+    {
+      "asset_id": "asset-2009",
+      "tag_id": "tag-4a6dc35e"
+    },
+    {
+      "asset_id": "asset-2010",
+      "tag_id": "tag-57a8a3f2"
+    },
+    {
+      "asset_id": "asset-2010",
+      "tag_id": "tag-afc7f41b"
+    },
+    {
+      "asset_id": "asset-2010",
+      "tag_id": "tag-990f89f7"
+    },
+    {
+      "asset_id": "asset-2010",
+      "tag_id": "tag-0bc66711"
+    },
+    {
+      "asset_id": "asset-2010",
+      "tag_id": "tag-38e23cd1"
+    },
+    {
+      "asset_id": "asset-2011",
+      "tag_id": "tag-b0d21b87"
+    },
+    {
+      "asset_id": "asset-2011",
+      "tag_id": "tag-0fbf1e58"
+    },
+    {
+      "asset_id": "asset-2011",
+      "tag_id": "tag-4b386568"
+    },
+    {
+      "asset_id": "asset-2011",
+      "tag_id": "tag-a51ec70c"
+    },
+    {
+      "asset_id": "asset-2011",
+      "tag_id": "tag-aa5bbb49"
+    },
+    {
+      "asset_id": "asset-2012",
+      "tag_id": "tag-f0a55671"
+    },
+    {
+      "asset_id": "asset-2012",
+      "tag_id": "tag-8cf5ca0a"
+    },
+    {
+      "asset_id": "asset-2012",
+      "tag_id": "tag-f5150e11"
+    },
+    {
+      "asset_id": "asset-2012",
+      "tag_id": "tag-4d264e95"
+    },
+    {
+      "asset_id": "asset-2012",
+      "tag_id": "tag-f46ad22a"
+    },
+    {
+      "asset_id": "asset-2013",
+      "tag_id": "tag-54b5de6d"
+    },
+    {
+      "asset_id": "asset-2013",
+      "tag_id": "tag-1ca28311"
+    },
+    {
+      "asset_id": "asset-2013",
+      "tag_id": "tag-7c561b8b"
+    },
+    {
+      "asset_id": "asset-2013",
+      "tag_id": "tag-a9cd9c87"
+    },
+    {
+      "asset_id": "asset-2013",
+      "tag_id": "tag-f46ad22a"
+    },
+    {
+      "asset_id": "asset-2014",
+      "tag_id": "tag-a3420bfa"
+    },
+    {
+      "asset_id": "asset-2014",
+      "tag_id": "tag-54b5de6d"
+    },
+    {
+      "asset_id": "asset-2014",
+      "tag_id": "tag-631cf638"
+    },
+    {
+      "asset_id": "asset-2014",
+      "tag_id": "tag-f461980e"
+    },
+    {
+      "asset_id": "asset-2014",
+      "tag_id": "tag-e4b9bb1f"
+    },
+    {
+      "asset_id": "asset-3001",
+      "tag_id": "tag-35d4c867"
+    },
+    {
+      "asset_id": "asset-3001",
+      "tag_id": "tag-51a30f09"
+    },
+    {
+      "asset_id": "asset-3001",
+      "tag_id": "tag-f31368c5"
+    },
+    {
+      "asset_id": "asset-3001",
+      "tag_id": "tag-553ca531"
+    },
+    {
+      "asset_id": "asset-3001",
+      "tag_id": "tag-579bf7ed"
+    },
+    {
+      "asset_id": "asset-3002",
+      "tag_id": "tag-58767228"
+    },
+    {
+      "asset_id": "asset-3002",
+      "tag_id": "tag-9a7c4d7e"
+    },
+    {
+      "asset_id": "asset-3002",
+      "tag_id": "tag-a9fb377e"
+    },
+    {
+      "asset_id": "asset-3002",
+      "tag_id": "tag-24ee39a9"
+    },
+    {
+      "asset_id": "asset-3002",
+      "tag_id": "tag-560d4bde"
+    },
+    {
+      "asset_id": "asset-3003",
+      "tag_id": "tag-7cb616a4"
+    },
+    {
+      "asset_id": "asset-3003",
+      "tag_id": "tag-c5416d65"
+    },
+    {
+      "asset_id": "asset-3003",
+      "tag_id": "tag-cdad92e6"
+    },
+    {
+      "asset_id": "asset-3003",
+      "tag_id": "tag-3314849d"
+    },
+    {
+      "asset_id": "asset-3003",
+      "tag_id": "tag-731990db"
+    },
+    {
+      "asset_id": "asset-3004",
+      "tag_id": "tag-bf8fdea6"
+    },
+    {
+      "asset_id": "asset-3004",
+      "tag_id": "tag-f97ebe8e"
+    },
+    {
+      "asset_id": "asset-3004",
+      "tag_id": "tag-5e12d142"
+    },
+    {
+      "asset_id": "asset-3004",
+      "tag_id": "tag-02e65a86"
+    },
+    {
+      "asset_id": "asset-3004",
+      "tag_id": "tag-756cee57"
+    },
+    {
+      "asset_id": "asset-3005",
+      "tag_id": "tag-6f143458"
+    },
+    {
+      "asset_id": "asset-3005",
+      "tag_id": "tag-b7d87bc1"
+    },
+    {
+      "asset_id": "asset-3005",
+      "tag_id": "tag-334b20d3"
+    },
+    {
+      "asset_id": "asset-3005",
+      "tag_id": "tag-0bc66711"
+    },
+    {
+      "asset_id": "asset-3005",
+      "tag_id": "tag-01b14746"
+    },
+    {
+      "asset_id": "asset-3006",
+      "tag_id": "tag-051187d6"
+    },
+    {
+      "asset_id": "asset-3006",
+      "tag_id": "tag-8ba6409c"
+    },
+    {
+      "asset_id": "asset-3006",
+      "tag_id": "tag-6a755ad5"
+    },
+    {
+      "asset_id": "asset-3006",
+      "tag_id": "tag-bd83e948"
+    },
+    {
+      "asset_id": "asset-3006",
+      "tag_id": "tag-fd64107f"
+    },
+    {
+      "asset_id": "asset-3007",
+      "tag_id": "tag-b6e01f1c"
+    },
+    {
+      "asset_id": "asset-3007",
+      "tag_id": "tag-15452fef"
+    },
+    {
+      "asset_id": "asset-3007",
+      "tag_id": "tag-95e794ec"
+    },
+    {
+      "asset_id": "asset-3007",
+      "tag_id": "tag-6e063ff1"
+    },
+    {
+      "asset_id": "asset-3007",
+      "tag_id": "tag-aa59edb3"
+    },
+    {
+      "asset_id": "asset-3008",
+      "tag_id": "tag-d032722c"
+    },
+    {
+      "asset_id": "asset-3008",
+      "tag_id": "tag-ee4c5fdb"
+    },
+    {
+      "asset_id": "asset-3008",
+      "tag_id": "tag-5ff1e9ca"
+    },
+    {
+      "asset_id": "asset-3008",
+      "tag_id": "tag-d1e9ecb8"
+    },
+    {
+      "asset_id": "asset-3008",
+      "tag_id": "tag-30f18d46"
+    },
+    {
+      "asset_id": "asset-3009",
+      "tag_id": "tag-93d3046b"
+    },
+    {
+      "asset_id": "asset-3009",
+      "tag_id": "tag-95ef0ea4"
+    },
+    {
+      "asset_id": "asset-3009",
+      "tag_id": "tag-6052dcc2"
+    },
+    {
+      "asset_id": "asset-3009",
+      "tag_id": "tag-4bdf0f39"
+    },
+    {
+      "asset_id": "asset-3009",
+      "tag_id": "tag-eb6c9b55"
+    },
+    {
+      "asset_id": "asset-3010",
+      "tag_id": "tag-7554d8f5"
+    },
+    {
+      "asset_id": "asset-3010",
+      "tag_id": "tag-40d3e02c"
+    },
+    {
+      "asset_id": "asset-3010",
+      "tag_id": "tag-78235b11"
+    },
+    {
+      "asset_id": "asset-3010",
+      "tag_id": "tag-d432e142"
+    },
+    {
+      "asset_id": "asset-3010",
+      "tag_id": "tag-f75d23ef"
+    },
+    {
+      "asset_id": "asset-3011",
+      "tag_id": "tag-b2e7eac5"
+    },
+    {
+      "asset_id": "asset-3011",
+      "tag_id": "tag-b807622f"
+    },
+    {
+      "asset_id": "asset-3011",
+      "tag_id": "tag-ea5dcb0e"
+    },
+    {
+      "asset_id": "asset-3011",
+      "tag_id": "tag-27a52c45"
+    },
+    {
+      "asset_id": "asset-3011",
+      "tag_id": "tag-10d3dca2"
+    },
+    {
+      "asset_id": "asset-3012",
+      "tag_id": "tag-bd0133e0"
+    },
+    {
+      "asset_id": "asset-3012",
+      "tag_id": "tag-0129e4c7"
+    },
+    {
+      "asset_id": "asset-3012",
+      "tag_id": "tag-5cd17c2b"
+    },
+    {
+      "asset_id": "asset-3012",
+      "tag_id": "tag-11fae2e0"
+    },
+    {
+      "asset_id": "asset-3012",
+      "tag_id": "tag-5e1c32c5"
+    },
+    {
+      "asset_id": "asset-4001",
+      "tag_id": "tag-27a52c45"
+    },
+    {
+      "asset_id": "asset-4001",
+      "tag_id": "tag-bcedc86c"
+    },
+    {
+      "asset_id": "asset-4001",
+      "tag_id": "tag-72756165"
+    },
+    {
+      "asset_id": "asset-4001",
+      "tag_id": "tag-1917d0ed"
+    },
+    {
+      "asset_id": "asset-4001",
+      "tag_id": "tag-b144d1cc"
+    },
+    {
+      "asset_id": "asset-4002",
+      "tag_id": "tag-72ed8bcc"
+    },
+    {
+      "asset_id": "asset-4002",
+      "tag_id": "tag-e16d911c"
+    },
+    {
+      "asset_id": "asset-4002",
+      "tag_id": "tag-0a6296b4"
+    },
+    {
+      "asset_id": "asset-4002",
+      "tag_id": "tag-a4405b8e"
+    },
+    {
+      "asset_id": "asset-4002",
+      "tag_id": "tag-3a7c25c8"
+    },
+    {
+      "asset_id": "asset-4003",
+      "tag_id": "tag-3b3d49b9"
+    },
+    {
+      "asset_id": "asset-4003",
+      "tag_id": "tag-9b0e42aa"
+    },
+    {
+      "asset_id": "asset-4003",
+      "tag_id": "tag-f7e81ea6"
+    },
+    {
+      "asset_id": "asset-4003",
+      "tag_id": "tag-27004d49"
+    },
+    {
+      "asset_id": "asset-4003",
+      "tag_id": "tag-3a7c25c8"
+    },
+    {
+      "asset_id": "asset-4004",
+      "tag_id": "tag-72ed8bcc"
+    },
+    {
+      "asset_id": "asset-4004",
+      "tag_id": "tag-f18daf64"
+    },
+    {
+      "asset_id": "asset-4004",
+      "tag_id": "tag-7f2f16b2"
+    },
+    {
+      "asset_id": "asset-4004",
+      "tag_id": "tag-fbe50382"
+    },
+    {
+      "asset_id": "asset-4004",
+      "tag_id": "tag-10d53a97"
+    },
+    {
+      "asset_id": "asset-4005",
+      "tag_id": "tag-72ed8bcc"
+    },
+    {
+      "asset_id": "asset-4005",
+      "tag_id": "tag-57626384"
+    },
+    {
+      "asset_id": "asset-4005",
+      "tag_id": "tag-822ee09e"
+    },
+    {
+      "asset_id": "asset-4005",
+      "tag_id": "tag-3a7c25c8"
+    },
+    {
+      "asset_id": "asset-4005",
+      "tag_id": "tag-c9180066"
+    },
+    {
+      "asset_id": "asset-4006",
+      "tag_id": "tag-b00c10b0"
+    },
+    {
+      "asset_id": "asset-4006",
+      "tag_id": "tag-03a53c62"
+    },
+    {
+      "asset_id": "asset-4006",
+      "tag_id": "tag-f2c41e5d"
+    },
+    {
+      "asset_id": "asset-4006",
+      "tag_id": "tag-9b0e42aa"
+    },
+    {
+      "asset_id": "asset-4006",
+      "tag_id": "tag-3df2c31b"
+    },
+    {
+      "asset_id": "asset-4007",
+      "tag_id": "tag-fdc3ff58"
+    },
+    {
+      "asset_id": "asset-4007",
+      "tag_id": "tag-b144d1cc"
+    },
+    {
+      "asset_id": "asset-4007",
+      "tag_id": "tag-bcedc86c"
+    },
+    {
+      "asset_id": "asset-4007",
+      "tag_id": "tag-dc66a9b8"
+    },
+    {
+      "asset_id": "asset-4007",
+      "tag_id": "tag-727e78a2"
+    },
+    {
+      "asset_id": "asset-4008",
+      "tag_id": "tag-4a68b4dc"
+    },
+    {
+      "asset_id": "asset-4008",
+      "tag_id": "tag-bc91acff"
+    },
+    {
+      "asset_id": "asset-4008",
+      "tag_id": "tag-f18daf64"
+    },
+    {
+      "asset_id": "asset-4008",
+      "tag_id": "tag-2e3c92d6"
+    },
+    {
+      "asset_id": "asset-4008",
+      "tag_id": "tag-b449d1ff"
+    },
+    {
+      "asset_id": "asset-4009",
+      "tag_id": "tag-f18daf64"
+    },
+    {
+      "asset_id": "asset-4009",
+      "tag_id": "tag-8143cde0"
+    },
+    {
+      "asset_id": "asset-4009",
+      "tag_id": "tag-ae92e3b4"
+    },
+    {
+      "asset_id": "asset-4009",
+      "tag_id": "tag-72ed8bcc"
+    },
+    {
+      "asset_id": "asset-4009",
+      "tag_id": "tag-f9fbec30"
+    },
+    {
+      "asset_id": "asset-4010",
+      "tag_id": "tag-50f74370"
+    },
+    {
+      "asset_id": "asset-4010",
+      "tag_id": "tag-bcedc86c"
+    },
+    {
+      "asset_id": "asset-4010",
+      "tag_id": "tag-8c9b44d8"
+    },
+    {
+      "asset_id": "asset-4010",
+      "tag_id": "tag-632d7bdd"
+    },
+    {
+      "asset_id": "asset-4010",
+      "tag_id": "tag-72756165"
+    },
+    {
+      "asset_id": "asset-5001",
+      "tag_id": "tag-52b92ce9"
+    },
+    {
+      "asset_id": "asset-5001",
+      "tag_id": "tag-420570ec"
+    },
+    {
+      "asset_id": "asset-5001",
+      "tag_id": "tag-6dd002cc"
+    },
+    {
+      "asset_id": "asset-5001",
+      "tag_id": "tag-745b4ff8"
+    },
+    {
+      "asset_id": "asset-5001",
+      "tag_id": "tag-4c0daec2"
+    },
+    {
+      "asset_id": "asset-5002",
+      "tag_id": "tag-52b92ce9"
+    },
+    {
+      "asset_id": "asset-5002",
+      "tag_id": "tag-43f5de37"
+    },
+    {
+      "asset_id": "asset-5002",
+      "tag_id": "tag-02a0557e"
+    },
+    {
+      "asset_id": "asset-5002",
+      "tag_id": "tag-8d941570"
+    },
+    {
+      "asset_id": "asset-5002",
+      "tag_id": "tag-5930f41c"
+    },
+    {
+      "asset_id": "asset-5003",
+      "tag_id": "tag-a7555ec1"
+    },
+    {
+      "asset_id": "asset-5003",
+      "tag_id": "tag-e8cdf254"
+    },
+    {
+      "asset_id": "asset-5003",
+      "tag_id": "tag-3a99cc1d"
+    },
+    {
+      "asset_id": "asset-5003",
+      "tag_id": "tag-d3c1284c"
+    },
+    {
+      "asset_id": "asset-5003",
+      "tag_id": "tag-1c452946"
+    },
+    {
+      "asset_id": "asset-5004",
+      "tag_id": "tag-43f5de37"
+    },
+    {
+      "asset_id": "asset-5004",
+      "tag_id": "tag-52b92ce9"
+    },
+    {
+      "asset_id": "asset-5004",
+      "tag_id": "tag-40b82dc0"
+    },
+    {
+      "asset_id": "asset-5004",
+      "tag_id": "tag-907d381c"
+    },
+    {
+      "asset_id": "asset-5004",
+      "tag_id": "tag-4071a9ea"
+    },
+    {
+      "asset_id": "asset-74be4a1e-7096-4df0-a3a0-25ffd9ade0fa",
+      "tag_id": "tag-5264aac7"
+    },
+    {
+      "asset_id": "asset-74be4a1e-7096-4df0-a3a0-25ffd9ade0fa",
+      "tag_id": "tag-b0180225"
+    },
+    {
+      "asset_id": "asset-2950f7cd-67ba-41d9-8498-144832f6222d",
+      "tag_id": "tag-01f12ae4"
+    },
+    {
+      "asset_id": "asset-2950f7cd-67ba-41d9-8498-144832f6222d",
+      "tag_id": "tag-c3e95b7b"
+    },
+    {
+      "asset_id": "asset-2950f7cd-67ba-41d9-8498-144832f6222d",
+      "tag_id": "tag-c16aff71"
+    },
+    {
+      "asset_id": "asset-2950f7cd-67ba-41d9-8498-144832f6222d",
+      "tag_id": "tag-1283e1f7"
+    },
+    {
+      "asset_id": "asset-da2e2886-de3f-4244-bea4-bdc1afaf7540",
+      "tag_id": "tag-c822d1b5"
+    },
+    {
+      "asset_id": "asset-da2e2886-de3f-4244-bea4-bdc1afaf7540",
+      "tag_id": "tag-c3e95b7b"
+    },
+    {
+      "asset_id": "asset-da2e2886-de3f-4244-bea4-bdc1afaf7540",
+      "tag_id": "tag-c16aff71"
+    },
+    {
+      "asset_id": "asset-da2e2886-de3f-4244-bea4-bdc1afaf7540",
+      "tag_id": "tag-79db7e2e"
+    },
+    {
+      "asset_id": "asset-2c59718d-8746-40ed-83b9-38eeca9d4ecf",
+      "tag_id": "tag-446939aa"
+    },
+    {
+      "asset_id": "asset-2c59718d-8746-40ed-83b9-38eeca9d4ecf",
+      "tag_id": "tag-c3e95b7b"
+    },
+    {
+      "asset_id": "asset-2c59718d-8746-40ed-83b9-38eeca9d4ecf",
+      "tag_id": "tag-c16aff71"
+    },
+    {
+      "asset_id": "asset-2c59718d-8746-40ed-83b9-38eeca9d4ecf",
+      "tag_id": "tag-ebab23ae"
+    },
+    {
+      "asset_id": "asset-2357aa86-ff8f-4a93-8164-b873ddbf4fab",
+      "tag_id": "tag-00159e77"
+    },
+    {
+      "asset_id": "asset-2357aa86-ff8f-4a93-8164-b873ddbf4fab",
+      "tag_id": "tag-c3e95b7b"
+    },
+    {
+      "asset_id": "asset-2357aa86-ff8f-4a93-8164-b873ddbf4fab",
+      "tag_id": "tag-c16aff71"
+    },
+    {
+      "asset_id": "asset-2357aa86-ff8f-4a93-8164-b873ddbf4fab",
+      "tag_id": "tag-fd9dee20"
+    },
+    {
+      "asset_id": "asset-0730a07a-99dc-43fa-aa34-1991b512fa37",
+      "tag_id": "tag-df969a38"
+    },
+    {
+      "asset_id": "asset-0730a07a-99dc-43fa-aa34-1991b512fa37",
+      "tag_id": "tag-c3e95b7b"
+    },
+    {
+      "asset_id": "asset-0730a07a-99dc-43fa-aa34-1991b512fa37",
+      "tag_id": "tag-c16aff71"
+    },
+    {
+      "asset_id": "asset-0730a07a-99dc-43fa-aa34-1991b512fa37",
+      "tag_id": "tag-ec6d497d"
+    },
+    {
+      "asset_id": "asset-21b8e9f7-3345-419a-b552-14b5f1e0ccc0",
+      "tag_id": "tag-feafa0f0"
+    },
+    {
+      "asset_id": "asset-21b8e9f7-3345-419a-b552-14b5f1e0ccc0",
+      "tag_id": "tag-c3e95b7b"
+    },
+    {
+      "asset_id": "asset-21b8e9f7-3345-419a-b552-14b5f1e0ccc0",
+      "tag_id": "tag-c16aff71"
+    },
+    {
+      "asset_id": "asset-21b8e9f7-3345-419a-b552-14b5f1e0ccc0",
+      "tag_id": "tag-5cd17c2b"
+    },
+    {
+      "asset_id": "asset-01d15089-d7df-4b85-92cb-c5293c44d416",
+      "tag_id": "tag-feafa0f0"
+    },
+    {
+      "asset_id": "asset-01d15089-d7df-4b85-92cb-c5293c44d416",
+      "tag_id": "tag-c3e95b7b"
+    },
+    {
+      "asset_id": "asset-01d15089-d7df-4b85-92cb-c5293c44d416",
+      "tag_id": "tag-c16aff71"
+    },
+    {
+      "asset_id": "asset-01d15089-d7df-4b85-92cb-c5293c44d416",
+      "tag_id": "tag-f5ad180f"
+    },
+    {
+      "asset_id": "asset-01d15089-d7df-4b85-92cb-c5293c44d416",
+      "tag_id": "tag-08327f18"
+    },
+    {
+      "asset_id": "asset-2081b1fe-1853-48e6-a22b-59f2ea0f2b2d",
+      "tag_id": "tag-a2995a5b"
+    },
+    {
+      "asset_id": "asset-2081b1fe-1853-48e6-a22b-59f2ea0f2b2d",
+      "tag_id": "tag-c3e95b7b"
+    },
+    {
+      "asset_id": "asset-2081b1fe-1853-48e6-a22b-59f2ea0f2b2d",
+      "tag_id": "tag-c16aff71"
+    },
+    {
+      "asset_id": "asset-2081b1fe-1853-48e6-a22b-59f2ea0f2b2d",
+      "tag_id": "tag-a63b1201"
+    }
+  ]
+}

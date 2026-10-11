@@ -1,0 +1,305 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --glass-bg: rgba(255, 255, 255, 0.92);
+    --glass-border: rgba(203, 213, 225, 0.88);
+    --glass-border-subtle: rgba(226, 232, 240, 0.95);
+    --glass-shine: rgba(255, 255, 255, 0.98);
+    --glass-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.08), 0 2px 6px -1px rgba(15, 23, 42, 0.04);
+    --glass-inner-shadow: inset 0 1px 1.5px 0 rgba(255, 255, 255, 1);
+  }
+
+  .dark {
+    --glass-bg: rgba(13, 17, 28, 0.88);
+    --glass-border: rgba(255, 255, 255, 0.14);
+    --glass-border-subtle: rgba(255, 255, 255, 0.08);
+    --glass-shine: rgba(255, 255, 255, 0.25);
+    --glass-shadow: 0 16px 40px -6px rgba(0, 0, 0, 0.6), 0 2px 8px -1px rgba(0, 0, 0, 0.4);
+    --glass-inner-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.16);
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-feature-settings: "tnum" 1;
+  }
+}
+
+/* ============================================================
+   Apple Liquid Glass & shadcn-ui-glass Design System Utilities
+   ============================================================ */
+
+/* Liquid Glass Ambient Backing Canvas */
+.liquid-mesh-bg {
+  background-image: 
+    radial-gradient(circle at 15% 15%, rgba(99, 102, 241, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 85% 15%, rgba(16, 185, 129, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 50% 50%, rgba(14, 165, 233, 0.06) 0%, transparent 50%),
+    radial-gradient(circle at 80% 85%, rgba(168, 85, 247, 0.07) 0%, transparent 45%),
+    radial-gradient(circle at 15% 85%, rgba(245, 158, 11, 0.06) 0%, transparent 40%);
+}
+
+.dark .liquid-mesh-bg {
+  background-image: 
+    radial-gradient(circle at 20% 15%, rgba(99, 102, 241, 0.18) 0%, transparent 45%),
+    radial-gradient(circle at 85% 20%, rgba(16, 185, 129, 0.14) 0%, transparent 45%),
+    radial-gradient(circle at 50% 55%, rgba(14, 165, 233, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 80% 85%, rgba(168, 85, 247, 0.14) 0%, transparent 45%),
+    radial-gradient(circle at 15% 80%, rgba(16, 185, 129, 0.1) 0%, transparent 40%);
+}
+
+/* Apple Liquid Glass Panels & Containers */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(24px) saturate(190%);
+  -webkit-backdrop-filter: blur(24px) saturate(190%);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow), var(--glass-inner-shadow);
+}
+
+/* Apple Liquid Glass Cards */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow), var(--glass-inner-shadow);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card-interactive {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card-interactive:hover {
+  transform: translateY(-2px);
+  border-color: rgba(16, 185, 129, 0.6);
+  box-shadow: 0 16px 36px -4px rgba(16, 185, 129, 0.16), inset 0 1px 2px 0 rgba(255, 255, 255, 0.95);
+}
+
+.dark .glass-card-interactive:hover {
+  border-color: rgba(16, 185, 129, 0.65);
+  box-shadow: 0 20px 40px -4px rgba(0, 0, 0, 0.6), inset 0 1px 2px 0 rgba(255, 255, 255, 0.25);
+}
+
+/* Apple Liquid Glass Buttons */
+.glass-btn {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  border: 1px solid rgba(203, 213, 225, 0.9);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05), inset 0 1px 1px rgba(255, 255, 255, 0.95);
+  transition: all 0.16s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dark .glass-btn {
+  background: rgba(26, 32, 48, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.18);
+}
+
+.glass-btn:hover {
+  background: #ffffff;
+  border-color: rgba(148, 163, 184, 0.95);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), inset 0 1px 1px #ffffff;
+}
+
+.dark .glass-btn:hover {
+  background: rgba(38, 46, 68, 0.92);
+  border-color: rgba(255, 255, 255, 0.28);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.28);
+}
+
+.glass-btn:active {
+  transform: scale(0.97);
+}
+
+/* Apple Liquid Glass Primary Pill Button */
+.glass-btn-primary {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.4);
+  transition: all 0.16s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dark .glass-btn-primary {
+  background: linear-gradient(135deg, #ffffff, #f1f5f9);
+  color: #09090b;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.22), inset 0 1px 1px rgba(255, 255, 255, 1);
+}
+
+.glass-btn-primary:hover {
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.28), inset 0 1px 1px rgba(255, 255, 255, 0.5);
+  transform: translateY(-1px);
+}
+
+.dark .glass-btn-primary:hover {
+  box-shadow: 0 6px 24px rgba(255, 255, 255, 0.38), inset 0 1px 1px #ffffff;
+  transform: translateY(-1px);
+}
+
+.glass-btn-primary:active {
+  transform: scale(0.97);
+}
+
+/* Apple Liquid Glass Input */
+.glass-input {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(203, 213, 225, 0.95);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.03), 0 1px 2px rgba(0, 0, 0, 0.02);
+  transition: all 0.18s ease;
+}
+
+.dark .glass-input {
+  background: rgba(15, 20, 32, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.glass-input:focus {
+  background: #ffffff;
+  border-color: rgba(16, 185, 129, 0.9);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2), inset 0 1px 1px #ffffff;
+}
+
+.dark .glass-input:focus {
+  background: rgba(20, 26, 42, 0.92);
+  border-color: rgba(16, 185, 129, 0.75);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.18);
+}
+
+/* Liquid Glass Specular Sheen */
+.liquid-sheen {
+  position: relative;
+}
+
+.liquid-sheen::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.85) 50%, transparent 100%);
+  pointer-events: none;
+}
+
+.dark .liquid-sheen::after {
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.28) 50%, transparent 100%);
+}
+
+/* ============================================================
+   SVG Auto-Fit Engine for Preview Boxes, Cards & Viewports
+   Ensures any SVG automatically scales to fit its preview box,
+   centers itself, preserves aspect ratio, and never overflows
+   ============================================================ */
+
+.svg-auto-fit {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+}
+
+.svg-auto-fit svg,
+.svg-fit-stage svg,
+.svg-preview-box svg {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+  display: block !important;
+  margin: auto !important;
+  transform-origin: center center !important;
+  overflow: visible !important;
+}
+
+/* Responsive Table Wrapper with Touch Momentum */
+.responsive-table-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+}
+
+/* Developer-tool checkerboard background for SVG transparency preview */
+.bg-checkerboard-light {
+  background-color: #ffffff;
+  background-image:
+    linear-gradient(45deg, #e2e8f0 25%, transparent 25%),
+    linear-gradient(-45deg, #e2e8f0 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #e2e8f0 75%),
+    linear-gradient(-45deg, transparent 75%, #e2e8f0 75%);
+  background-size: 14px 14px;
+  background-position: 0 0, 0 7px, 7px -7px, -7px 0;
+}
+
+.bg-checkerboard-dark {
+  background-color: #0b0f19;
+  background-image:
+    linear-gradient(45deg, #172033 25%, transparent 25%),
+    linear-gradient(-45deg, #172033 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #172033 75%),
+    linear-gradient(-45deg, transparent 75%, #172033 75%);
+  background-size: 14px 14px;
+  background-position: 0 0, 0 7px, 7px -7px, -7px 0;
+}
+
+/* Grid preview pattern */
+.bg-grid-subtle {
+  background-size: 20px 20px;
+  background-image:
+    linear-gradient(to right, rgba(203, 213, 225, 0.7) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(203, 213, 225, 0.7) 1px, transparent 1px);
+}
+
+.dark .bg-grid-subtle {
+  background-image:
+    linear-gradient(to right, rgba(51, 65, 85, 0.4) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(51, 65, 85, 0.4) 1px, transparent 1px);
+}
+
+/* Sleek Apple-style scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.45);
+  border-radius: 9999px;
+  backdrop-filter: blur(8px);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.7);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.35);
+}

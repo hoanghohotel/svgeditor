@@ -1,4 +1,5 @@
 import 'dotenv/config';
+import {createServer as createHttpServer} from 'http';
 import express from 'express';
 import cookieParser from 'cookie-parser';
 import { apiRouter } from './src/server/api.ts';
@@ -12,6 +13,7 @@ async function startServer() {
   const app = express();
   const PORT = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
   const isProd = process.env.NODE_ENV === 'production';
+  const httpServer = createHttpServer(app);
 
   // Body parsing and cookies
   app.use(express.json({ limit: '5mb' }));
@@ -30,7 +32,10 @@ async function startServer() {
     // Mount Vite dev server in middleware mode
     const { createServer: createViteServer } = await import('vite');
     const vite = await createViteServer({
-      server: { middlewareMode: true },
+      server: {
+        middlewareMode: true,
+        hmr: process.env.DISABLE_HMR === 'true' ? false : {server: httpServer},
+      },
       appType: 'spa',
     });
 
@@ -45,7 +50,7 @@ async function startServer() {
     });
   }
 
-  app.listen(PORT, '0.0.0.0', () => {
+  httpServer.listen(PORT, '0.0.0.0', () => {
     console.log(`VectorHub Full-Stack Server listening on http://0.0.0.0:${PORT}`);
   });
 }

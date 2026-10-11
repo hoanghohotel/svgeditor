@@ -46,27 +46,21 @@ async function startServer() {
     // Vite middleware only handles module imports and static assets; client routes
     // like /editor, /portfolio, /s/:id, /directory/:category need index.html fallback
     // so refreshing (F5) never yields a 404 error.
+    // Serve index.html for all client-side navigation routes (SPA fallback).
     app.use(async (req, res, next) => {
-      // Exclude API, health, and Vite internal asset/source requests
       if (req.path.startsWith('/api') || req.path === '/health' || req.path.startsWith('/@') || req.path.startsWith('/src')) {
         return next();
       }
-
-      // Check if this is an HTML document navigation request or a clean URL without file extension
+    
       const acceptsHtml = req.headers.accept?.includes('text/html');
       const hasNoExtension = !path.extname(req.path);
-
+    
       if (acceptsHtml || hasNoExtension) {
-        try {
-          const indexPath = path.resolve(__dirname, 'index.html');
-          const source = await readFile(indexPath, 'utf8');
-          const html = await vite.transformIndexHtml(req.originalUrl || req.url, source);
-          res.type('html').send(html);
-          return;
-        } catch (error) {
-          next(error);
-          return;
-        }
+        const indexPath = path.resolve(__dirname, 'index.html');
+        const source = await readFile(indexPath, 'utf8');
+        const html = await vite.transformIndexHtml(req.originalUrl || req.url, source);
+        res.type('html').send(html);
+        return;
       }
       next();
     });

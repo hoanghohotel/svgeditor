@@ -41,6 +41,13 @@ async function startServer() {
       appType: 'spa',
     });
 
+    // Vite still injects its client module in middleware mode, even when HMR is
+    // disabled. The preview proxy cannot provide a WebSocket endpoint, so serve
+    // a no-op client module instead of allowing the injected client to reconnect.
+    app.get('/@vite/client', (_req, res) => {
+      res.type('application/javascript').send('export {};');
+    });
+
     app.use(vite.middlewares);
   } else {
     // Production static serving

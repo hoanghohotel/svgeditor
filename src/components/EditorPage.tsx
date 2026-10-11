@@ -58,6 +58,7 @@ import {
   SvgCustomizationOptions,
 } from '../utils/svgExporter';
 import { normalizeSvgForPreview } from '../utils/svgNormalizer';
+import { sanitizeSvgClient } from '../utils/svgSanitizer';
 import { navigateTo } from '../utils/router';
 import { useI18n } from '../i18n';
 
@@ -238,6 +239,35 @@ export const EditorPage: React.FC<EditorPageProps> = ({ initialIconId }) => {
     }
   };
 
+  // Global keyboard shortcuts (Ctrl+Z / Cmd+Z: Undo, Ctrl+Y / Cmd+Shift+Z: Redo, Escape: close dropdowns)
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      const activeEl = document.activeElement;
+      const isInput = activeEl && (activeEl.tagName === 'INPUT' || activeEl.tagName === 'TEXTAREA' || (activeEl as HTMLElement).isContentEditable);
+
+      if (e.key === 'Escape') {
+        setTopExportMenuOpen(false);
+      }
+
+      if (isInput) return;
+
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'z') {
+        e.preventDefault();
+        if (e.shiftKey) {
+          handleRedo();
+        } else {
+          handleUndo();
+        }
+      } else if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'y') {
+        e.preventDefault();
+        handleRedo();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [historyIndex, history]);
+
   const handleReset = () => {
     const original = history[0];
     updateCodeWithHistory(original);
@@ -269,7 +299,11 @@ export const EditorPage: React.FC<EditorPageProps> = ({ initialIconId }) => {
     reader.onload = (event) => {
       const content = event.target?.result as string;
       if (content) {
-        updateCodeWithHistory(content);
+        const { cleanSvg, sanitizedItems } = sanitizeSvgClient(content);
+        if (sanitizedItems.length > 0) {
+          console.warn('SVG Security Sanitizer neutralized potentially unsafe tags:', sanitizedItems);
+        }
+        updateCodeWithHistory(cleanSvg);
         resetDesignControls();
       }
     };

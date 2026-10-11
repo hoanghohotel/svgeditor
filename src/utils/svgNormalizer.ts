@@ -4,14 +4,19 @@
  * have valid viewBox attributes, and do not blow out or shrink to a tiny dot.
  */
 
+import { sanitizeSvgClient } from './svgSanitizer';
+
 export function normalizeSvgForPreview(svgString: string): string {
   if (!svgString || typeof svgString !== 'string') return '';
 
   try {
-    // 1. Check if viewBox exists
-    const hasViewBox = /viewBox=["']([^"']+)["']/i.test(svgString);
+    // 0. Sanitize to prevent stored XSS or injection via dangerouslySetInnerHTML
+    const { cleanSvg } = sanitizeSvgClient(svgString);
 
-    let normalized = svgString;
+    // 1. Check if viewBox exists
+    const hasViewBox = /viewBox=["']([^"']+)["']/i.test(cleanSvg);
+
+    let normalized = cleanSvg;
 
     if (!hasViewBox) {
       // Try to extract width and height to construct viewBox

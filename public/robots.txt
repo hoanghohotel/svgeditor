@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://svgeditor-self.vercel.app/sitemap.xml

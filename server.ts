@@ -1,8 +1,7 @@
 import 'dotenv/config';
 import {createServer as createHttpServer} from 'http';
 import express from 'express';
-import cookieParser from 'cookie-parser';
-import { apiRouter } from './src/server/api.ts';
+import app from './src/server/app.ts';
 import path from 'path';
 import { readFile } from 'fs/promises';
 import { fileURLToPath } from 'url';
@@ -11,23 +10,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 async function startServer() {
-  const app = express();
   const PORT = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
   const isProd = process.env.NODE_ENV === 'production';
   const httpServer = createHttpServer(app);
-
-  // Body parsing and cookies
-  app.use(express.json({ limit: '5mb' }));
-  app.use(express.urlencoded({ extended: true, limit: '5mb' }));
-  app.use(cookieParser());
-
-  // Mount Backend REST API
-  app.use('/api', apiRouter);
-
-  // Health check
-  app.get('/health', (_req, res) => {
-    res.json({ status: 'healthy', timestamp: new Date().toISOString() });
-  });
 
   if (!isProd) {
     // Mount Vite dev server in middleware mode

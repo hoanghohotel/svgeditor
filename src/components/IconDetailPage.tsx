@@ -109,6 +109,16 @@ export const IconDetailPage: React.FC<IconDetailPageProps> = ({ iconId, iconSlug
       });
   }, [iconId]);
 
+  // Normalize URL to canonical clean path /s/:id/:slug
+  useEffect(() => {
+    if (icon && icon.slug) {
+      const canonicalPath = `/s/${encodeURIComponent(icon.id)}/${encodeURIComponent(icon.slug)}`;
+      if (window.location.pathname !== canonicalPath && !window.location.hash) {
+        window.history.replaceState({ route: { type: 'detail', id: icon.id, slug: icon.slug } }, '', canonicalPath);
+      }
+    }
+  }, [icon, iconSlug]);
+
   if (loading) {
     return (
       <div className="max-w-4xl mx-auto px-4 py-24 text-center space-y-4">
@@ -202,16 +212,6 @@ export const ${reactComponentName}: React.FC<React.SVGProps<SVGSVGElement>> = (p
       setIsExportingPng(false);
     }
   };
-
-  // Normalize URL to canonical clean path /s/:id/:slug
-  useEffect(() => {
-    if (icon && icon.slug) {
-      const canonicalPath = `/s/${encodeURIComponent(icon.id)}/${encodeURIComponent(icon.slug)}`;
-      if (window.location.pathname !== canonicalPath && !window.location.hash) {
-        window.history.replaceState({ route: { type: 'detail', id: icon.id, slug: icon.slug } }, '', canonicalPath);
-      }
-    }
-  }, [icon, iconSlug]);
 
   const handleCopyLink = async () => {
     if (!icon) return;

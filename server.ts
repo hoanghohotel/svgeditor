@@ -45,13 +45,15 @@ async function startServer() {
     // Vite can inject its client module in middleware mode even when HMR is
     // disabled. The preview proxy cannot provide a WebSocket endpoint, so serve
     // the entry HTML without that client and keep Vite for module requests.
-    app.get('*', async (req, res, next) => {
+    app.use(async (req, res, next) => {
       if (req.headers.accept?.includes('text/html')) {
         try {
           const indexPath = path.resolve(__dirname, 'index.html');
           const source = await readFile(indexPath, 'utf8');
-          const html = await vite.transformIndexHtml(req.originalUrl, source);
-          res.type('html').send(html.replace(/<script[^>]+src=["']\/?@vite\/client["'][^>]*><\/script>/g, ''));
+          // Serve the source document directly in preview. Vite's HTML transform
+          // injects /@vite/client even with HMR disabled, and the preview proxy
+          // cannot establish that WebSocket connection.
+          res.type('html').send(source);
           return;
         } catch (error) {
           next(error);

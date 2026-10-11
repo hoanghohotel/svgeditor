@@ -4,6 +4,7 @@ import express from 'express';
 import cookieParser from 'cookie-parser';
 import { apiRouter } from './src/server/api.ts';
 import path from 'path';
+import { readFile } from 'fs/promises';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -38,14 +39,26 @@ async function startServer() {
         // Disable HMR so the injected Vite client does not repeatedly reconnect.
         hmr: false,
       },
-      appType: 'spa',
+      appType: 'custom',
     });
 
-    // Vite still injects its client module in middleware mode, even when HMR is
+    // Vite can inject its client module in middleware mode even when HMR is
     // disabled. The preview proxy cannot provide a WebSocket endpoint, so serve
-    // a no-op client module instead of allowing the injected client to reconnect.
-    app.get('/@vite/client', (_req, res) => {
-      res.type('application/javascript').send('export {};');
+    // the entry HTML without that client and keep Vite for module requests.
+    app.get('*', async (req, res, next) => {
+      if (req.headers.accept?.includes('text/html')) {
+        try {
+          const indexPath = path.resolve(__dirname, 'index.html');
+          const source = await readFile(indexPath, 'utf8');
+          const html = await vite.transformIndexHtml(req.originalUrl, source);
+          res.type('html').send(html.replace(/<script[^>]+src=["']\/?@vite\/client["'][^>]*><\/script>/g, ''));
+          return;
+        } catch (error) {
+          next(error);
+          return;
+        }
+      }
+      next();
     });
 
     app.use(vite.middlewares);

@@ -13,34 +13,42 @@ export type AppRoute =
 
 /**
  * Parses any incoming URL into a structured AppRoute.
+ * Primary source of truth is window.location.pathname and window.location.search.
  * Supports:
  *   - Clean path URLs: /s/1002/shield-check, /editor, /portfolio, /admin
  *   - Nested parameters: /s/:id/:slug, /editor/:id, /editor?id=:id
- *   - Legacy hash URLs: #/s/1002/shield-check, #/editor?id=1001 (for seamless migration)
+ *   - Seamless backward-compatible migration for legacy hash URLs: /#/s/1002/shield-check
  */
 export function parseRoute(
-  rawPath: string = window.location.pathname,
-  rawSearch: string = window.location.search
+  rawPath?: string,
+  rawSearch?: string
 ): AppRoute {
-  let routeString = rawPath;
-  let searchString = rawSearch;
+  let path = rawPath !== undefined ? rawPath : (typeof window !== 'undefined' ? window.location.pathname : '/');
+  let search = rawSearch !== undefined ? rawSearch : (typeof window !== 'undefined' ? window.location.search : '');
 
-  // Seamless legacy hash migration: if window.location.hash contains a route, extract it
-  if (window.location.hash && window.location.hash.length > 1) {
-    const hashContent = window.location.hash.replace(/^#\/?/, '/');
+  // Seamless legacy hash migration:
+  // If user visits an old bookmarked URL like /#/s/1002/shield-check,
+  // extract the route from the hash ONLY if the main path is root ('/' or empty)
+  // and the hash starts with '#/' or '#!/'.
+  if (
+    typeof window !== 'undefined' &&
+    (path === '/' || path === '') &&
+    window.location.hash &&
+    (window.location.hash.startsWith('#/') || window.location.hash.startsWith('#!/'))
+  ) {
+    const hashContent = window.location.hash.replace(/^#![/]?|^#[/]?/, '/');
     const [hPath, hQuery] = hashContent.split('?');
     if (hPath && hPath !== '/') {
-      routeString = hPath.startsWith('/') ? hPath : `/${hPath}`;
+      path = hPath.startsWith('/') ? hPath : `/${hPath}`;
     }
     if (hQuery) {
-      searchString = `?${hQuery}`;
+      search = `?${hQuery}`;
     }
   }
 
-  // Normalize path
-  const cleanPath = (routeString.startsWith('/') ? routeString : `/${routeString}`)
-    .replace(/\/+$/, '') || '/';
-  const searchParams = new URLSearchParams(searchString);
+  // Normalize path (ensure leading slash, strip trailing slashes unless root)
+  const cleanPath = (path.startsWith('/') ? path : `/${path}`).replace(/\/+$/, '') || '/';
+  const searchParams = new URLSearchParams(search);
 
   // 1. Admin / Dashboard: /admin or /dashboard
   if (cleanPath === '/admin' || cleanPath === '/dashboard') {
@@ -183,8 +191,9 @@ export function formatRouteUrl(route: AppRoute): string {
  * Returns full shareable URL with origin (e.g. https://svgeditor-self.vercel.app/s/1002/shield-check)
  */
 export function getShareableUrl(route?: AppRoute): string {
-  const path = route ? formatRouteUrl(route) : window.location.pathname + window.location.search;
-  return `${window.location.origin}${path}`;
+  const path = route ? formatRouteUrl(route) : (typeof window !== 'undefined' ? window.location.pathname + window.location.search : '/');
+  const origin = typeof window !== 'undefined' ? window.location.origin : 'https://svgeditor-self.vercel.app';
+  return `${origin}${path}`;
 }
 
 /**
@@ -208,6 +217,8 @@ function notifyListeners(route: AppRoute) {
  * Uses clean path-based routing (pushState/replaceState).
  */
 export function navigateTo(route: AppRoute, options?: { replace?: boolean }): void {
+  if (typeof window === 'undefined') return;
+
   const targetUrl = formatRouteUrl(route);
   const currentUrl = window.location.pathname + window.location.search;
 
@@ -225,38 +236,43 @@ interface RouterContextType {
   navigateTo: (route: AppRoute, options?: { replace?: boolean }) => void;
 }
 
-const RouterContext = createContext<RouterContextType | null>(null);
+const defaultContext: RouterContextType = {
+  get currentRoute() {
+    return parseRoute();
+  },
+  navigateTo,
+};
+
+const RouterContext = createContext<RouterContextType>(defaultContext);
 
 /**
  * BrowserRouter Component:
  * Clean, standard HTML5 History API router.
  * Features:
  *   - Clean URLs without '#' (e.g. /s/1002/shield-check)
- *   - F5 page refresh support on static deployments & dev server
- *   - Automatic legacy hash migration: transforms #/s/1002/shield-check to /s/1002/shield-check
- *   - Browser Back and Forward button support
+ *   - Direct deep linking and F5 page refresh support
+ *   - Primary initialization based on window.location.pathname
+ *   - Automatic legacy hash migration: cleanly upgrades #/s/1002/shield-check to /s/1002/shield-check
+ *   - Browser Back and Forward button support via popstate
  *   - Restores document state seamlessly on reload
  */
 export const BrowserRouter: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [currentRoute, setCurrentRoute] = useState<AppRoute>(() => {
-    // If user arrived with a legacy hash (e.g. #/s/1002/shield-check), parse and upgrade to clean URL
-    if (window.location.hash && window.location.hash.length > 1) {
-      const parsed = parseRoute();
-      const cleanUrl = formatRouteUrl(parsed);
-      window.history.replaceState({ route: parsed }, '', cleanUrl);
-      return parsed;
-    }
-    return parseRoute();
-  });
-
+  const [currentRoute, setCurrentRoute] = useState<AppRoute>(() => parseRoute());
   const [, startTransition] = useTransition();
 
   useEffect(() => {
-    // If there is still a legacy hash after mount, clean it up
-    if (window.location.hash && window.location.hash.length > 1) {
+    // If user arrived with a legacy hash (e.g. /#/s/1002/shield-check), upgrade address bar to clean URL
+    if (
+      typeof window !== 'undefined' &&
+      window.location.hash &&
+      (window.location.hash.startsWith('#/') || window.location.hash.startsWith('#!/'))
+    ) {
       const parsed = parseRoute();
       const cleanUrl = formatRouteUrl(parsed);
       window.history.replaceState({ route: parsed }, '', cleanUrl);
+      startTransition(() => {
+        setCurrentRoute(parsed);
+      });
     }
 
     const handleRouteChange = (newRoute: AppRoute) => {
@@ -295,27 +311,9 @@ export const HashRouter = BrowserRouter;
 
 /**
  * Custom hook to consume the current AppRoute and navigate function.
+ * Strictly adheres to React Rules of Hooks (no conditional hook calls).
  */
 export function useAppRouter(): [AppRoute, (route: AppRoute, options?: { replace?: boolean }) => void] {
   const context = useContext(RouterContext);
-  if (context) {
-    return [context.currentRoute, context.navigateTo];
-  }
-
-  // Fallback if rendered outside of <BrowserRouter>
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const [route, setRoute] = useState<AppRoute>(() => parseRoute());
-
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  useEffect(() => {
-    const handlePopState = () => setRoute(parseRoute());
-    routeListeners.add(setRoute);
-    window.addEventListener('popstate', handlePopState);
-    return () => {
-      routeListeners.delete(setRoute);
-      window.removeEventListener('popstate', handlePopState);
-    };
-  }, []);
-
-  return [route, navigateTo];
+  return [context.currentRoute, context.navigateTo];
 }

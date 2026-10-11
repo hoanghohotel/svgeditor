@@ -549,6 +549,7 @@ export const DirectoryPage: React.FC<DirectoryPageProps> = ({
                       ? 'bg-white'
                       : 'bg-[#0f1420]'
                   }`}
+                  data-stage-theme={canvasBg === 'white' ? 'light' : canvasBg === 'dark' ? 'dark' : 'auto'}
                 >
                   <div
                     className={`w-full h-full ${

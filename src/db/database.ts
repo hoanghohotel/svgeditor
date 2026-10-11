@@ -359,7 +359,9 @@ class DatabaseStore {
   }
 
   public getSvgAssetById(id: string) {
-    const asset = this.state.svg_assets.find((a) => a.id === id || a.slug === id);
+    const asset = this.state.svg_assets.find(
+      (a) => a.id === id || a.id === `asset-${id}` || a.id.replace(/^asset-/, '') === id || a.slug === id
+    );
     if (!asset) return null;
     return this.enrichAsset(asset);
   }

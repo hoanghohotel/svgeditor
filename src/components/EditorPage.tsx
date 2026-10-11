@@ -716,6 +716,13 @@ export const EditorPage: React.FC<EditorPageProps> = ({ initialIconId }) => {
                   ? 'bg-[#0f1420] text-white'
                   : 'bg-white dark:bg-neutral-900 bg-grid-subtle'
               }`}
+              data-stage-theme={
+                canvasBg === 'white'
+                  ? 'light'
+                  : canvasBg === 'dark' || canvasBg === 'midnight'
+                  ? 'dark'
+                  : 'auto'
+              }
             >
               {customizedSvg ? (
                 <div

@@ -51,14 +51,28 @@ export function normalizeSvgForPreview(svgString: string): string {
     }
 
     // 3. Make sure the root <svg> tag has width="100%" and height="100%"
-    // Replace existing width/height on the root <svg ...> tag
+    // Safely strip root width and height without corrupting stroke-width or other hyphenated properties
     normalized = normalized.replace(
       /<svg\b([^>]*)>/i,
       (match, attributes) => {
         let cleaned = attributes
-          .replace(/\bwidth=["'][^"']*["']/gi, '')
-          .replace(/\bheight=["'][^"']*["']/gi, '');
-        return `<svg${cleaned} width="100%" height="100%">`;
+          .replace(/(?<!-)\bwidth=["'][^"']*["']/gi, '')
+          .replace(/(?<!-)\bheight=["'][^"']*["']/gi, '');
+
+        // If root SVG specifies explicit black fill, adapt to currentColor for dynamic theme support
+        cleaned = cleaned.replace(/\bfill=["'](?:#000(?:000)?|black)["']/gi, 'fill="currentColor"');
+
+        // If root SVG specifies explicit black stroke, adapt to currentColor
+        cleaned = cleaned.replace(/\bstroke=["'](?:#000(?:000)?|black)["']/gi, 'stroke="currentColor"');
+
+        // If neither fill nor stroke is declared on root <svg>, declare fill="currentColor"
+        // so children without explicit fills inherit theme color instead of defaulting to browser black
+        let defaultFill = '';
+        if (!/\bfill=["']/i.test(cleaned) && !/\bstroke=["']/i.test(cleaned)) {
+          defaultFill = ' fill="currentColor"';
+        }
+
+        return `<svg${cleaned}${defaultFill} width="100%" height="100%">`;
       }
     );
 

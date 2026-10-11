@@ -181,7 +181,7 @@ export const PortfolioPage: React.FC = () => {
             </div>
 
             {/* 3D Glass Pedestal Viewport */}
-            <div className="py-12 flex items-center justify-center min-h-[320px] sm:min-h-[380px]">
+            <div className="py-12 flex items-center justify-center min-h-[320px] sm:min-h-[380px]" data-stage-theme="auto">
               <div
                 style={{
                   transform: `scale(${scale / 100}) rotate(${rotation}deg)`,

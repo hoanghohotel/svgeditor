@@ -151,9 +151,8 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
 
   const toggleTheme = () => {
     setModeState((current) => {
-      if (current === 'light') return 'dark';
-      if (current === 'dark') return 'system';
-      return 'light';
+      const currentlyDark = current === 'system' ? systemIsDark : current === 'dark';
+      return currentlyDark ? 'light' : 'dark';
     });
   };
 

@@ -255,6 +255,60 @@
   overflow: visible !important;
 }
 
+/* ============================================================
+   SVG Dark Mode Visibility Guarantees
+   Prevents black or default-color SVGs from vanishing on dark canvases
+   ============================================================ */
+
+/* In dark mode, ensure SVGs on auto or dark stages inherit crisp light text color */
+.dark [data-stage-theme="auto"] .svg-auto-fit svg,
+[data-stage-theme="dark"] .svg-auto-fit svg,
+.dark .svg-auto-fit:not([data-stage-theme="light"]) svg {
+  color: #f8fafc;
+}
+
+/* Dynamically invert pure black or near-black fills to white in dark mode stages */
+.dark [data-stage-theme="auto"] .svg-auto-fit svg [fill="#000"],
+.dark [data-stage-theme="auto"] .svg-auto-fit svg [fill="#000000"],
+.dark [data-stage-theme="auto"] .svg-auto-fit svg [fill="black"],
+.dark [data-stage-theme="auto"] .svg-auto-fit svg [fill="#111827"],
+.dark [data-stage-theme="auto"] .svg-auto-fit svg [fill="#0f172a"],
+.dark [data-stage-theme="auto"] .svg-auto-fit svg [fill="#1e293b"],
+[data-stage-theme="dark"] .svg-auto-fit svg [fill="#000"],
+[data-stage-theme="dark"] .svg-auto-fit svg [fill="#000000"],
+[data-stage-theme="dark"] .svg-auto-fit svg [fill="black"],
+[data-stage-theme="dark"] .svg-auto-fit svg [fill="#111827"],
+[data-stage-theme="dark"] .svg-auto-fit svg [fill="#0f172a"],
+[data-stage-theme="dark"] .svg-auto-fit svg [fill="#1e293b"] {
+  fill: #f8fafc;
+}
+
+/* Dynamically invert pure black or near-black strokes to white in dark mode stages */
+.dark [data-stage-theme="auto"] .svg-auto-fit svg [stroke="#000"],
+.dark [data-stage-theme="auto"] .svg-auto-fit svg [stroke="#000000"],
+.dark [data-stage-theme="auto"] .svg-auto-fit svg [stroke="black"],
+.dark [data-stage-theme="auto"] .svg-auto-fit svg [stroke="#111827"],
+.dark [data-stage-theme="auto"] .svg-auto-fit svg [stroke="#0f172a"],
+[data-stage-theme="dark"] .svg-auto-fit svg [stroke="#000"],
+[data-stage-theme="dark"] .svg-auto-fit svg [stroke="#000000"],
+[data-stage-theme="dark"] .svg-auto-fit svg [stroke="black"],
+[data-stage-theme="dark"] .svg-auto-fit svg [stroke="#111827"],
+[data-stage-theme="dark"] .svg-auto-fit svg [stroke="#0f172a"] {
+  stroke: #f8fafc;
+}
+
+/* In dark mode, unstyled shapes without explicit fill/stroke inherit currentColor */
+.dark [data-stage-theme="auto"] .svg-auto-fit svg:not([fill]) path:not([fill]):not([stroke]),
+.dark [data-stage-theme="auto"] .svg-auto-fit svg:not([fill]) circle:not([fill]):not([stroke]),
+.dark [data-stage-theme="auto"] .svg-auto-fit svg:not([fill]) polygon:not([fill]):not([stroke]),
+.dark [data-stage-theme="auto"] .svg-auto-fit svg:not([fill]) rect:not([fill]):not([stroke]),
+[data-stage-theme="dark"] .svg-auto-fit svg:not([fill]) path:not([fill]):not([stroke]),
+[data-stage-theme="dark"] .svg-auto-fit svg:not([fill]) circle:not([fill]):not([stroke]),
+[data-stage-theme="dark"] .svg-auto-fit svg:not([fill]) polygon:not([fill]):not([stroke]),
+[data-stage-theme="dark"] .svg-auto-fit svg:not([fill]) rect:not([fill]):not([stroke]) {
+  fill: #f8fafc;
+}
+
 /* Responsive Table Wrapper with Touch Momentum */
 .responsive-table-container {
   overflow-x: auto;
@@ -275,12 +329,12 @@
 }
 
 .bg-checkerboard-dark {
-  background-color: #0b0f19;
+  background-color: #0d121f;
   background-image:
-    linear-gradient(45deg, #172033 25%, transparent 25%),
-    linear-gradient(-45deg, #172033 25%, transparent 25%),
-    linear-gradient(45deg, transparent 75%, #172033 75%),
-    linear-gradient(-45deg, transparent 75%, #172033 75%);
+    linear-gradient(45deg, #182238 25%, transparent 25%),
+    linear-gradient(-45deg, #182238 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #182238 75%),
+    linear-gradient(-45deg, transparent 75%, #182238 75%);
   background-size: 14px 14px;
   background-position: 0 0, 0 7px, 7px -7px, -7px 0;
 }

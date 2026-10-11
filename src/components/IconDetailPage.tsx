@@ -431,6 +431,13 @@ export const ${reactComponentName}: React.FC<React.SVGProps<SVGSVGElement>> = (p
                   ? 'bg-black text-white'
                   : 'bg-[#0f1420] text-white'
               }`}
+              data-stage-theme={
+                canvasBg === 'white'
+                  ? 'light'
+                  : canvasBg === 'dark' || canvasBg === 'midnight'
+                  ? 'dark'
+                  : 'auto'
+              }
             >
               <div
                 style={{

@@ -23,6 +23,7 @@ import { iconDataset, categoriesMeta } from '../data/iconDataset';
 import { formatBytes, copyToClipboard, downloadSvgFile } from '../utils/svgExporter';
 import { normalizeSvgForPreview } from '../utils/svgNormalizer';
 import { navigateTo } from '../utils/router';
+import { useI18n } from '../i18n';
 
 interface DirectoryPageProps {
   activeCategory: IconCategory;
@@ -40,6 +41,7 @@ export const DirectoryPage: React.FC<DirectoryPageProps> = ({
   searchQuery,
   onSearchChange,
 }) => {
+  const { t } = useI18n();
   const [sortOption, setSortOption] = useState<SortOption>('name-asc');
   const [copiedId, setCopiedId] = useState<string | null>(null);
   const [activeStyle, setActiveStyle] = useState<string>('all');
@@ -50,6 +52,18 @@ export const DirectoryPage: React.FC<DirectoryPageProps> = ({
   const [viewDensity, setViewDensity] = useState<ViewDensity>('comfortable');
   const [itemsPerPage, setItemsPerPage] = useState<number>(24);
   const searchInputRef = useRef<HTMLInputElement>(null);
+
+  const getCategoryLabel = (slug: string) => {
+    switch (slug) {
+      case 'all': return t.allCategories;
+      case 'ui-actions': return t.catUiActions;
+      case 'tech-logos': return t.catTechLogos;
+      case 'system-devices': return t.catSystemDevices;
+      case 'media-controls': return t.catMediaControls;
+      case 'science-molecules': return t.catScienceMolecules;
+      default: return slug;
+    }
+  };
 
   // Shortcut key '/' to focus search
   useEffect(() => {
@@ -277,25 +291,33 @@ export const DirectoryPage: React.FC<DirectoryPageProps> = ({
               </span>
               <span className="text-neutral-300 dark:text-neutral-700">·</span>
               <span className="text-xs text-neutral-500 dark:text-neutral-400">
-                Font Awesome Pro &amp; VectorHub SVG Engine
+                {t.heroKicker}
               </span>
             </div>
             <h1
               className="text-2xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white"
               style={{ textWrap: 'balance' }}
             >
-              Vector Icon Directory
+              {t.heroHeadline1} <span className="bg-gradient-to-r from-emerald-500 to-teal-500 bg-clip-text text-transparent">{t.heroHeadline2}</span>
             </h1>
             <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-300 mt-1.5 max-w-2xl leading-relaxed">
-              Explore, inspect, copy, and optimize production developer vector assets. Enhanced with high-fidelity frosted glass preview stages, live SVG editor, and PostgreSQL storage.
+              {t.heroDescription}
             </p>
           </div>
 
-          <div className="flex items-center gap-2 self-start sm:self-center shrink-0">
+          <div className="flex flex-wrap items-center gap-2 self-start sm:self-center shrink-0">
+            <button
+              onClick={() => navigateTo({ type: 'portfolio' })}
+              className="glass-btn px-3.5 py-2 rounded-2xl flex items-center gap-1.5 shadow-xs text-xs font-semibold text-neutral-800 dark:text-neutral-200 hover:scale-102 transition-transform cursor-pointer"
+            >
+              <Sparkles className="w-3.5 h-3.5 text-amber-500" />
+              <span>{t.navPortfolio}</span>
+            </button>
+
             <div className="glass-card px-3.5 py-2 rounded-2xl flex items-center gap-2 shadow-xs">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
               <span className="text-xs font-mono text-neutral-700 dark:text-neutral-200 tabular-nums">
-                {totalItems} {totalItems === 1 ? 'icon' : 'icons'} indexed
+                {totalItems} {totalItems === 1 ? 'icon' : 'icons'}
               </span>
             </div>
           </div>
@@ -315,7 +337,7 @@ export const DirectoryPage: React.FC<DirectoryPageProps> = ({
                     : 'text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:bg-white/40 dark:hover:bg-white/5'
                 }`}
               >
-                <span>{cat.name}</span>
+                <span>{getCategoryLabel(cat.slug)}</span>
                 <span className="font-mono text-[10px] tabular-nums px-1.5 py-0.2 rounded-md bg-neutral-200/50 dark:bg-neutral-700/50 text-neutral-600 dark:text-neutral-300">
                   {cat.count}
                 </span>
@@ -367,14 +389,14 @@ export const DirectoryPage: React.FC<DirectoryPageProps> = ({
               type="text"
               value={searchQuery}
               onChange={(e) => onSearchChange(e.target.value)}
-              placeholder="Search icons by name, style, category, or tag (Press '/' to focus)..."
+              placeholder={t.searchPlaceholder}
               className="w-full pl-10 pr-10 py-2.5 text-xs sm:text-sm glass-input rounded-2xl text-neutral-900 dark:text-white placeholder-neutral-400 focus:outline-none transition-all"
             />
             {searchQuery ? (
               <button
                 onClick={() => onSearchChange('')}
                 className="absolute right-3 top-1/2 -translate-y-1/2 p-1 text-neutral-400 hover:text-neutral-700 dark:hover:text-neutral-200 rounded-full cursor-pointer"
-                title="Clear Search"
+                title={t.searchClear}
               >
                 <X className="w-3.5 h-3.5" />
               </button>
@@ -388,48 +410,48 @@ export const DirectoryPage: React.FC<DirectoryPageProps> = ({
           {/* Controls: Canvas background, Density, Sort */}
           <div className="flex flex-wrap items-center justify-between sm:justify-start gap-2 w-full md:w-auto shrink-0">
             {/* Canvas Stage Selector */}
-            <div className="flex items-center gap-1 p-1 rounded-xl bg-neutral-200/50 dark:bg-neutral-900/50 border border-white/50 dark:border-white/10 backdrop-blur-md text-xs">
-              <span className="text-[10px] text-neutral-500 dark:text-neutral-400 px-1 font-medium">Stage:</span>
+            <div className="flex items-center gap-1 p-1 rounded-xl bg-neutral-200/50 dark:bg-neutral-900/50 border border-slate-200/80 dark:border-white/10 backdrop-blur-md text-xs">
+              <span className="text-[10px] text-neutral-500 dark:text-neutral-400 px-1 font-medium">{t.canvasStage}</span>
               <button
                 onClick={() => setCanvasBg('checkerboard')}
-                title="Grid Stage"
+                title={t.canvasGrid}
                 className={`px-2 py-1 text-[11px] rounded-lg transition-all cursor-pointer ${
                   canvasBg === 'checkerboard'
                     ? 'bg-white dark:bg-neutral-800 text-neutral-950 dark:text-white font-semibold shadow-xs border border-white/50 dark:border-white/10'
                     : 'text-neutral-600 dark:text-neutral-400 hover:text-neutral-900'
                 }`}
               >
-                Grid
+                {t.canvasGrid.split(' ')[0]}
               </button>
               <button
                 onClick={() => setCanvasBg('white')}
-                title="White Stage"
+                title={t.canvasWhite}
                 className={`px-2 py-1 text-[11px] rounded-lg transition-all cursor-pointer ${
                   canvasBg === 'white'
                     ? 'bg-white dark:bg-neutral-800 text-neutral-950 dark:text-white font-semibold shadow-xs border border-white/50 dark:border-white/10'
                     : 'text-neutral-600 dark:text-neutral-400 hover:text-neutral-900'
                 }`}
               >
-                White
+                {t.canvasWhite.split(' ')[0]}
               </button>
               <button
                 onClick={() => setCanvasBg('dark')}
-                title="Dark Stage"
+                title={t.canvasDark}
                 className={`px-2 py-1 text-[11px] rounded-lg transition-all cursor-pointer ${
                   canvasBg === 'dark'
                     ? 'bg-white dark:bg-neutral-800 text-neutral-950 dark:text-white font-semibold shadow-xs border border-white/50 dark:border-white/10'
                     : 'text-neutral-600 dark:text-neutral-400 hover:text-neutral-900'
                 }`}
               >
-                Dark
+                {t.canvasDark.split(' ')[0]}
               </button>
             </div>
 
             {/* Density Selector */}
-            <div className="flex items-center gap-1 p-1 rounded-xl bg-neutral-200/50 dark:bg-neutral-900/50 border border-white/50 dark:border-white/10 backdrop-blur-md text-xs">
+            <div className="flex items-center gap-1 p-1 rounded-xl bg-neutral-200/50 dark:bg-neutral-900/50 border border-slate-200/80 dark:border-white/10 backdrop-blur-md text-xs">
               <button
                 onClick={() => setViewDensity('comfortable')}
-                title="Comfortable Cards"
+                title={t.densityComfortable}
                 className={`p-1.5 rounded-lg transition-all cursor-pointer ${
                   viewDensity === 'comfortable'
                     ? 'bg-white dark:bg-neutral-800 text-neutral-950 dark:text-white shadow-xs border border-white/50 dark:border-white/10'
@@ -440,7 +462,7 @@ export const DirectoryPage: React.FC<DirectoryPageProps> = ({
               </button>
               <button
                 onClick={() => setViewDensity('compact')}
-                title="Compact Matrix"
+                title={t.densityCompact}
                 className={`p-1.5 rounded-lg transition-all cursor-pointer ${
                   viewDensity === 'compact'
                     ? 'bg-white dark:bg-neutral-800 text-neutral-950 dark:text-white shadow-xs border border-white/50 dark:border-white/10'
@@ -458,20 +480,20 @@ export const DirectoryPage: React.FC<DirectoryPageProps> = ({
                 onChange={(e) => setSortOption(e.target.value as SortOption)}
                 className="w-full sm:w-auto px-3 py-1.5 text-xs glass-btn rounded-xl text-neutral-900 dark:text-white focus:outline-none cursor-pointer"
               >
-                <option value="name-asc">Name (A → Z)</option>
-                <option value="name-desc">Name (Z → A)</option>
-                <option value="size-asc">Size (Smallest)</option>
-                <option value="size-desc">Size (Largest)</option>
-                <option value="newest">Recently Added</option>
+                <option value="name-asc">{t.sortNameAsc}</option>
+                <option value="name-desc">{t.sortNameDesc}</option>
+                <option value="size-asc">{t.sortSizeAsc}</option>
+                <option value="size-desc">{t.sortSizeDesc}</option>
+                <option value="newest">{t.sortNewest}</option>
               </select>
             </div>
           </div>
         </div>
 
         {/* Quick Filter Tag Bar & Active State Summary */}
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pt-3 border-t border-white/40 dark:border-white/10 text-xs">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pt-3 border-t border-slate-200/60 dark:border-white/10 text-xs">
           <div className="flex flex-wrap items-center gap-1.5 text-neutral-500 dark:text-neutral-400">
-            <span className="text-[11px] font-medium mr-1 text-neutral-400">Popular:</span>
+            <span className="text-[11px] font-medium mr-1 text-neutral-400">{t.popularFilters}</span>
             {quickFilters.map((keyword) => (
               <button
                 key={keyword}
@@ -486,12 +508,12 @@ export const DirectoryPage: React.FC<DirectoryPageProps> = ({
           {/* Active Result Metadata */}
           <div className="flex items-center gap-2 text-[11px] text-neutral-500 dark:text-neutral-400 self-end sm:self-auto font-mono">
             <span>
-              Showing <strong className="text-neutral-800 dark:text-neutral-200 tabular-nums">{paginatedIcons.length}</strong> of{' '}
+              {t.showingResults} <strong className="text-neutral-800 dark:text-neutral-200 tabular-nums">{paginatedIcons.length}</strong> {t.ofTotal}{' '}
               <strong className="text-neutral-800 dark:text-neutral-200 tabular-nums">{totalItems}</strong>
             </span>
             <span aria-hidden="true">·</span>
             <span>
-              Page <strong className="text-neutral-800 dark:text-neutral-200 tabular-nums">{validPage}</strong> of{' '}
+              {t.page} <strong className="text-neutral-800 dark:text-neutral-200 tabular-nums">{validPage}</strong> {t.ofTotal}{' '}
               <strong className="text-neutral-800 dark:text-neutral-200 tabular-nums">{totalPages}</strong>
             </span>
           </div>
@@ -546,7 +568,7 @@ export const DirectoryPage: React.FC<DirectoryPageProps> = ({
                     {icon.is_pro && (
                       <span className="flex items-center gap-0.5 px-1.5 py-0.5 text-[9px] font-bold tracking-wider bg-amber-500/20 text-amber-700 dark:text-amber-300 border border-amber-500/30 rounded-full backdrop-blur-md shadow-xs">
                         <Crown className="w-2.5 h-2.5" />
-                        <span>PRO</span>
+                        <span>{t.proBadge}</span>
                       </span>
                     )}
                     {icon.style && viewDensity === 'comfortable' && (
@@ -560,21 +582,21 @@ export const DirectoryPage: React.FC<DirectoryPageProps> = ({
                   <div className="absolute inset-0 bg-neutral-900/60 dark:bg-neutral-950/75 backdrop-blur-[4px] opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center gap-1.5 p-2">
                     <button
                       onClick={(e) => handleCopySvg(e, icon)}
-                      title="Copy SVG Code"
+                      title={t.copySvg}
                       className="p-2 bg-white/95 text-neutral-900 hover:bg-white rounded-xl shadow-md transition-transform active:scale-90 cursor-pointer border border-white/50"
                     >
                       {isCopied ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
                     </button>
                     <button
                       onClick={(e) => handleDownload(e, icon)}
-                      title="Download .svg"
+                      title={t.downloadSvg}
                       className="p-2 bg-white/95 text-neutral-900 hover:bg-white rounded-xl shadow-md transition-transform active:scale-90 cursor-pointer border border-white/50"
                     >
                       <Download className="w-3.5 h-3.5" />
                     </button>
                     <button
                       onClick={(e) => handleOpenEditor(e, icon)}
-                      title="Open in Studio"
+                      title={t.openInStudio}
                       className="p-2 bg-white/95 text-neutral-900 hover:bg-white rounded-xl shadow-md transition-transform active:scale-90 cursor-pointer border border-white/50"
                     >
                       <Code2 className="w-3.5 h-3.5" />

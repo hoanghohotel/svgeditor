@@ -7,6 +7,7 @@ export type AppRoute =
   | { type: 'detail'; id: string; slug: string }
   | { type: 'editor'; iconId?: string }
   | { type: 'search'; query: string; page: number }
+  | { type: 'portfolio' }
   | { type: 'admin' }
   | { type: 'login' };
 
@@ -17,6 +18,11 @@ export function parseRoute(path: string = window.location.pathname, search: stri
   // 1. Admin or Dashboard: /admin or /dashboard
   if (cleanPath === '/admin' || cleanPath === '/dashboard') {
     return { type: 'admin' };
+  }
+
+  // 2. Portfolio Showcase: /portfolio
+  if (cleanPath === '/portfolio') {
+    return { type: 'portfolio' };
   }
 
   // 2. Login: /login
@@ -101,6 +107,8 @@ export function formatRouteUrl(route: AppRoute): string {
   switch (route.type) {
     case 'admin':
       return '/admin';
+    case 'portfolio':
+      return '/portfolio';
     case 'login':
       return '/login';
     case 'search':

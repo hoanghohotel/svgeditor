@@ -26,6 +26,7 @@ import {
 import { optimizeSvg } from '../utils/svgOptimizer';
 import { normalizeSvgForPreview } from '../utils/svgNormalizer';
 import { navigateTo } from '../utils/router';
+import { useI18n } from '../i18n';
 
 interface IconDetailPageProps {
   iconId: string;
@@ -46,6 +47,7 @@ const COLOR_PRESETS = [
 ];
 
 export const IconDetailPage: React.FC<IconDetailPageProps> = ({ iconId }) => {
+  const { t } = useI18n();
   const [icon, setIcon] = useState<SvgIcon | null>(() => getIconById(iconId) || null);
   const [loading, setLoading] = useState<boolean>(!icon);
   const [copiedType, setCopiedType] = useState<string | null>(null);
@@ -232,7 +234,7 @@ export const ${reactComponentName}: React.FC<React.SVGProps<SVGSVGElement>> = (p
             className="glass-btn px-2.5 py-1 rounded-xl text-neutral-700 dark:text-neutral-200 hover:text-neutral-900 dark:hover:text-white transition-all flex items-center gap-1 cursor-pointer font-medium"
           >
             <ArrowLeft className="w-3.5 h-3.5" />
-            <span>Directory</span>
+            <span>{t.navDirectory}</span>
           </button>
           <span aria-hidden="true" className="text-neutral-300 dark:text-neutral-700">/</span>
           <button
@@ -249,7 +251,7 @@ export const ${reactComponentName}: React.FC<React.SVGProps<SVGSVGElement>> = (p
           {icon.is_pro && (
             <span className="flex items-center gap-1 px-3 py-1 text-xs font-semibold bg-amber-500/20 text-amber-700 dark:text-amber-300 border border-amber-500/30 rounded-xl backdrop-blur-md shadow-xs">
               <Crown className="w-3.5 h-3.5" />
-              <span>Font Awesome Pro</span>
+              <span>{t.proBadge}</span>
             </span>
           )}
           {icon.style && (
@@ -265,10 +267,10 @@ export const ${reactComponentName}: React.FC<React.SVGProps<SVGSVGElement>> = (p
         <div className="p-4 sm:p-5 rounded-2xl glass-panel border border-amber-500/30 text-amber-900 dark:text-amber-200 space-y-1.5 shadow-xs">
           <div className="flex items-center gap-2 font-semibold text-xs text-amber-800 dark:text-amber-300">
             <ShieldAlert className="w-4 h-4 text-amber-600 dark:text-amber-400" />
-            <span>Font Awesome Pro Asset — Restricted License Notice</span>
+            <span>{t.proRestrictedNotice}</span>
           </div>
           <p className="text-[11px] text-amber-800/80 dark:text-amber-300/80 leading-relaxed">
-            This vector asset was imported from your locally licensed Font Awesome Pro collection. Redistribution, public re-hosting, or sublicensing to unauthorized third parties is restricted under Font Awesome Pro license terms. The original file is preserved on local server storage and protected with content hashing.
+            {t.proRestrictedDesc}
           </p>
         </div>
       )}
@@ -280,12 +282,12 @@ export const ${reactComponentName}: React.FC<React.SVGProps<SVGSVGElement>> = (p
           {/* SVG Preview Card (Apple Liquid Glass Stage) */}
           <div className="glass-panel liquid-sheen rounded-3xl overflow-hidden shadow-md">
             {/* Stage Toolbar */}
-            <div className="flex flex-wrap items-center justify-between gap-2 px-5 py-3 border-b border-white/50 dark:border-white/10 bg-white/40 dark:bg-neutral-900/40">
+            <div className="flex flex-wrap items-center justify-between gap-2 px-5 py-3 border-b border-slate-200/80 dark:border-white/10 bg-white/40 dark:bg-neutral-900/40">
               {/* Background Selector */}
               <div className="flex items-center gap-1.5">
                 <span className="text-[11px] font-medium text-neutral-500 dark:text-neutral-400 mr-1 flex items-center gap-1">
                   <Palette className="w-3.5 h-3.5" />
-                  <span>Canvas:</span>
+                  <span>{t.canvasStage}</span>
                 </span>
                 <div className="flex items-center gap-1 p-0.5 rounded-xl bg-neutral-200/40 dark:bg-neutral-800/40 border border-white/40 dark:border-white/10 text-xs">
                   <button
@@ -296,7 +298,7 @@ export const ${reactComponentName}: React.FC<React.SVGProps<SVGSVGElement>> = (p
                         : 'text-neutral-600 dark:text-neutral-400 hover:text-neutral-900'
                     }`}
                   >
-                    Grid
+                    {t.canvasGrid.split(' ')[0]}
                   </button>
                   <button
                     onClick={() => setCanvasBg('white')}
@@ -306,7 +308,7 @@ export const ${reactComponentName}: React.FC<React.SVGProps<SVGSVGElement>> = (p
                         : 'text-neutral-600 dark:text-neutral-400 hover:text-neutral-900'
                     }`}
                   >
-                    White
+                    {t.canvasWhite.split(' ')[0]}
                   </button>
                   <button
                     onClick={() => setCanvasBg('dark')}
@@ -316,7 +318,7 @@ export const ${reactComponentName}: React.FC<React.SVGProps<SVGSVGElement>> = (p
                         : 'text-neutral-600 dark:text-neutral-400 hover:text-neutral-900'
                     }`}
                   >
-                    Dark
+                    {t.canvasDark.split(' ')[0]}
                   </button>
                   <button
                     onClick={() => setCanvasBg('midnight')}
@@ -326,7 +328,7 @@ export const ${reactComponentName}: React.FC<React.SVGProps<SVGSVGElement>> = (p
                         : 'text-neutral-600 dark:text-neutral-400 hover:text-neutral-900'
                     }`}
                   >
-                    Midnight
+                    {t.canvasMidnight.split(' ')[0]}
                   </button>
                 </div>
               </div>
@@ -362,7 +364,7 @@ export const ${reactComponentName}: React.FC<React.SVGProps<SVGSVGElement>> = (p
 
             {/* Canvas Color Tint Swatch Strip */}
             <div className="flex items-center justify-between px-5 py-2.5 border-b border-white/40 dark:border-white/10 bg-white/20 dark:bg-neutral-900/20 text-xs">
-              <span className="text-[11px] text-neutral-500 dark:text-neutral-400 font-medium">Vector Tint Refraction:</span>
+              <span className="text-[11px] text-neutral-500 dark:text-neutral-400 font-medium">{t.tintRefraction}</span>
               <div className="flex items-center gap-2">
                 {COLOR_PRESETS.map((color) => (
                   <button
@@ -706,35 +708,35 @@ export const ${reactComponentName}: React.FC<React.SVGProps<SVGSVGElement>> = (p
 
           {/* Metadata Specification Table */}
           <div className="p-5 glass-panel liquid-sheen rounded-3xl space-y-3 text-xs shadow-sm">
-            <h3 className="font-semibold text-neutral-900 dark:text-white text-xs">Asset Specification</h3>
+            <h3 className="font-semibold text-neutral-900 dark:text-white text-xs">{t.assetSpecifications}</h3>
             <div className="space-y-2 text-neutral-600 dark:text-neutral-400 divide-y divide-white/40 dark:divide-white/10">
               <div className="flex justify-between py-1">
-                <span>Collection</span>
+                <span>{t.specCollection}</span>
                 <span className="font-medium text-neutral-900 dark:text-white">{icon.collection}</span>
               </div>
               {icon.style && (
                 <div className="flex justify-between py-1">
-                  <span>Style</span>
+                  <span>{t.specStyle}</span>
                   <span className="font-medium text-neutral-900 dark:text-white capitalize">{icon.style}</span>
                 </div>
               )}
               <div className="flex justify-between py-1">
-                <span>ViewBox</span>
+                <span>{t.specViewBox}</span>
                 <span className="font-mono text-neutral-900 dark:text-white">{icon.viewBox}</span>
               </div>
               <div className="flex justify-between py-1">
-                <span>File Size</span>
+                <span>{t.specFileSize}</span>
                 <span className="font-mono tabular-nums text-neutral-900 dark:text-white">
                   {formatBytes(icon.rawBytes)} ({icon.rawBytes} bytes)
                 </span>
               </div>
               <div className="flex justify-between py-1">
-                <span>License</span>
+                <span>{t.specLicense}</span>
                 <span className="font-medium text-neutral-900 dark:text-white">{icon.license}</span>
               </div>
               {icon.content_hash && (
                 <div className="flex justify-between py-1 items-center">
-                  <span>SHA-256 Digest</span>
+                  <span>{t.specDigest}</span>
                   <button
                     onClick={handleCopyHash}
                     title="Click to copy SHA-256"
@@ -747,7 +749,7 @@ export const ${reactComponentName}: React.FC<React.SVGProps<SVGSVGElement>> = (p
               )}
               {icon.storage_path && (
                 <div className="flex justify-between py-1 items-center">
-                  <span>Local Preserved Path</span>
+                  <span>{t.specLocalPath}</span>
                   <span className="font-mono text-[10px] text-neutral-500 max-w-[150px] truncate" title={icon.storage_path}>
                     {icon.storage_path}
                   </span>
@@ -763,10 +765,10 @@ export const ${reactComponentName}: React.FC<React.SVGProps<SVGSVGElement>> = (p
         <div className="space-y-5 pt-8 border-t border-white/50 dark:border-white/10">
           <div>
             <h2 className="text-lg font-bold text-neutral-900 dark:text-white">
-              Related Vectors in {icon.collection}
+              {t.relatedVectors} — {icon.collection}
             </h2>
             <p className="text-xs text-neutral-500 dark:text-neutral-400">
-              Complementary icons matching style and semantic categorization.
+              {t.relatedVectorsDesc}
             </p>
           </div>
 

@@ -57,6 +57,7 @@ import {
 } from '../utils/svgExporter';
 import { normalizeSvgForPreview } from '../utils/svgNormalizer';
 import { navigateTo } from '../utils/router';
+import { useI18n } from '../i18n';
 
 interface EditorPageProps {
   initialIconId?: string;
@@ -94,6 +95,7 @@ const COLOR_SWATCHES = [
 ];
 
 export const EditorPage: React.FC<EditorPageProps> = ({ initialIconId }) => {
+  const { t } = useI18n();
   const initialIcon = initialIconId ? getIconById(initialIconId) : iconDataset[0];
   const initialCode = initialIcon ? initialIcon.svgContent : iconDataset[0].svgContent;
 
@@ -374,14 +376,14 @@ export const EditorPage: React.FC<EditorPageProps> = ({ initialIconId }) => {
           <div>
             <div className="flex items-center gap-2 flex-wrap">
               <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-neutral-900 dark:text-white">
-                SVG Viewer &amp; Studio
+                {t.editorHeading}
               </h1>
               <span className="text-[10px] font-semibold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 backdrop-blur-md">
                 Inspired by SVGViewer.dev
               </span>
             </div>
             <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-0.5">
-              Live interactive designer, multi-format exporter (PNG, WEBP, React, Vue), code editor, and SVGO optimizer.
+              {t.editorSubheading}
             </p>
           </div>
         </div>
@@ -421,7 +423,7 @@ export const EditorPage: React.FC<EditorPageProps> = ({ initialIconId }) => {
             className="flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold glass-btn-primary rounded-xl cursor-pointer shadow-md"
           >
             <Download className="w-3.5 h-3.5 text-emerald-400 dark:text-emerald-500" />
-            <span>Download SVG</span>
+            <span>{t.downloadCustomized}</span>
           </button>
         </div>
       </div>

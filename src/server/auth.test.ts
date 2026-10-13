@@ -30,7 +30,7 @@ test('Supabase login, admin authorization, and remote database selection', async
   process.env.SVG_SUPABASE_PUBLISHABLE_KEY = 'test-publishable';
   process.env.SVG_SUPABASE_SECRET_KEY = 'test-server-secret';
   process.env.SVG_ADMIN_EMAILS = 'owner@example.test';
-  const { default: app } = await import('./app');
+  const { default: app } = await import('./app.js');
   const server = app.listen(0, '127.0.0.1');
   await new Promise<void>(resolve => server.once('listening', resolve));
   const base = `http://127.0.0.1:${(server.address() as any).port}/api`;

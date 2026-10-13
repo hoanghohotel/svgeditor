@@ -15,9 +15,9 @@ import 'dotenv/config';
 import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
-import { dbStore } from '../src/db/database';
-import { sanitizeAndValidateSvg } from '../src/server/svgSecurity';
-import { getSupabaseClient } from '../src/db/supabaseClient';
+import { dbStore } from '../src/db/database.js';
+import { sanitizeAndValidateSvg } from '../src/server/svgSecurity.js';
+import { getSupabaseClient } from '../src/db/supabaseClient.js';
 
 interface CliArgs {
   dir: string;

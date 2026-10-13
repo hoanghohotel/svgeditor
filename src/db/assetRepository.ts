@@ -1,6 +1,6 @@
 import { randomUUID } from 'node:crypto';
-import { dbStore } from './database';
-import { getSupabaseClient } from './supabaseClient';
+import { dbStore } from './database.js';
+import { getSupabaseClient } from './supabaseClient.js';
 
 const selection = '*,category:categories(name,slug),collection:collections(name,slug,author),license:licenses(name,license_url),svg_asset_tags(tags(name,slug))';
 function enrich(row: any) {

@@ -1,16 +1,16 @@
 import express, { Request, Response, Router } from 'express';
 import { z } from 'zod';
-import { assetRepository } from '../db/assetRepository';
-import { authenticateUser, protectOperations, login, logout } from './auth';
-import { sanitizeAndValidateSvg } from './svgSecurity';
-import { runSvgoOptimization } from './svgoService';
-import { queryPubChemCompound } from './scienceService';
-import { runFontAwesomeImport } from '../../scripts/import-font-awesome';
+import { assetRepository } from '../db/assetRepository.js';
+import { authenticateUser, protectOperations, login, logout } from './auth.js';
+import { sanitizeAndValidateSvg } from './svgSecurity.js';
+import { runSvgoOptimization } from './svgoService.js';
+import { queryPubChemCompound } from './scienceService.js';
+import { runFontAwesomeImport } from '../../scripts/import-font-awesome.js';
 import {
   checkSupabaseHealth,
   syncLocalDatabaseToSupabase,
   getSupabaseConfigInfo,
-} from '../db/supabaseClient';
+} from '../db/supabaseClient.js';
 
 export const apiRouter = Router();
 

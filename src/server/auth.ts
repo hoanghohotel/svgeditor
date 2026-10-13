@@ -1,6 +1,6 @@
 import { createClient, type User } from '@supabase/supabase-js';
 import { type Request, type Response, type NextFunction } from 'express';
-import { getSupabaseClient } from '../db/supabaseClient';
+import { getSupabaseClient } from '../db/supabaseClient.js';
 import { z } from 'zod';
 
 const cookieName = 'vh_session';

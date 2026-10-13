@@ -1,7 +1,7 @@
 import 'dotenv/config';
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
-import { dbStore } from './database';
-import { POSTGRES_MIGRATION_SQL } from './schema';
+import { dbStore } from './database.js';
+import { POSTGRES_MIGRATION_SQL } from './schema.js';
 
 export interface SupabaseConfigInfo {
   isConfigured: boolean;

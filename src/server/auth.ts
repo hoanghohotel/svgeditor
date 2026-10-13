@@ -53,7 +53,7 @@ export function protectOperations(req: Request, res: Response, next: NextFunctio
     let crossOrigin = req.get('sec-fetch-site') === 'cross-site';
     try { if (origin && new URL(origin).host !== host) crossOrigin = true; } catch { crossOrigin = true; }
     if (crossOrigin) {
-      return res.status(403).json({ error: 'Cross-origin request rejected' });
+      return res.status(403).json({ error: 'Cross-origin request rejected', code: 'ORIGIN_REJECTED' });
     }
     if (!req.is('application/json')) return res.status(415).json({ error: 'Content-Type must be application/json' });
   }
@@ -66,7 +66,7 @@ export function protectOperations(req: Request, res: Response, next: NextFunctio
   next();
 }
 
-const credentials = z.object({ email: z.string().email().max(254), password: z.string().min(1).max(1024) });
+const credentials = z.object({ email: z.string().trim().email().max(254), password: z.string().min(1).max(1024) });
 
 export async function login(req: Request, res: Response) {
   res.setHeader('Cache-Control', 'no-store');
@@ -74,15 +74,23 @@ export async function login(req: Request, res: Response) {
   if (!parsed.success) return res.status(400).json({ error: 'Invalid email or password format' });
   try {
     const client = createAuthClient();
-    if (!client) return res.status(503).json({ error: 'Authentication is not configured' });
+    if (!client) return res.status(503).json({ error: 'Authentication is not configured', code: 'AUTH_NOT_CONFIGURED' });
     const { data, error } = await client.auth.signInWithPassword(parsed.data);
-    if (error || !data.session || !data.user) return res.status(401).json({ error: 'Invalid email or password' });
-    if (!isAdmin(data.user)) return res.status(403).json({ error: 'This account does not have admin access' });
+    if (error) {
+      if (error.code === 'email_not_confirmed') return res.status(403).json({ error: 'Confirm your email before signing in', code: 'EMAIL_NOT_CONFIRMED' });
+      if (error.status === 429) return res.status(429).json({ error: 'Too many login attempts', code: 'AUTH_RATE_LIMITED' });
+      if (/api.?key/i.test(error.message) || (error.status && error.status >= 500)) return res.status(503).json({ error: 'Authentication configuration or service error', code: 'AUTH_SERVICE_ERROR' });
+      return res.status(401).json({ error: 'Invalid email or password', code: 'INVALID_CREDENTIALS' });
+    }
+    if (!data.session || !data.user) return res.status(401).json({ error: 'Invalid email or password', code: 'INVALID_CREDENTIALS' });
+    if (!data.user.email_confirmed_at) return res.status(403).json({ error: 'Confirm your email before signing in', code: 'EMAIL_NOT_CONFIRMED' });
+    if (!(process.env.SVG_ADMIN_EMAILS || '').trim()) return res.status(503).json({ error: 'Administrator allowlist is not configured', code: 'ADMIN_NOT_CONFIGURED' });
+    if (!isAdmin(data.user)) return res.status(403).json({ error: 'This account does not have admin access', code: 'ADMIN_ACCESS_DENIED' });
     res.cookie(cookieName, data.session.access_token, { ...cookieOptions(), maxAge: data.session.expires_in * 1000 });
     res.clearCookie('vh_user', { path: '/' });
     res.json({ profile: profile(data.user), authenticated: true });
   } catch {
-    res.status(503).json({ error: 'Authentication service unavailable' });
+    res.status(503).json({ error: 'Authentication service unavailable', code: 'AUTH_SERVICE_ERROR' });
   }
 }
 

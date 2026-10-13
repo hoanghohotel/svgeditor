@@ -54,7 +54,11 @@ test('Supabase login, admin authorization, and remote database selection', async
     const admin = await fetch(base + '/auth/me', { headers }); assert.equal((await admin.json()).profile.role, 'admin');
     process.env.SVG_ADMIN_EMAILS = '';
     assert.equal((await fetch(base + '/admin/stats', { headers })).status, 403);
-    assert.equal((await post('/auth/login', { email: user.email, password: 'test-correct-password' })).status, 403);
+    const unconfigured = await post('/auth/login', { email: user.email, password: 'test-correct-password' });
+    assert.equal(unconfigured.status, 503); assert.equal((await unconfigured.json()).code, 'ADMIN_NOT_CONFIGURED');
+    process.env.SVG_ADMIN_EMAILS = 'another@example.test';
+    const notAdmin = await post('/auth/login', { email: user.email, password: 'test-correct-password' });
+    assert.equal(notAdmin.status, 403); assert.equal((await notAdmin.json()).code, 'ADMIN_ACCESS_DENIED');
     process.env.SVG_ADMIN_EMAILS = user.email;
     assert.equal((await post('/svg', {}, headers)).status, 400); // Authorized, reaches schema validation.
     assert.equal((await post('/svg', {}, { ...headers, Origin: 'https://attacker.test' })).status, 403);
